@@ -1,0 +1,69 @@
+{
+  "n_rows": 114073,
+  "n_columns": 7,
+  "columns": [
+    "id",
+    "repo",
+    "title",
+    "body",
+    "labels",
+    "priority",
+    "severity"
+  ],
+  "null_fraction": {
+    "id": 0.0,
+    "repo": 0.0,
+    "title": 0.0,
+    "body": 0.0011659200687279198,
+    "labels": 0.0,
+    "priority": 0.0,
+    "severity": 0.0
+  },
+  "sample_top_values": {
+    "id": {
+      "393061": 1,
+      "1948096561": 1,
+      "1948478121": 1,
+      "1948396725": 1,
+      "1948378148": 1
+    },
+    "repo": {
+      "pytorch": 14451,
+      "flutter": 13130,
+      "godot": 11207,
+      "rust": 9925,
+      "go": 9094
+    },
+    "title": {
+      "[Bug]: ": 23,
+      "Illegal value for lineNumber": 14,
+      "Model is disposed!": 6,
+      "Soft Assertion Failed": 6,
+      "[DevTools Bug] Cannot add node \"1\" because a node with that id is already in the Store.": 5
+    },
+    "body": {
+      "None": 133,
+      "": 85,
+      "Please look at the parent issue for instructions.(https://github.com/pytorch/pytorch/issues/62540)": 31,
+      "<!--\r\n    Please note that your issue will be fixed much faster if you spend about\r\n    half an hour preparing it, including the exact reproduction steps and a demo.\r\n\r\n    If you're in a hurry or don't feel confident, it's fine to report bugs with\r\n    less details, but this makes it less likely they'll get fixed soon.\r\n\r\n    In either case, please use this template and fill in as many fields below as you can.\r\n\r\n    Note that we don't provide help for webpack questions after ejecting.\r\n    You can find webpack docs at https://webpack.js.org/.\r\n-->\r\n\r\n### Describe the bug\r\n\r\n(Write your answer here.)\r\n\r\n### Did you try recovering your dependencies?\r\n\r\n<!--\r\n  Your module tree might be corrupted, and that might be causing the issues.\r\n  Let's try to recover it. First, delete these files and folders in your project:\r\n\r\n    * node_modules\r\n    * package-lock.json\r\n    * yarn.lock\r\n\r\n  Then you need to decide which package manager you prefer to use.\r\n  We support both npm (https://npmjs.com) and yarn (https://yarnpkg.com/).\r\n  However, **they can't be used together in one project** so you need to pick one.\r\n\r\n  If you decided to use npm, run this in your project directory:\r\n\r\n    npm install -g npm@latest\r\n    npm install\r\n\r\n  This should fix your project.\r\n\r\n  If you decided to use yarn, update it first (https://yarnpkg.com/en/docs/install).\r\n  Then run in your project directory:\r\n\r\n    yarn\r\n\r\n  This should fix your project.\r\n\r\n  Importantly, **if you decided to use yarn, you should never run `npm install` in the project**.\r\n  For example, yarn users should run `yarn add <library>` instead of `npm install <library>`.\r\n  Otherwise your project will break again.\r\n\r\n  Have you done all these steps and still see the issue?\r\n  Please paste the output of `npm --version` and/or `yarn --version` to confirm.\r\n-->\r\n\r\n(Write your answer here.)\r\n\r\n### Which terms did you search for in User Guide?\r\n\r\n<!--\r\n  There are a few common documented problems, such as watcher not detecting changes, or build failing.\r\n  They are described in the Troubleshooting section of the User Guide:\r\n\r\n  https://facebook.github.io/create-react-app/docs/troubleshooting\r\n\r\n  Please scan these few sections for common problems.\r\n  Additionally, you can search the User Guide itself for something you're having issues with:\r\n\r\n  https://facebook.github.io/create-react-app/\r\n\r\n  If you didn't find the solution, please share which words you searched for.\r\n  This helps us improve documentation for future readers who might encounter the same problem.\r\n-->\r\n\r\n(Write your answer here if relevant.)\r\n\r\n### Environment\r\n\r\n<!--\r\n  To help identify if a problem is specific to a platform, browser, or module version, information about your environment is required.\r\n  This enables the maintainers quickly reproduce the issue and give feedback.\r\n\r\n  Run the following command in your React app's folder in terminal.\r\n  Note: The result is copied to your clipboard directly.\r\n\r\n  `npx create-react-app --info`\r\n\r\n  Paste the output of the command in the section below.\r\n-->\r\n\r\n(paste the output of the command here.)\r\n\r\n### Steps to reproduce\r\n\r\n<!--\r\n  How would you describe your issue to someone who doesn\u2019t know you or your project?\r\n  Try to write a sequence of steps that anybody can repeat to see the issue.\r\n-->\r\n\r\n(Write your steps here:)\r\n\r\n1.\r\n2.\r\n3.\r\n\r\n### Expected behavior\r\n\r\n<!--\r\n  How did you expect the tool to behave?\r\n  It\u2019s fine if you\u2019re not sure your understanding is correct.\r\n  Just write down what you thought would happen.\r\n-->\r\n\r\n(Write what you thought would happen.)\r\n\r\n### Actual behavior\r\n\r\n<!--\r\n  Did something go wrong?\r\n  Is something broken, or not behaving as you expected?\r\n  Please attach screenshots if possible! They are extremely helpful for diagnosing issues.\r\n-->\r\n\r\n(Write what happened. Please add screenshots!)\r\n\r\n### Reproducible demo\r\n\r\n<!--\r\n  If you can, please share a project that reproduces the issue.\r\n  This is the single most effective way to get an issue fixed soon.\r\n\r\n  There are two ways to do it:\r\n\r\n    * Create a new app and try to reproduce the issue in it.\r\n      This is useful if you roughly know where the problem is, or can\u2019t share the real code.\r\n\r\n    * Or, copy your app and remove things until you\u2019re left with the minimal reproducible demo.\r\n      This is useful for finding the root cause. You may then optionally create a new project.\r\n\r\n  This is a good guide to creating bug demos: https://stackoverflow.com/help/mcve\r\n  Once you\u2019re done, push the project to GitHub and paste the link to it below:\r\n-->\r\n\r\n(Paste the link to an example project and exact instructions to reproduce the issue.)\r\n\r\n<!--\r\n  What happens if you skip this step?\r\n\r\n  We will try to help you, but in many cases it is impossible because crucial\r\n  information is missing. In that case we'll tag an issue as having a low priority,\r\n  and eventually close it if there is no clear direction.\r\n\r\n  We still appreciate the report though, as eventually somebody else might\r\n  create a reproducible example for it.\r\n\r\n  Thanks for helping us help you!\r\n-->\r\n": 17,
+      "This task tracks the translation of the patterns. More information about the translation process is available at https://github.com/iluwatar/java-design-patterns/wiki/15.-Support-for-multiple-languages\n\nAcceptance criteria\n\n- The patterns have been translated\n- The patterns can be browsed in Github and on the website https://java-design-patterns.com\n": 15
+    },
+    "labels": {
+      "bug": 2380,
+      "NeedsInvestigation": 1869,
+      "Suggestion,Awaiting More Feedback": 1195,
+      "bug-report": 1137,
+      "enhancement": 1072
+    },
+    "priority": {
+      "low": 101937,
+      "medium": 10132,
+      "high": 2004
+    },
+    "severity": {
+      "Critical": 66491,
+      "Minor": 29769,
+      "Major": 17813
+    }
+  }
+}

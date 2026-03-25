@@ -1,0 +1,9 @@
+datasets
+pandas
+pyarrow
+scikit-learn
+matplotlib
+jupyter
+tqdm
+pyyaml
+mlflow
