@@ -1,6 +1,6 @@
 # Issue Triage Copilot
 
-An end-to-end applied AI/ML project for GitHub issue triage.
+An end-to-end project for GitHub issue triage.
 
 ## Current status
 - [x] repo scaffold
