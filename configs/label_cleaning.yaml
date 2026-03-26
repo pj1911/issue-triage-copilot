@@ -1,0 +1,79 @@
+# Label cleaning rules — edit here, not in code.
+# All matching is done on lowercased, whitespace-stripped label tokens.
+
+# Minimum occurrences to keep a label in the vocabulary
+min_occurrences: 50
+
+# Top-N labels to keep after frequency filtering (for V1 baseline)
+top_n: 50
+
+# ── Leakage labels ──────────────────────────────────────────────────────────
+# These are assigned during or after triage, not by the issue author.
+# Using them as targets would be fine; using them as inputs would be leakage.
+# Listed here so we never accidentally include them as model inputs.
+leakage_exact:
+  - triaged
+  - needs triage
+  - needs-triage
+  - needsinvestigation
+  - needs investigation
+  - needs more info
+  - needs more information
+  - needs repro
+  - needs reproduction
+  - has reproducible steps
+  - awaiting more feedback
+  - awaiting response
+  - waiting for author
+  - waiting-for-author
+  - stale
+  - wontfix
+  - wont-fix
+  - duplicate
+  - invalid
+  - closed
+  - resolved
+  - confirmed         # assigned after someone verifies the bug
+  - needsfix          # assigned after triage confirms it needs fixing
+  - "oncall: pt2"     # internal routing, not issue type
+  - "oncall: distributed"
+
+leakage_prefixes:
+  - triaged           # triaged-framework, triaged-engine, etc.
+  - team-
+  - t-                # T-compiler, T-lang (rust team labels)
+  - priority
+  - severity
+  - "topic:"
+  - "area:"
+  - issue-            # issue-bug, issue-enhancement
+
+# Regex patterns for leakage labels (applied separately in code)
+leakage_patterns_regex:
+  - '^p\d$'           # p0, p1, p2, p3, p4
+  - '^s\d$'           # s1, s2, s3
+  - '^\d+$'           # purely numeric
+
+# ── Synonym normalization ────────────────────────────────────────────────────
+# Map right-hand side → left-hand side (canonical form).
+# Applied after lowercasing and stripping.
+synonyms:
+  "feature request": "feature-request"
+  "feature":         "feature-request"   # only safe at corpus level; revisit if ambiguous
+  "bug report":      "bug"
+  "bug-report":      "bug"
+  "c: bug":          "bug"
+  "c: new feature":  "feature-request"
+  "c: proposal":     "proposal"
+  "idea-enhancement": "enhancement"
+  "f: material design": "material-design"
+  "compiler/runtime":   "compiler"
+  "product-terminal":   "terminal"
+
+# ── Repo-specific prefix stripping ──────────────────────────────────────────
+# Remove these prefixes when followed by a meaningful term.
+# e.g. "c: new feature" → strip "c: " → "new feature" → synonym → "feature-request"
+strip_prefixes:
+  - "c: "
+  - "f: "
+  - "p: "

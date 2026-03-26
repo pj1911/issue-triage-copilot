@@ -11,3 +11,15 @@ download-data:
 
 eda:
 	$(PYTHON) -m src.data.eda
+
+inspect:
+	$(PYTHON) -m src.data.inspect_schema
+
+clean-labels:
+	$(PYTHON) -m src.data.clean_labels
+
+split:
+	$(PYTHON) -m src.data.split
+
+preprocess:
+	$(PYTHON) -m src.data.preprocess
