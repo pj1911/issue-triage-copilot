@@ -6,5 +6,7 @@ data/raw/
 data/interim/
 data/processed/
 mlruns/
+models/*.joblib
+!models/labels_threshold.joblib
 .env
 .DS_Store

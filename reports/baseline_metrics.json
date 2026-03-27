@@ -1,0 +1,226 @@
+{
+  "description": "Dumb majority-class baseline. Priority: always predict most common class. Labels: predict empty set OR top-k most frequent labels.",
+  "priority": {
+    "majority_class": "low",
+    "strategy": "always predict most common training class",
+    "val": {
+      "accuracy": 0.8756,
+      "macro_f1": 0.3112,
+      "weighted_f1": 0.8175,
+      "per_class": {
+        "high": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 343.0
+        },
+        "low": {
+          "precision": 0.8756,
+          "recall": 1.0,
+          "f1-score": 0.9337,
+          "support": 10142.0
+        },
+        "medium": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1098.0
+        },
+        "macro avg": {
+          "precision": 0.2919,
+          "recall": 0.3333,
+          "f1-score": 0.3112,
+          "support": 11583.0
+        },
+        "weighted avg": {
+          "precision": 0.7667,
+          "recall": 0.8756,
+          "f1-score": 0.8175,
+          "support": 11583.0
+        }
+      }
+    },
+    "test": {
+      "accuracy": 0.9042,
+      "macro_f1": 0.3166,
+      "weighted_f1": 0.8587,
+      "per_class": {
+        "high": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 574.0
+        },
+        "low": {
+          "precision": 0.9042,
+          "recall": 1.0,
+          "f1-score": 0.9497,
+          "support": 28156.0
+        },
+        "medium": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2409.0
+        },
+        "macro avg": {
+          "precision": 0.3014,
+          "recall": 0.3333,
+          "f1-score": 0.3166,
+          "support": 31139.0
+        },
+        "weighted avg": {
+          "precision": 0.8176,
+          "recall": 0.9042,
+          "f1-score": 0.8587,
+          "support": 31139.0
+        }
+      }
+    }
+  },
+  "labels": {
+    "vocab_size": 50,
+    "top_20_labels": [
+      {
+        "label": "bug",
+        "train_count": 15188
+      },
+      {
+        "label": "enhancement",
+        "train_count": 5044
+      },
+      {
+        "label": "feature-request",
+        "train_count": 2724
+      },
+      {
+        "label": "help wanted",
+        "train_count": 2291
+      },
+      {
+        "label": "needs testing",
+        "train_count": 1898
+      },
+      {
+        "label": "compiler",
+        "train_count": 1791
+      },
+      {
+        "label": "discussion",
+        "train_count": 1734
+      },
+      {
+        "label": "documentation",
+        "train_count": 1455
+      },
+      {
+        "label": "terminal",
+        "train_count": 1217
+      },
+      {
+        "label": "proposal",
+        "train_count": 1189
+      },
+      {
+        "label": "oncall: jit",
+        "train_count": 1173
+      },
+      {
+        "label": "inactive",
+        "train_count": 1110
+      },
+      {
+        "label": "performance",
+        "train_count": 1101
+      },
+      {
+        "label": "module: cuda",
+        "train_count": 1020
+      },
+      {
+        "label": "module: nn",
+        "train_count": 918
+      },
+      {
+        "label": "triage/accepted",
+        "train_count": 861
+      },
+      {
+        "label": "site-support-request",
+        "train_count": 814
+      },
+      {
+        "label": "kind/bug",
+        "train_count": 784
+      },
+      {
+        "label": "crash",
+        "train_count": 769
+      },
+      {
+        "label": "tools",
+        "train_count": 761
+      }
+    ],
+    "empty_set": {
+      "strategy": "predict empty set for all issues",
+      "val": {
+        "subset_accuracy": 0.338,
+        "hamming_loss": 0.0141,
+        "micro_f1": 0.0,
+        "macro_f1": 0.0
+      },
+      "test": {
+        "subset_accuracy": 0.7338,
+        "hamming_loss": 0.0059,
+        "micro_f1": 0.0,
+        "macro_f1": 0.0
+      }
+    },
+    "top_1": {
+      "strategy": "always predict top-1 most common labels: ['bug']",
+      "val": {
+        "subset_accuracy": 0.3168,
+        "hamming_loss": 0.0205,
+        "micro_f1": 0.4,
+        "macro_f1": 0.0102
+      },
+      "test": {
+        "subset_accuracy": 0.0594,
+        "hamming_loss": 0.0226,
+        "micro_f1": 0.1287,
+        "macro_f1": 0.0031
+      }
+    },
+    "top_3": {
+      "strategy": "always predict top-3 most common labels: ['bug', 'enhancement', 'feature-request']",
+      "val": {
+        "subset_accuracy": 0.0,
+        "hamming_loss": 0.0482,
+        "micro_f1": 0.3492,
+        "macro_f1": 0.0195
+      },
+      "test": {
+        "subset_accuracy": 0.0,
+        "hamming_loss": 0.0611,
+        "micro_f1": 0.0729,
+        "macro_f1": 0.0045
+      }
+    },
+    "top_5": {
+      "strategy": "always predict top-5 most common labels: ['bug', 'enhancement', 'feature-request', 'help wanted', 'needs testing']",
+      "val": {
+        "subset_accuracy": 0.0,
+        "hamming_loss": 0.0868,
+        "micro_f1": 0.2397,
+        "macro_f1": 0.021
+      },
+      "test": {
+        "subset_accuracy": 0.0,
+        "hamming_loss": 0.0998,
+        "micro_f1": 0.0579,
+        "macro_f1": 0.0058
+      }
+    }
+  }
+}

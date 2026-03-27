@@ -1,0 +1,187 @@
+{
+  "description": "TF-IDF (1-2gram, 100k features) + Logistic Regression. Label threshold tuned on val, applied once to test.",
+  "priority": {
+    "val": {
+      "accuracy": 0.7468,
+      "macro_f1": 0.3652,
+      "weighted_f1": 0.7679,
+      "confusion_matrix": {
+        "labels": [
+          "high",
+          "medium",
+          "low"
+        ],
+        "matrix": [
+          [
+            22,
+            97,
+            224
+          ],
+          [
+            39,
+            242,
+            817
+          ],
+          [
+            151,
+            1605,
+            8386
+          ]
+        ]
+      },
+      "per_class": {
+        "high": {
+          "precision": 0.1038,
+          "recall": 0.0641,
+          "f1-score": 0.0793,
+          "support": 343.0
+        },
+        "medium": {
+          "precision": 0.1245,
+          "recall": 0.2204,
+          "f1-score": 0.1591,
+          "support": 1098.0
+        },
+        "low": {
+          "precision": 0.8896,
+          "recall": 0.8269,
+          "f1-score": 0.8571,
+          "support": 10142.0
+        },
+        "macro avg": {
+          "precision": 0.3726,
+          "recall": 0.3705,
+          "f1-score": 0.3652,
+          "support": 11583.0
+        },
+        "weighted avg": {
+          "precision": 0.7938,
+          "recall": 0.7468,
+          "f1-score": 0.7679,
+          "support": 11583.0
+        }
+      }
+    },
+    "test": {
+      "accuracy": 0.7474,
+      "macro_f1": 0.3646,
+      "weighted_f1": 0.7885,
+      "confusion_matrix": {
+        "labels": [
+          "high",
+          "medium",
+          "low"
+        ],
+        "matrix": [
+          [
+            76,
+            174,
+            324
+          ],
+          [
+            178,
+            579,
+            1652
+          ],
+          [
+            904,
+            4633,
+            22619
+          ]
+        ]
+      },
+      "per_class": {
+        "high": {
+          "precision": 0.0656,
+          "recall": 0.1324,
+          "f1-score": 0.0878,
+          "support": 574.0
+        },
+        "medium": {
+          "precision": 0.1075,
+          "recall": 0.2403,
+          "f1-score": 0.1486,
+          "support": 2409.0
+        },
+        "low": {
+          "precision": 0.9197,
+          "recall": 0.8033,
+          "f1-score": 0.8576,
+          "support": 28156.0
+        },
+        "macro avg": {
+          "precision": 0.3643,
+          "recall": 0.392,
+          "f1-score": 0.3646,
+          "support": 31139.0
+        },
+        "weighted avg": {
+          "precision": 0.8411,
+          "recall": 0.7474,
+          "f1-score": 0.7885,
+          "support": 31139.0
+        }
+      }
+    }
+  },
+  "labels": {
+    "val": {
+      "threshold": 0.15,
+      "micro_f1": 0.2733,
+      "macro_f1": 0.0276,
+      "exact_match_ratio": 0.1292,
+      "hamming_loss": 0.0369,
+      "per_label_f1_top20": {
+        "bug": 0.5666,
+        "feature-request": 0.4406,
+        "documentation": 0.194,
+        "help wanted": 0.0865,
+        "compiler": 0.037,
+        "performance": 0.0221,
+        "good first issue": 0.0196,
+        "terminal": 0.013,
+        "builders": 0.0,
+        "crash": 0.0,
+        "discussion": 0.0,
+        "enhancement": 0.0,
+        "enhancement :sparkles:": 0.0,
+        "featurerequest": 0.0,
+        "gopls": 0.0,
+        "high priority": 0.0,
+        "idea-new powertoy": 0.0,
+        "inactive": 0.0,
+        "issue: bug report": 0.0,
+        "issue: proposal": 0.0
+      }
+    },
+    "test": {
+      "threshold": 0.15,
+      "micro_f1": 0.1005,
+      "macro_f1": 0.0294,
+      "exact_match_ratio": 0.1697,
+      "hamming_loss": 0.0329,
+      "per_label_f1_top20": {
+        "proposal": 0.3166,
+        "crash": 0.2574,
+        "performance": 0.1947,
+        "bug": 0.1401,
+        "terminal": 0.1336,
+        "platform:windows": 0.1023,
+        "enhancement": 0.0904,
+        "feature-request": 0.0698,
+        "help wanted": 0.0663,
+        "regression": 0.0422,
+        "documentation": 0.0399,
+        "good first issue": 0.0108,
+        "discussion": 0.0038,
+        "builders": 0.0,
+        "compiler": 0.0,
+        "enhancement :sparkles:": 0.0,
+        "featurerequest": 0.0,
+        "gopls": 0.0,
+        "high priority": 0.0,
+        "idea-new powertoy": 0.0
+      }
+    }
+  }
+}
