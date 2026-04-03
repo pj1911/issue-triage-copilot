@@ -1,20 +1,21 @@
 #!/bin/bash
 #SBATCH --job-name=issue-triage-encoder
-#SBATCH -p YOUR_GPU_PARTITION
-#SBATCH -A YOUR_ACCOUNT
-#SBATCH --qos=YOUR_QOS
+#SBATCH -p <your-gpu-partition>
+#SBATCH -A <your-account>
+#SBATCH --qos=<your-qos>
 #SBATCH --gres=gpu:1
 #SBATCH -c 4
 #SBATCH -t 4:00:00
 #SBATCH -o encoder_%j.out
 #SBATCH -e encoder_%j.err
 #SBATCH --mail-type=END,FAIL
-#SBATCH --mail-user=YOUR_EMAIL
+#SBATCH --mail-user=<your-email>
 
-cd PROJECT_ROOT
+cd <path-to-repo>
 
-source CONDA_INIT_SCRIPT
-conda activate YOUR_ENV
+# Activate your conda environment
+source <path-to-conda>/etc/profile.d/conda.sh
+conda activate <your-env>
 
 echo "Job ID:    $SLURM_JOB_ID"
 echo "Node:      $SLURMD_NODENAME"
