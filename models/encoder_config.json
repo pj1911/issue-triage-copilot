@@ -1,0 +1,12 @@
+{
+  "model_name": "distilbert-base-uncased",
+  "num_labels": 50,
+  "max_length": 256,
+  "epochs": 4,
+  "batch_size": 64,
+  "lr": 2e-05,
+  "best_epoch": 3,
+  "best_val_micro_f1_thr05": 0.3264,
+  "best_val_micro_f1_tuned": 0.3264,
+  "best_threshold": 0.1
+}

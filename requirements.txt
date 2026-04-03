@@ -7,3 +7,6 @@ jupyter
 tqdm
 pyyaml
 mlflow
+joblib
+torch
+transformers

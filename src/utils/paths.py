@@ -8,6 +8,7 @@ PROCESSED_DIR = DATA_DIR / "processed"
 REPORTS_DIR = ROOT / "reports"
 DOCS_DIR = ROOT / "docs"
 CONFIGS = ROOT / "configs"
+MODELS_DIR = ROOT / "models"
 
-for p in [RAW_DIR, INTERIM_DIR, PROCESSED_DIR, REPORTS_DIR, DOCS_DIR, CONFIGS]:
+for p in [RAW_DIR, INTERIM_DIR, PROCESSED_DIR, REPORTS_DIR, DOCS_DIR, CONFIGS, MODELS_DIR]:
     p.mkdir(parents=True, exist_ok=True)

@@ -8,5 +8,13 @@ data/processed/
 mlruns/
 models/*.joblib
 !models/labels_threshold.joblib
+models/*.pt
+models/*.npy
+artifacts/encoder/*.pt
+artifacts/encoder/*.npy
+reports/encoder_predictions_val.csv
+reports/encoder_predictions_test.csv
+artifacts/encoder/encoder_predictions_val.csv
+artifacts/encoder/encoder_predictions_test.csv
 .env
 .DS_Store
