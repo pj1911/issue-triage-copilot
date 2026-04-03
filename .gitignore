@@ -12,6 +12,7 @@ models/*.pt
 models/*.npy
 artifacts/encoder/*.pt
 artifacts/encoder/*.npy
+artifacts/encoder/*.joblib
 reports/encoder_predictions_val.csv
 reports/encoder_predictions_test.csv
 artifacts/encoder/encoder_predictions_val.csv
