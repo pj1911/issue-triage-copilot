@@ -1,0 +1,610 @@
+RETRIEVAL EXAMPLES — LEXICAL (TF-IDF + COSINE)
+
+========================================================================
+
+                            GOOD RETRIEVALS                             
+
+========================================================================
+────────────────────────────────────────────────────────────────────────
+[GOOD #1]  repo=deno  split=val  labels=['bug']
+MRR=1.0000  Recall@5=1.0000  Recall@10=1.0000
+
+QUERY:
+TITLE: Issues regarding integration of Clerk with NextJS  BODY:
+Version: Deno 2.0    ### What is the issue?  Basically, if you are
+trying to integrate Clerk with NextJS it will immediately crash when
+the first page is trying to compile.  It passes the middleware
+compilation, but when it hits the pag
+
+GOLD RELEVANT (1–3 expected targets):
+  [next.js] score=0.1748  shared=['bug']
+  TITLE: Failed to parse source map: TypeError: Cannot read properties o
+  [next.js] score=0.1502  shared=['bug']
+  TITLE: NextJS does not work with FreeBSD
+  [next.js] score=0.1448  shared=['bug']
+  TITLE: WorkerError after updating Next.js from v13.2.4 to v13.4.16
+
+TOP-5 RETRIEVED:
+  #1 score=0.1748  [next.js]  labels=['bug'] ← GOLD HIT
+  TITLE: Failed to parse source map: TypeError: Cannot read properties o
+  #2 score=0.1502  [next.js]  labels=['bug'] ← GOLD HIT
+  TITLE: NextJS does not work with FreeBSD
+  #3 score=0.1448  [next.js]  labels=['bug'] ← GOLD HIT
+  TITLE: WorkerError after updating Next.js from v13.2.4 to v13.4.16
+  #4 score=0.1408  [next.js]  labels=['bug']
+  TITLE: [NEXT-707] Next.js 13.2.1: Custom TypeScript ESLint setup fails
+  #5 score=0.1267  [create-react-app]  labels=[]
+  TITLE: npm start isssue
+────────────────────────────────────────────────────────────────────────
+[GOOD #2]  repo=deno  split=val  labels=['bug']
+MRR=1.0000  Recall@5=1.0000  Recall@10=1.0000
+
+QUERY:
+TITLE: npm compat: typescript-language-server  BODY: Version: Deno
+1.42.0    typescript-language-server@4.3.3 fails to work correctly
+```    2024-03-29T18:39:10.362 helix_lsp::transport [ERROR] typescript
+err <- "error: Uncaught (in promise) Error: tsserver process has
+exited (exit code: 1, signal:
+
+GOLD RELEVANT (1–3 expected targets):
+  [storybook] score=0.119  shared=['bug']
+  TITLE: [Bug]: Docs not created with storybook-dark-mode addon integrat
+  [godot] score=0.1161  shared=['bug']
+  TITLE: After initialize request LSP sometimes responds incorrectly
+  [storybook] score=0.1101  shared=['bug']
+  TITLE: [Bug]: Failed to run on sveltekit monorepo(pnpm workspace)
+
+TOP-5 RETRIEVED:
+  #1 score=0.1190  [storybook]  labels=['bug'] ← GOLD HIT
+  TITLE: [Bug]: Docs not created with storybook-dark-mode addon integrat
+  #2 score=0.1161  [godot]  labels=['bug'] ← GOLD HIT
+  TITLE: After initialize request LSP sometimes responds incorrectly
+  #3 score=0.1114  [go]  labels=['gopls', 'tools']
+  TITLE: x/tools/gopls: upstream feature requests
+  #4 score=0.1101  [storybook]  labels=['bug', 'help wanted'] ← GOLD HIT
+  TITLE: [Bug]: Failed to run on sveltekit monorepo(pnpm workspace)
+  #5 score=0.1004  [create-react-app]  labels=['issue: proposal']
+  TITLE: Error in the demo project, can't do the first run with npm.
+────────────────────────────────────────────────────────────────────────
+[GOOD #3]  repo=svelte  split=val  labels=['feature-request', 'compiler']
+MRR=1.0000  Recall@5=1.0000  Recall@10=1.0000
+
+QUERY:
+TITLE: Restriction of one top level style block causing issues  BODY:
+**Is your feature request related to a problem? Please describe.**
+I've created a tool which preprocesses HTML and scans class names for
+functional CSS. This CSS is then translated into styles using CSS
+variables which are insert
+
+GOLD RELEVANT (1–3 expected targets):
+  [animate.css] score=0.1776  shared=['feature-request']
+  TITLE: [Docs] Svelte-Animate
+  [animate.css] score=0.1459  shared=['feature-request']
+  TITLE: [FEATURE] Combining multiple classes
+  [storybook] score=0.1363  shared=['feature-request']
+  TITLE: [Feature Request]: Pass `isStoryArgsReset` or similar to `rende
+
+TOP-5 RETRIEVED:
+  #1 score=0.1776  [animate.css]  labels=['feature-request'] ← GOLD HIT
+  TITLE: [Docs] Svelte-Animate
+  #2 score=0.1460  [create-react-app]  labels=['issue: proposal']
+  TITLE: Allow prefixing generated CSS class names for namespacing (loca
+  #3 score=0.1459  [animate.css]  labels=['feature-request'] ← GOLD HIT
+  TITLE: [FEATURE] Combining multiple classes
+  #4 score=0.1363  [storybook]  labels=['feature-request'] ← GOLD HIT
+  TITLE: [Feature Request]: Pass `isStoryArgsReset` or similar to `rende
+  #5 score=0.1338  [storybook]  labels=['feature-request']
+  TITLE: [Feature Request]: Support @remarks tsdoc block
+────────────────────────────────────────────────────────────────────────
+[GOOD #4]  repo=vscode  split=val  labels=['bug', 'help wanted', 'good first issue', 'terminal']
+MRR=1.0000  Recall@5=1.0000  Recall@10=1.0000
+
+QUERY:
+TITLE: DECSCUSR 0 should reset to the user-defined cursorStyle  BODY:
+VS Code Version: 1.88.1  OS: Linux    Steps to Reproduce:    1. Add
+`"terminal.integrated.cursorStyle": "line"` to your settings.json  2.
+Run these commands in the integrated terminal:  ```sh  printf "\033[4
+q" # set cursor style
+
+GOLD RELEVANT (1–3 expected targets):
+  [terminal] score=0.194  shared=['terminal']
+  TITLE: Refine customization around text color adjustment
+  [terminal] score=0.1686  shared=['terminal']
+  TITLE: Switching OS input method resets Terminal colors and zoom
+  [terminal] score=0.161  shared=['terminal']
+  TITLE: Neither TIOCGWINSZ nor 14t allow introspection of the window si
+
+TOP-5 RETRIEVED:
+  #1 score=0.1940  [terminal]  labels=['terminal'] ← GOLD HIT
+  TITLE: Refine customization around text color adjustment
+  #2 score=0.1686  [terminal]  labels=['terminal'] ← GOLD HIT
+  TITLE: Switching OS input method resets Terminal colors and zoom
+  #3 score=0.1610  [terminal]  labels=['terminal'] ← GOLD HIT
+  TITLE: Neither TIOCGWINSZ nor 14t allow introspection of the window si
+  #4 score=0.1547  [terminal]  labels=['terminal']
+  TITLE: Cursor attributes cannot be set with ANSI VT Sequences before a
+  #5 score=0.1413  [terminal]  labels=['terminal']
+  TITLE: Add support for `--file,-f configuration_file` for reading a li
+────────────────────────────────────────────────────────────────────────
+[GOOD #5]  repo=TypeScript  split=test  labels=['discussion']
+MRR=1.0000  Recall@5=0.3333  Recall@10=0.3333
+
+QUERY:
+TITLE: Start following semantic versioning  BODY: ### 🔍 Search Terms
+`semantic versioning`  ### ✅ Viability Checklist  - [X] This wouldn't
+be a breaking change in existing TypeScript/JavaScript code - [X] This
+wouldn't change the runtime behavior of existing JavaScript code - [X]
+This could be impl
+
+GOLD RELEVANT (1–3 expected targets):
+  [material-ui] score=0.1246  shared=['discussion']
+  TITLE: [Discussion] Versioning strategy for the typings
+  [vue] score=0.0864  shared=['discussion']
+  TITLE: Consistency in `$refs`: all children of $refs array using same 
+  [electron] score=0.0773  shared=['discussion']
+  TITLE: [Bug]: Electron 21 breaks node-api stability guarantees
+
+TOP-5 RETRIEVED:
+  #1 score=0.1246  [material-ui]  labels=['discussion'] ← GOLD HIT
+  TITLE: [Discussion] Versioning strategy for the typings
+  #2 score=0.1123  [next.js]  labels=['bug']
+  TITLE: [NEXT-1065] Breaking change in 12.3.4 for res.end(res.getHeader
+  #3 score=0.1053  [pytorch]  labels=['module: build']
+  TITLE: Versioning for libtorch nightlies
+  #4 score=0.1017  [go]  labels=['tools']
+  TITLE: x/exp/cmd/gorelease: cannot verify consistency of existing tag
+  #5 score=0.0962  [go]  labels=['tools']
+  TITLE: x/tools: automate major version upgrades for modules
+────────────────────────────────────────────────────────────────────────
+[GOOD #6]  repo=neovim  split=test  labels=['bug', 'platform:windows']
+MRR=0.5000  Recall@5=0.6667  Recall@10=1.0000
+
+QUERY:
+TITLE: Opening more than one file of an sshfs mount fails on windows
+BODY: I mounted a remote directory via SSHFS-Win (V2.7.17334) and
+WinFsp (2019.2).    Now when i open the first file in the mounted
+directory everything i tried worked as expected. Opening, writing, ...
+all work fine.    The probl
+
+GOLD RELEVANT (1–3 expected targets):
+  [godot] score=0.1106  shared=['bug']
+  TITLE: LSP: Neovim not initilzing correctly
+  [godot] score=0.1032  shared=['bug', 'platform:windows']
+  TITLE: The FileDialog could not get the path to the file correctly
+  [godot] score=0.095  shared=['bug']
+  TITLE: Cannot open res:// file from directory in exported project thro
+
+TOP-5 RETRIEVED:
+  #1 score=0.1142  [PowerToys]  labels=['enhancement']
+  TITLE: [Feature Request] File Location/Path Display and Label
+  #2 score=0.1106  [godot]  labels=['bug', 'needs testing'] ← GOLD HIT
+  TITLE: LSP: Neovim not initilzing correctly
+  #3 score=0.1094  [kubernetes]  labels=['kind/bug', 'triage/accepted']
+  TITLE: Kubelet deletes CSI mount points if a "requiresrepublish" call 
+  #4 score=0.1078  [rustdesk]  labels=['enhancement', 'help wanted']
+  TITLE: mount local drive to remote (usb redirect)
+  #5 score=0.1032  [godot]  labels=['bug', 'platform:windows'] ← GOLD HIT
+  TITLE: The FileDialog could not get the path to the file correctly
+────────────────────────────────────────────────────────────────────────
+[GOOD #7]  repo=neovim  split=test  labels=['bug', 'documentation']
+MRR=0.5000  Recall@5=0.6667  Recall@10=1.0000
+
+QUERY:
+TITLE: `autocmd BufRead * autocmd FileType <buffer> ++once` doesn't
+work  BODY: ### Describe the bug  The autocmd described in `:help
+restore-cursor` doesn't work.  ### Steps to reproduce  A simple
+reproducer would be:    ```  autocmd BufRead * autocmd FileType
+<buffer> ++once echo "wurst"  ```  ###
+
+GOLD RELEVANT (1–3 expected targets):
+  [godot] score=0.1575  shared=['bug']
+  TITLE: LSP x Neovim crash after saving and reloading a script
+  [godot] score=0.1127  shared=['documentation']
+  TITLE: CodeEdit's code-completion doesn't work
+  [godot] score=0.1094  shared=['bug']
+  TITLE: OS.execute trouble with shell evaluation ("export PATH=test && 
+
+TOP-5 RETRIEVED:
+  #1 score=0.1703  [terminal]  labels=[]
+  TITLE: Cursor shape keep changing
+  #2 score=0.1575  [godot]  labels=['bug', 'crash'] ← GOLD HIT
+  TITLE: LSP x Neovim crash after saving and reloading a script
+  #3 score=0.1414  [terminal]  labels=['help wanted', 'terminal']
+  TITLE: Cursor appears in unfocused window when the buffer changes in t
+  #4 score=0.1202  [create-react-app]  labels=['issue: bug report']
+  TITLE: Misdetection of vim as opened code editor while nvim is running
+  #5 score=0.1127  [godot]  labels=['discussion', 'documentation'] ← GOLD HIT
+  TITLE: CodeEdit's code-completion doesn't work
+────────────────────────────────────────────────────────────────────────
+[GOOD #8]  repo=tauri  split=val  labels=['help wanted']
+MRR=0.5000  Recall@5=0.3333  Recall@10=0.3333
+
+QUERY:
+TITLE: v2 requiring an instance of App, AppHandle or Window to get
+access to path functions like home_dir()  BODY: in v1, all you needed
+was to import and you had access to paths:  ```rust  use
+tauri::api::path::home_dir;    #[tauri::command]  fn getPath() ->
+Result<PathBuf> {     home_dir()  ```
+
+GOLD RELEVANT (1–3 expected targets):
+  [angular] score=0.0961  shared=['help wanted']
+  TITLE: docs: Inject `typescript-vfs.worker` instead of create an insta
+  [terminal] score=0.0798  shared=['help wanted']
+  TITLE: Add `bellSound` to the Settings UI
+  [gin] score=0.0701  shared=['help wanted']
+  TITLE: [PROJECT] Future steps
+
+TOP-5 RETRIEVED:
+  #1 score=0.1021  [electron]  labels=['enhancement :sparkles:']
+  TITLE: Feature request: Access to "user gesture" flag, especially in '
+  #2 score=0.0961  [angular]  labels=['help wanted'] ← GOLD HIT
+  TITLE: docs: Inject `typescript-vfs.worker` instead of create an insta
+  #3 score=0.0899  [PowerToys]  labels=['enhancement', 'product-powertoys run']
+  TITLE: [Run] Switch to running app instead of opening a new one
+  #4 score=0.0892  [create-react-app]  labels=[]
+  TITLE: tsconfig compilerOptions paths alias config not working
+  #5 score=0.0883  [godot]  labels=['bug', 'usability']
+  TITLE: Can't access rotation and transform in Node2Ds and call functio
+────────────────────────────────────────────────────────────────────────
+[GOOD #9]  repo=deno  split=val  labels=['bug']
+MRR=0.3333  Recall@5=0.3333  Recall@10=1.0000
+
+QUERY:
+TITLE: Bug: patch feature silently fails on invalid `exports` map
+BODY: Took me a couple of hours to narrow this down. When you use
+`patch` to point to a local JSR dependency, it will always ignore it
+when the `export` map contains an error. This is not obvious to the
+user as no error message is sh
+
+GOLD RELEVANT (1–3 expected targets):
+  [next.js] score=0.1243  shared=['bug']
+  TITLE: next package can't be found when using --turbo and deno 2 rc in
+  [storybook] score=0.0927  shared=['bug']
+  TITLE: [Bug]: Automatic naming is not working with grouped named expor
+  [next.js] score=0.0922  shared=['bug']
+  TITLE: Failed to parse source map: TypeError: Cannot read properties o
+
+TOP-5 RETRIEVED:
+  #1 score=0.1725  [node]  labels=['feature-request']
+  TITLE: import.meta.main
+  #2 score=0.1664  [create-react-app]  labels=['issue: proposal']
+  TITLE: Deno support
+  #3 score=0.1243  [next.js]  labels=['bug'] ← GOLD HIT
+  TITLE: next package can't be found when using --turbo and deno 2 rc in
+  #4 score=0.1156  [ui]  labels=[]
+  TITLE: [feat]: add native support for deno 2 as a package manager.
+  #5 score=0.0933  [angular]  labels=[]
+  TITLE: Reconsider usefulness of flatModuleOutFile
+────────────────────────────────────────────────────────────────────────
+[GOOD #10]  repo=vscode  split=val  labels=['terminal']
+MRR=0.3333  Recall@5=0.6667  Recall@10=1.0000
+
+QUERY:
+TITLE: Git - Trial GIT_NO_OPT_LOCKS environment variable to avoid
+conflicts between git extension and git in terminal  BODY:
+
+GOLD RELEVANT (1–3 expected targets):
+  [terminal] score=0.1397  shared=['terminal']
+  TITLE: Extension: Pipe output to command palette in Terminal
+  [terminal] score=0.1322  shared=['terminal']
+  TITLE: Launching Terminal Preview as an administrator causes the usern
+  [terminal] score=0.1117  shared=['terminal']
+  TITLE: How do I remove the right-click menu "open in Windows terminal"
+
+TOP-5 RETRIEVED:
+  #1 score=0.1871  [terminal]  labels=[]
+  TITLE: DISCUSSION: Is my app running in Terminal?
+  #2 score=0.1423  [PowerToys]  labels=[]
+  TITLE: Unset Environment Variable Using "Environment Variables" tool
+  #3 score=0.1397  [terminal]  labels=['terminal'] ← GOLD HIT
+  TITLE: Extension: Pipe output to command palette in Terminal
+  #4 score=0.1322  [terminal]  labels=['terminal'] ← GOLD HIT
+  TITLE: Launching Terminal Preview as an administrator causes the usern
+  #5 score=0.1317  [terminal]  labels=[]
+  TITLE: cmd: add environment variable to disable/enable 'Terminate batc
+
+========================================================================
+
+                             BAD RETRIEVALS                             
+
+========================================================================
+────────────────────────────────────────────────────────────────────────
+[BAD #1]  repo=svelte  split=val  labels=['documentation']
+MRR=0.0000  Recall@5=0.0000  Recall@10=0.0000
+
+QUERY:
+TITLE: Updating a keyed {#each} triggers lifecycles in reverse order
+BODY: **Describe the bug**  Updating a key list causes
+onDestroy/onMount lifecycles in reverse order    **Logs**  ```  mount
+{item: "item 1"}  mount {item: "item 2"}  mount {item: "item 3"}
+mount {item: "item 4"}  mount {item: "i
+
+GOLD RELEVANT (1–3 expected targets):
+  [godot] score=0.0746  shared=['documentation']
+  TITLE: CanvasItem.show_behind_parent does nothing if parent has Y sort
+  [godot] score=0.073  shared=['documentation']
+  TITLE: Resources.Load<Json> corrupts json data by adding extra symbols
+  [go] score=0.0728  shared=['documentation']
+  TITLE: cmd/go: document that generate processes packages in command li
+
+TOP-5 RETRIEVED:
+  #1 score=0.1491  [storybook]  labels=['feature-request']
+  TITLE: Controls: subcomponents doesn't show controls column in prop ta
+  #2 score=0.1353  [next.js]  labels=['bug']
+  TITLE: The client component cannot get the type attribute of the child
+  #3 score=0.1318  [react]  labels=[]
+  TITLE: Bug: Nested Suspense Fallback Not Triggering for Child Componen
+  #4 score=0.1183  [vue]  labels=[]
+  TITLE: keep-alive breaks initial transition
+  #5 score=0.1175  [godot]  labels=['bug', 'discussion']
+  TITLE: `@export_storage` is missing parser safeguards
+────────────────────────────────────────────────────────────────────────
+[BAD #2]  repo=svelte  split=val  labels=['compiler']
+MRR=0.0000  Recall@5=0.0000  Recall@10=0.0000
+
+QUERY:
+TITLE: import "with" attribute crashs  BODY: ### Describe the bug
+using `with` or `assert` in import attributes (import statement or
+dynamic import) crashs   ### Reproduction  ```svelte     ```  ### Logs
+```shell Unexpected token  import Miaou from "./cat.svelte" with {
+type: "json" };
+
+GOLD RELEVANT (1–3 expected targets):
+  [go] score=0.0443  shared=['compiler']
+  TITLE: runtime: optionally (reliably) avoid netpoller
+  [go] score=0.0389  shared=['compiler']
+  TITLE: cmd/compile: suboptimal compilation of struct-valued switch sta
+  [go] score=0.0353  shared=['compiler']
+  TITLE: plugin: type switches fail with reflect-created types
+
+TOP-5 RETRIEVED:
+  #1 score=0.1568  [animate.css]  labels=['feature-request']
+  TITLE: [Docs] Svelte-Animate
+  #2 score=0.1418  [react]  labels=[]
+  TITLE: Bug: `eslint-plugin-react-compiler` causes `@babel/generator` t
+  #3 score=0.1382  [storybook]  labels=['feature-request']
+  TITLE: [Feature Request] Support ArgTypes inference from TS prop types
+  #4 score=0.1349  [node]  labels=[]
+  TITLE: What should we do with unknown import assertions?
+  #5 score=0.1325  [storybook]  labels=['bug']
+  TITLE: [Bug]: Svelte source viewer shows events as `event_NAME` in pre
+────────────────────────────────────────────────────────────────────────
+[BAD #3]  repo=tauri  split=val  labels=['help wanted']
+MRR=0.0000  Recall@5=0.0000  Recall@10=0.0000
+
+QUERY:
+TITLE: [feat] upstream nix requirements to nixpkgs  BODY: ### Describe
+the problem  Not sure if this is a bug or a feature, it's borderline
+imo.    Basically what I expect is that when i use the `cargo-tauri`
+derivation from `nixpkgs` that i don't also have to copy and paste a
+bunch of additional pr
+
+GOLD RELEVANT (1–3 expected targets):
+  [storybook] score=0.0916  shared=['help wanted']
+  TITLE: [Documentation]: Need instruction on how to get basic extended 
+  [go] score=0.0838  shared=['help wanted']
+  TITLE: wiki: add page on using private repositories (e.g., on-prem Git
+  [node] score=0.0829  shared=['help wanted']
+  TITLE: Option to have a shared V8 library?
+
+TOP-5 RETRIEVED:
+  #1 score=0.1314  [bitcoin]  labels=[]
+  TITLE: DB_RUNRECOVERY: Fatal error, run database recovery
+  #2 score=0.1176  [go]  labels=['documentation']
+  TITLE: doc: declare a standard for packaging Go for downstream distrib
+  #3 score=0.1160  [create-react-app]  labels=['issue: proposal']
+  TITLE: Support for changing the cache location
+  #4 score=0.1095  [electron]  labels=['enhancement :sparkles:']
+  TITLE: [Feature Request]: Add an option to specify the resource direct
+  #5 score=0.1034  [go]  labels=['proposal']
+  TITLE: proposal: encoding/json: opt-in for true streaming support
+────────────────────────────────────────────────────────────────────────
+[BAD #4]  repo=tauri  split=val  labels=['good first issue']
+MRR=0.0000  Recall@5=0.0000  Recall@10=0.0000
+
+QUERY:
+TITLE: [bug] Improve error messages if `cargo metadata` fails.  BODY:
+### Describe the bug    Running:     `cargo create-tauri-app` or `sh
+<(curl https://create.tauri.app/sh)`    - Tried rust-based (tried
+vanilla and leptos)  frontend as well as Typescript based (vanilla
+with pnpm or deno)    then
+
+GOLD RELEVANT (1–3 expected targets):
+  [next.js] score=0.074  shared=['good first issue']
+  TITLE: POST request succeeds for pages with next dev
+  [storybook] score=0.0688  shared=['good first issue']
+  TITLE: [Bug]: favicon doesn't work for dev server
+  [storybook] score=0.0652  shared=['good first issue']
+  TITLE: [Bug]: Storybook not accessible from local hostname after Vite 
+
+TOP-5 RETRIEVED:
+  #1 score=0.1234  [create-react-app]  labels=['issue: proposal']
+  TITLE: Deno support
+  #2 score=0.1115  [ui]  labels=[]
+  TITLE: [feat]: add native support for deno 2 as a package manager.
+  #3 score=0.1101  [node]  labels=['feature-request']
+  TITLE: import.meta.main
+  #4 score=0.1007  [next.js]  labels=['bug']
+  TITLE: next package can't be found when using --turbo and deno 2 rc in
+  #5 score=0.0995  [storybook]  labels=['bug']
+  TITLE: [Bug]: `storybook dev` crash by `file-system-cache`
+────────────────────────────────────────────────────────────────────────
+[BAD #5]  repo=transformers  split=val  labels=['documentation']
+MRR=0.0000  Recall@5=0.0000  Recall@10=0.0000
+
+QUERY:
+TITLE: Tranformers documentation translation to Italian  BODY: Hi!
+Let's bring the documentation to all the Italian-speaking community :)
+Who would want to translate? Please follow the 🤗 [TRANSLATING guide](h
+ttps://github.com/huggingface/transformers/blob/main/docs/TRANSLATING.
+md). Here is a l
+
+GOLD RELEVANT (1–3 expected targets):
+  [storybook] score=0.1038  shared=['documentation']
+  TITLE: [Bug]: Docs for MDX builder support are incorrect
+  [three.js] score=0.0997  shared=['documentation']
+  TITLE: Docs: Spanish version
+  [three.js] score=0.0972  shared=['documentation']
+  TITLE: Docs: Korean version
+
+TOP-5 RETRIEVED:
+  #1 score=0.2558  [pytorch]  labels=[]
+  TITLE: [fx] symbolic trace "is None" and "is not None" checks
+  #2 score=0.2087  [pytorch]  labels=['module: nn']
+  TITLE: Add head_mask for transformers
+  #3 score=0.2004  [pytorch]  labels=['enhancement']
+  TITLE: xpu: implement aten::_linalg_eigvals for XPU backend (affecting
+  #4 score=0.1851  [pytorch]  labels=['module: docs']
+  TITLE: Torch dynamo deep dive and overview discrepancy
+  #5 score=0.1764  [pytorch]  labels=[]
+  TITLE: [Dynamo] HuggingFace transformers configuration_utils graph bre
+────────────────────────────────────────────────────────────────────────
+[BAD #6]  repo=transformers  split=val  labels=['documentation']
+MRR=0.0000  Recall@5=0.0000  Recall@10=0.0000
+
+QUERY:
+TITLE: 🌐 [i18n-KO] Translating docs to Korean  BODY: Hi!    Let's
+bring the documentation to all the Korean-speaking community 🌏
+(currently 9 out of 77 complete)    Would you want to translate?
+Please follow the 🤗 [TRANSLATING guide](https://github.com/huggingface
+/transformers/blob/main/docs/TRANSL
+
+GOLD RELEVANT (1–3 expected targets):
+  [three.js] score=0.1133  shared=['documentation']
+  TITLE: Docs: Korean version
+  [three.js] score=0.1019  shared=['documentation']
+  TITLE: Docs: Spanish version
+  [storybook] score=0.0738  shared=['documentation']
+  TITLE: [Documentation]: Angular Translations - ngx-translate integrati
+
+TOP-5 RETRIEVED:
+  #1 score=0.1920  [pytorch]  labels=[]
+  TITLE: [fx] symbolic trace "is None" and "is not None" checks
+  #2 score=0.1815  [pytorch]  labels=['enhancement']
+  TITLE: xpu: implement aten::_linalg_eigvals for XPU backend (affecting
+  #3 score=0.1648  [stable-diffusion-webui]  labels=['enhancement']
+  TITLE: [Feature Request]: Make use of Optimum / BetterTransformer opti
+  #4 score=0.1596  [pytorch]  labels=[]
+  TITLE: [Dynamo] HuggingFace transformers configuration_utils graph bre
+  #5 score=0.1594  [pytorch]  labels=['module: nn']
+  TITLE: Add head_mask for transformers
+────────────────────────────────────────────────────────────────────────
+[BAD #7]  repo=transformers  split=val  labels=['performance']
+MRR=0.0000  Recall@5=0.0000  Recall@10=0.0000
+
+QUERY:
+TITLE: [activations] pytorch-1.11+ Tanh Gelu Approximation  BODY: # 🚀
+Feature request    As kindly flagged by @vadimkantorov pt-1.11 will
+have a fast Tanh Gelu Approximation as implemented here
+https://github.com/pytorch/pytorch/pull/61439 so we could replace our
+manual implementation with the fast
+
+GOLD RELEVANT (1–3 expected targets):
+  [go] score=0.0538  shared=['performance']
+  TITLE: crypto/cipher: easy optimisations to xorBytes
+  [next.js] score=0.0515  shared=['performance']
+  TITLE: Next build perf issue with long string `.concat` function
+  [go] score=0.0506  shared=['performance']
+  TITLE: cmd/compile: missed devirtualization
+
+TOP-5 RETRIEVED:
+  #1 score=0.2056  [pytorch]  labels=[]
+  TITLE: Support ONNX opset 20 to export GELU to one single op
+  #2 score=0.2048  [pytorch]  labels=['module: nn', 'enhancement']
+  TITLE: Add additional "sigmoid" approximation to GeLu activation?
+  #3 score=0.1888  [pytorch]  labels=[]
+  TITLE: NVFuser failing extremal opinfos
+  #4 score=0.1816  [pytorch]  labels=[]
+  TITLE: functorch roll-up issue for 2.1
+  #5 score=0.1726  [pytorch]  labels=[]
+  TITLE: ☂️  Issues that trigger crashes due to corner-case API usages
+────────────────────────────────────────────────────────────────────────
+[BAD #8]  repo=TypeScript  split=test  labels=['discussion']
+MRR=0.0000  Recall@5=0.0000  Recall@10=0.0000
+
+QUERY:
+TITLE: Type Guards and CallBack Parameters are any, if worked, could
+successfully defined a callback type and respective guard  BODY:
+**TypeScript Version:**  typescript@3.2.0-dev.20181003    Two bugs in
+one, if both of these issues work, I would be able to properly defined
+a callback type function
+
+GOLD RELEVANT (1–3 expected targets):
+  [godot] score=0.0923  shared=['discussion']
+  TITLE: Provide an error message for each function that currently retur
+  [material-ui] score=0.0898  shared=['discussion']
+  TITLE: [Discussion] Versioning strategy for the typings
+  [godot] score=0.086  shared=['discussion']
+  TITLE: Erroneous Error: The signal is declared but never emitted.   UN
+
+TOP-5 RETRIEVED:
+  #1 score=0.1912  [storybook]  labels=['bug']
+  TITLE: [Bug]: yarn build errors in latest SB example code
+  #2 score=0.1564  [angular]  labels=['feature-request']
+  TITLE: [Feature] Introduce Type-safe Token Providing
+  #3 score=0.1506  [vue]  labels=[]
+  TITLE: Vue.component doesnt except argument of type `Component`
+  #4 score=0.1373  [create-react-app]  labels=[]
+  TITLE: Errors emitted by `react-scripts build` don't include any trace
+  #5 score=0.1349  [angular]  labels=[]
+  TITLE: Using ?. in template does not narrow type in *ngIf directive
+────────────────────────────────────────────────────────────────────────
+[BAD #9]  repo=TypeScript  split=test  labels=['discussion']
+MRR=0.0000  Recall@5=0.0000  Recall@10=0.0000
+
+QUERY:
+TITLE: Native Node.js Integration/Support  BODY: ### 🔍 Search Terms
+native nodejs integration  nodejs support  nodejs integration  run
+nodejs  ### ✅ Viability Checklist  - [X] This wouldn't be a breaking
+change in existing TypeScript/JavaScript code - [X] This wouldn't
+change the runtime behavior o
+
+GOLD RELEVANT (1–3 expected targets):
+  [material-ui] score=0.0922  shared=['discussion']
+  TITLE: [Discussion] Versioning strategy for the typings
+  [electron] score=0.0891  shared=['discussion']
+  TITLE: [Bug]: Electron 21 breaks node-api stability guarantees
+  [electron] score=0.0804  shared=['discussion']
+  TITLE: [API design]: Consistency of platform-specific methods: no-op v
+
+TOP-5 RETRIEVED:
+  #1 score=0.1720  [node]  labels=[]
+  TITLE: How could we support typescript without vendoring it?
+  #2 score=0.1703  [node]  labels=[]
+  TITLE: Add console.log() %c support for parity with browsers, Deno, an
+  #3 score=0.1510  [node]  labels=['feature-request']
+  TITLE: Please make Node.js embeddable (e.g. libnode)
+  #4 score=0.1391  [node]  labels=['help wanted']
+  TITLE: doc: troubleshooting FAQ?
+  #5 score=0.1343  [node]  labels=[]
+  TITLE: module.registerHooks() tracking issue
+────────────────────────────────────────────────────────────────────────
+[BAD #10]  repo=flutter  split=test  labels=['performance']
+MRR=0.0000  Recall@5=0.0000  Recall@10=0.0000
+
+QUERY:
+TITLE: AppKit APIs that block the main queue cause UI to hang on macOS
+BODY: ## Details    ### Full description    It appears there are some
+operations within AppKit on macOS that can noticeably  delay or
+entirely block the main queue.  This manifests in Flutter as jank or
+the UI completely hangin
+
+GOLD RELEVANT (1–3 expected targets):
+  [godot] score=0.0929  shared=['performance']
+  TITLE: HTML5 export for Godot 4.x takes 1-2 minutes to load on macOS
+  [go] score=0.0864  shared=['performance']
+  TITLE: runtime: mark termination is slow to restart mutator
+  [godot] score=0.0835  shared=['performance']
+  TITLE: Game consumes 100% CPU if the window is covered by another OS w
+
+TOP-5 RETRIEVED:
+  #1 score=0.1328  [godot]  labels=['bug']
+  TITLE: window_get_popup_safe_rect error on popups in viewport
+  #2 score=0.1147  [electron]  labels=['enhancement :sparkles:']
+  TITLE: [Feature Request]: Support macOS palette menus
+  #3 score=0.1140  [godot]  labels=['bug']
+  TITLE: (Code-Shown) Popup Menu Makes Ordinary Menu Items Unresponsive
+  #4 score=0.1104  [ui]  labels=['bug']
+  TITLE: [bug]: MenuBar inside ContextMenu close issue
+  #5 score=0.1098  [godot]  labels=['bug']
+  TITLE: PopupMenu with prefer_native_menu=true locks focus on last focu

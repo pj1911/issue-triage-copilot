@@ -1,0 +1,47 @@
+Day 5 — Retrieval Baseline (Lexical: TF-IDF + Cosine)
+========================================================
+
+Corpus : 71,351 train issues  |  58 repos
+Vocab  : 150,000 features  |  matrix 71k × 150k
+Eval   : 37 queries (25 val / 12 test)  |  3 gold / query
+
+Overall
+-------
+  Recall@5   : 0.2252
+  Recall@10  : 0.3514
+  Recall@20  : 0.5045
+  MRR        : 0.2520
+
+By split
+--------
+  test    R@5=0.1667  R@10=0.3056  MRR=0.2196  (n=12)
+  val     R@5=0.2533  R@10=0.3733  MRR=0.2676  (n=25)
+
+By repo
+-------
+  TypeScript       R@5=0.1111  R@10=0.1111  MRR=0.3333  (n=3)
+  deno             R@5=0.4667  R@10=0.6000  MRR=0.4958  (n=5)
+  flutter          R@5=0.0000  R@10=0.1111  MRR=0.0476  (n=3)
+  neovim           R@5=0.4444  R@10=0.6667  MRR=0.3333  (n=3)
+  ollama           R@5=0.1111  R@10=0.3333  MRR=0.1641  (n=3)
+  svelte           R@5=0.2667  R@10=0.4667  MRR=0.2722  (n=5)
+  tauri            R@5=0.0667  R@10=0.2000  MRR=0.1444  (n=5)
+  transformers     R@5=0.0000  R@10=0.0667  MRR=0.0355  (n=5)
+  vscode           R@5=0.4667  R@10=0.5333  MRR=0.3900  (n=5)
+
+Index artifacts
+---------------
+  models/tfidf_retrieval_vectorizer.joblib  (5.8 MB)
+  models/tfidf_retrieval_matrix.npz         (168 MB)
+  models/tfidf_retrieval_ids.npy            (558 KB)
+  data/processed/retrieval_corpus.parquet   (153 MB)
+
+Key observations
+----------------
+  Strong  : deno, neovim, vscode  (R@10 0.53–0.67)
+            Distinctive vocabulary matches corpus tokens directly.
+  Weak    : flutter, transformers  (R@10 0.00–0.07)
+            Semantic mismatch — repo-specific jargon and
+            cross-repo label noise defeat keyword overlap.
+  Next    : Dense retriever (encoder embeddings) should close
+            the gap on the weak repos.

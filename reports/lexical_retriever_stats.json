@@ -1,0 +1,57 @@
+{
+  "n_documents": 71351,
+  "vocab_size": 150000,
+  "matrix_shape": [
+    71351,
+    150000
+  ],
+  "matrix_nnz": 19213319,
+  "vectorizer_params": {
+    "lowercase": true,
+    "strip_accents": "unicode",
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_df": 0.95,
+    "max_features": 150000,
+    "sublinear_tf": true
+  },
+  "smoke_test": [
+    {
+      "query": "App crashes on startup with null pointer exception",
+      "top1_score": 0.1969,
+      "top1_repo": "PowerToys",
+      "top1_labels": [],
+      "top1_text_snippet": "TITLE: Specific Configrurations on Startup\n\nBODY:\n### Description of the new feature / enhancement\n\nHow cool would it be"
+    },
+    {
+      "query": "Add dark mode support to the settings panel",
+      "top1_score": 0.2862,
+      "top1_repo": "Web-Dev-For-Beginners",
+      "top1_labels": [],
+      "top1_text_snippet": "TITLE: Dark Mode\n\nBODY:\nIt is good if you add dark mode in your website.. @WirelessLife \r\nIf you think it is good featur"
+    },
+    {
+      "query": "Performance regression in the latest release",
+      "top1_score": 0.2893,
+      "top1_repo": "go",
+      "top1_labels": [
+        "performance",
+        "compiler"
+      ],
+      "top1_text_snippet": "TITLE: runtime: 2.04% regression in Tile38QueryLoad p50-latency-sec at 24070cf\n\nBODY:\nDiscovered a regression in p50-lat"
+    },
+    {
+      "query": "Documentation for the new API endpoints is missing",
+      "top1_score": 0.1993,
+      "top1_repo": "pytorch",
+      "top1_labels": [
+        "module: docs",
+        "module: nn"
+      ],
+      "top1_text_snippet": "TITLE: nn.CrossMapLRN2d is missing from docs\n\nBODY:\n## \ud83d\udcda Documentation\r\n\r\nDocumentation for `nn.CrossMapLRN2d` is missin"
+    }
+  ]
+}

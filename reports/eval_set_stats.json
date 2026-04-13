@@ -1,0 +1,299 @@
+{
+  "n_queries": 37,
+  "n_val_queries": 25,
+  "n_test_queries": 12,
+  "n_with_gold": 37,
+  "n_queries_no_gold": 0,
+  "gold_per_query": 3.0,
+  "relevant_set_size": {
+    "min": 434,
+    "median": 2291,
+    "max": 18326
+  },
+  "queries_per_repo": {
+    "TypeScript": 3,
+    "deno": 5,
+    "flutter": 3,
+    "neovim": 3,
+    "ollama": 3,
+    "svelte": 5,
+    "tauri": 5,
+    "transformers": 5,
+    "vscode": 5
+  },
+  "label_breakdown": {
+    "2576899734": {
+      "labels": [
+        "bug"
+      ],
+      "n_relevant": 15188,
+      "n_gold": 3
+    },
+    "2505921033": {
+      "labels": [
+        "bug"
+      ],
+      "n_relevant": 15188,
+      "n_gold": 3
+    },
+    "2215760324": {
+      "labels": [
+        "bug"
+      ],
+      "n_relevant": 15188,
+      "n_gold": 3
+    },
+    "2744764213": {
+      "labels": [
+        "bug"
+      ],
+      "n_relevant": 15188,
+      "n_gold": 3
+    },
+    "2497437001": {
+      "labels": [
+        "bug"
+      ],
+      "n_relevant": 15188,
+      "n_gold": 3
+    },
+    "525387244": {
+      "labels": [
+        "documentation"
+      ],
+      "n_relevant": 1455,
+      "n_gold": 3
+    },
+    "2423859025": {
+      "labels": [
+        "compiler"
+      ],
+      "n_relevant": 1791,
+      "n_gold": 3
+    },
+    "718813034": {
+      "labels": [
+        "feature-request",
+        "compiler"
+      ],
+      "n_relevant": 4515,
+      "n_gold": 3
+    },
+    "652500799": {
+      "labels": [
+        "feature-request",
+        "compiler"
+      ],
+      "n_relevant": 4515,
+      "n_gold": 3
+    },
+    "526194760": {
+      "labels": [
+        "documentation"
+      ],
+      "n_relevant": 1455,
+      "n_gold": 3
+    },
+    "2447273640": {
+      "labels": [
+        "help wanted"
+      ],
+      "n_relevant": 2291,
+      "n_gold": 3
+    },
+    "2746614263": {
+      "labels": [
+        "help wanted"
+      ],
+      "n_relevant": 2291,
+      "n_gold": 3
+    },
+    "2076250496": {
+      "labels": [
+        "help wanted"
+      ],
+      "n_relevant": 2291,
+      "n_gold": 3
+    },
+    "1619812129": {
+      "labels": [
+        "help wanted"
+      ],
+      "n_relevant": 2291,
+      "n_gold": 3
+    },
+    "2770550726": {
+      "labels": [
+        "good first issue"
+      ],
+      "n_relevant": 434,
+      "n_gold": 3
+    },
+    "1251151485": {
+      "labels": [
+        "documentation"
+      ],
+      "n_relevant": 1455,
+      "n_gold": 3
+    },
+    "1446296960": {
+      "labels": [
+        "documentation"
+      ],
+      "n_relevant": 1455,
+      "n_gold": 3
+    },
+    "1117687164": {
+      "labels": [
+        "performance"
+      ],
+      "n_relevant": 1101,
+      "n_gold": 3
+    },
+    "2660515189": {
+      "labels": [
+        "documentation"
+      ],
+      "n_relevant": 1455,
+      "n_gold": 3
+    },
+    "2566513776": {
+      "labels": [
+        "discussion"
+      ],
+      "n_relevant": 1734,
+      "n_gold": 3
+    },
+    "1838556850": {
+      "labels": [
+        "bug",
+        "regression"
+      ],
+      "n_relevant": 15277,
+      "n_gold": 3
+    },
+    "2433799786": {
+      "labels": [
+        "bug",
+        "regression"
+      ],
+      "n_relevant": 15277,
+      "n_gold": 3
+    },
+    "2264582800": {
+      "labels": [
+        "bug",
+        "help wanted",
+        "good first issue",
+        "terminal"
+      ],
+      "n_relevant": 18326,
+      "n_gold": 3
+    },
+    "2614879249": {
+      "labels": [
+        "bug",
+        "regression"
+      ],
+      "n_relevant": 15277,
+      "n_gold": 3
+    },
+    "2753024551": {
+      "labels": [
+        "terminal"
+      ],
+      "n_relevant": 1217,
+      "n_gold": 3
+    },
+    "366435415": {
+      "labels": [
+        "discussion"
+      ],
+      "n_relevant": 1734,
+      "n_gold": 3
+    },
+    "2051707856": {
+      "labels": [
+        "discussion"
+      ],
+      "n_relevant": 1734,
+      "n_gold": 3
+    },
+    "2061457144": {
+      "labels": [
+        "discussion"
+      ],
+      "n_relevant": 1734,
+      "n_gold": 3
+    },
+    "1248394300": {
+      "labels": [
+        "performance"
+      ],
+      "n_relevant": 1101,
+      "n_gold": 3
+    },
+    "699667084": {
+      "labels": [
+        "crash"
+      ],
+      "n_relevant": 769,
+      "n_gold": 3
+    },
+    "156637045": {
+      "labels": [
+        "crash"
+      ],
+      "n_relevant": 769,
+      "n_gold": 3
+    },
+    "544527453": {
+      "labels": [
+        "bug",
+        "platform:windows"
+      ],
+      "n_relevant": 15261,
+      "n_gold": 3
+    },
+    "1550475755": {
+      "labels": [
+        "bug",
+        "documentation"
+      ],
+      "n_relevant": 16524,
+      "n_gold": 3
+    },
+    "520574738": {
+      "labels": [
+        "enhancement",
+        "platform:windows"
+      ],
+      "n_relevant": 5441,
+      "n_gold": 3
+    },
+    "2474097429": {
+      "labels": [
+        "feature-request",
+        "performance"
+      ],
+      "n_relevant": 3823,
+      "n_gold": 3
+    },
+    "2332190974": {
+      "labels": [
+        "documentation",
+        "feature-request"
+      ],
+      "n_relevant": 4174,
+      "n_gold": 3
+    },
+    "2528419723": {
+      "labels": [
+        "bug",
+        "performance"
+      ],
+      "n_relevant": 16079,
+      "n_gold": 3
+    }
+  }
+}

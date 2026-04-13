@@ -9,6 +9,8 @@ An end-to-end ML project for automated GitHub issue triage — predicting labels
 - [x] Data cleaning, label rules, leakage-safe repo-level split
 - [x] Baseline classifiers (majority + TF-IDF + logistic regression)
 - [x] Encoder fine-tuning (DistilBERT, multi-label)
+- [x] Retrieval baseline (lexical, TF-IDF + cosine)
+- [ ] Dense retrieval (encoder embeddings)
 - [ ] Retrieval-augmented labeling
 - [ ] Fine-tuned LLM
 - [ ] Demo app
@@ -40,17 +42,63 @@ An end-to-end ML project for automated GitHub issue triage — predicting labels
 
 ---
 
+## Day 5 — Retrieval baseline
+
+**Goal:** build a similar-issue retriever so the system can use repo-specific history instead of relying only on classifier generalization.
+
+### Retrieval metrics (lexical: TF-IDF + cosine)
+
+Eval set: 37 queries (25 val / 12 test), 3 gold relevant docs per query.
+
+| Metric | Score |
+|---|---|
+| Recall@5 | 0.225 |
+| Recall@10 | 0.351 |
+| Recall@20 | 0.505 |
+| MRR | 0.252 |
+
+**By repo:**
+
+| Repo | R@5 | R@10 | MRR |
+|---|---|---|---|
+| deno | 0.467 | 0.600 | 0.496 |
+| neovim | 0.444 | 0.667 | 0.333 |
+| vscode | 0.467 | 0.533 | 0.390 |
+| svelte | 0.267 | 0.467 | 0.272 |
+| ollama | 0.111 | 0.333 | 0.164 |
+| TypeScript | 0.111 | 0.111 | 0.333 |
+| tauri | 0.067 | 0.200 | 0.144 |
+| flutter | 0.000 | 0.111 | 0.048 |
+| transformers | 0.000 | 0.067 | 0.036 |
+
+**Analysis:**
+- **Strong repos (deno, neovim, vscode):** distinctive vocabulary maps directly to corpus tokens — lexical matching is sufficient
+- **Weak repos (flutter, transformers):** repo-specific jargon and cross-repo label noise defeat keyword overlap; semantic matching needed
+- **Failure modes** (from manual examples): label-only mismatch (query uses abstract language with no surface-form overlap) and cross-repo vocabulary gap (same label, completely different technical domain)
+
+### Corpus
+
+71,351 train issues — title + body + labels + repo per document. Only train issues included; no val/test contamination.
+
+| | |
+|---|---|
+| Documents | 71,351 |
+| Repos | 58 |
+| Labeled | 46,094 (64.6%) |
+| Vocab size | 150,000 features |
+
+---
+
 ## Project structure
 
 ```
 src/
   data/          # ingestion, cleaning, split, preprocessing
   models/        # encoder training, evaluation, ablations
+  retrieval/     # corpus building, lexical retriever, eval, examples
   utils/         # shared paths
-models/          # saved checkpoints and configs
-reports/         # metrics, error analysis, comparison tables
-artifacts/
-  encoder/       # all encoder experiment artifacts
+models/          # saved checkpoints and retrieval index
+reports/         # metrics, error analysis, retrieval eval
 configs/         # label cleaning rules
 data/            # raw / interim / processed (gitignored)
 ```
@@ -80,6 +128,14 @@ python -m src.models.evaluate_encoder
 # ablations
 python -m src.models.sweep_threshold
 python -m src.models.ablation_title_only
+
+# retrieval baseline (CPU only)
+python -m src.retrieval.build_corpus       # build retrieval corpus from train
+python -m src.retrieval.lexical_retriever  # fit TF-IDF index + smoke test
+python -m src.retrieval.build_eval         # build 37-query eval set
+python -m src.retrieval.evaluate_retrieval # Recall@k + MRR
+python -m src.retrieval.export_examples   # 10 good / 10 bad examples
+python -m src.retrieval.save_outputs       # write report + CSV
 ```
 
 ---
