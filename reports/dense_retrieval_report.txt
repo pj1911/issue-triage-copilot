@@ -1,0 +1,37 @@
+Day 6 — Dense Retrieval Baseline (BAAI/bge-small-en-v1.5)
+============================================================
+
+Model  : BAAI/bge-small-en-v1.5
+Pooling: CLS token + L2 normalisation
+Corpus : 71,351 train issues  |  58 repos
+Eval   : 37 queries (25 val / 12 test)  |  3 gold / query
+
+Overall
+-------
+  Recall@5   : 0.0450
+  Recall@10  : 0.0721
+  Recall@20  : 0.0811
+  MRR        : 0.0985
+
+By split
+--------
+  test               R@5=0.0833  R@10=0.1111  R@20=0.1111  MRR=0.1551  (n=12)
+  val                R@5=0.0267  R@10=0.0533  R@20=0.0667  MRR=0.0714  (n=25)
+
+By repo
+-------
+  TypeScript         R@5=0.1111  R@10=0.1111  R@20=0.1111  MRR=0.3333  (n=3)
+  deno               R@5=0.0667  R@10=0.0667  R@20=0.0667  MRR=0.1000  (n=5)
+  flutter            R@5=0.1111  R@10=0.1111  R@20=0.1111  MRR=0.1667  (n=3)
+  neovim             R@5=0.1111  R@10=0.2222  R@20=0.2222  MRR=0.1204  (n=3)
+  ollama             R@5=0.0000  R@10=0.0000  R@20=0.0000  MRR=0.0000  (n=3)
+  svelte             R@5=0.0000  R@10=0.0667  R@20=0.1333  MRR=0.0368  (n=5)
+  tauri              R@5=0.0000  R@10=0.0000  R@20=0.0000  MRR=0.0000  (n=5)
+  transformers       R@5=0.0667  R@10=0.1333  R@20=0.1333  MRR=0.2200  (n=5)
+  vscode             R@5=0.0000  R@10=0.0000  R@20=0.0000  MRR=0.0000  (n=5)
+
+Index artifacts
+---------------
+  models/dense_doc_embeddings.npy
+  models/dense_doc_ids.npy
+  models/dense_model_config.json

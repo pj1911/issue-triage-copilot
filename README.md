@@ -10,7 +10,7 @@ An end-to-end ML project for automated GitHub issue triage — predicting labels
 - [x] Baseline classifiers (majority + TF-IDF + logistic regression)
 - [x] Encoder fine-tuning (DistilBERT, multi-label)
 - [x] Retrieval baseline (lexical, TF-IDF + cosine)
-- [ ] Dense retrieval (encoder embeddings)
+- [x] Dense retrieval (encoder embeddings)
 - [ ] Retrieval-augmented labeling
 - [ ] Fine-tuned LLM
 - [ ] Demo app
@@ -89,6 +89,41 @@ Eval set: 37 queries (25 val / 12 test), 3 gold relevant docs per query.
 
 ---
 
+## Day 6 — Dense retrieval baseline
+
+**Goal:** replace TF-IDF with BAAI/bge-small-en-v1.5 embeddings and measure whether semantic matching improves on the same 37-query eval set.
+
+### Results (same eval set as Day 5)
+
+| Metric | Lexical | Dense | Δ |
+|---|---|---|---|
+| Recall@5 | 0.225 | 0.045 | -0.180 |
+| Recall@10 | 0.351 | 0.072 | -0.279 |
+| Recall@20 | 0.505 | 0.081 | -0.424 |
+| MRR | 0.252 | 0.099 | -0.153 |
+
+**Hard repos (lexical was weakest):**
+
+| Repo | Method | R@10 | MRR |
+|---|---|---|---|
+| flutter | Lexical | 0.111 | 0.048 |
+| flutter | Dense | 0.111 | **0.167** |
+| transformers | Lexical | 0.067 | 0.036 |
+| transformers | Dense | **0.133** | **0.220** |
+
+### Analysis
+
+Overall dense underperforms — but the eval set gold docs were selected by TF-IDF cosine similarity, which structurally favors lexical retrieval. The signal that matters: on the two repos where lexical was near-zero (flutter, transformers), dense is strictly better.
+
+Example exports (37 queries classified):
+- **3 dense wins** — both on `transformers` with `documentation` labels; dense understood the concept where lexical had no surface overlap
+- **10 dense failures** — `bug` reports on vscode/deno; keyword-heavy issues that TF-IDF handles exactly
+- **5 both fail** — TypeScript `discussion` labels; abstract issues neither method anchors
+
+**Conclusion:** lexical and dense are complementary. Lexical wins on concrete bug keywords; dense wins on semantic/conceptual labels. Neither handles abstract discussions. Next step: reciprocal rank fusion.
+
+---
+
 ## Project structure
 
 ```
@@ -136,6 +171,11 @@ python -m src.retrieval.build_eval         # build 37-query eval set
 python -m src.retrieval.evaluate_retrieval # Recall@k + MRR
 python -m src.retrieval.export_examples   # 10 good / 10 bad examples
 python -m src.retrieval.save_outputs       # write report + CSV
+
+# dense retrieval (requires GPU — see dense_retriever.slurm for HPC)
+python -m src.retrieval.dense_retriever          # encode 71k docs, save index
+python -m src.retrieval.evaluate_dense           # Recall@k + MRR vs lexical
+python -m src.retrieval.export_dense_examples   # dense wins / failures / both-fail
 ```
 
 ---

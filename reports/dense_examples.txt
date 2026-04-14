@@ -1,0 +1,782 @@
+DENSE vs LEXICAL — RETRIEVAL COMPARISON EXAMPLES
+BAAI/bge-small-en-v1.5  vs  TF-IDF + Cosine
+Eval set: 37 queries | 3 gold docs/query
+
+========================================================================
+
+========================================================================
+                DENSE WINS  (dense hit, lexical missed)                 
+========================================================================
+────────────────────────────────────────────────────────────────────────
+[DENSE_WIN #1]  repo=transformers  split=val
+labels=['documentation']
+Lexical  R@10=0.000  MRR=0.0000   Dense  R@10=0.333  MRR=1.0000
+
+QUERY:
+TITLE: 🌐 [i18n-KO] Translating docs to Korean  BODY: Hi!    Let's
+bring the documentation to all the Korean-speaking community 🌏
+(currently 9 out of 77 complete)    Would you want to translate?
+Please follow the 🤗 [TRANSLATING guide](https://github.com/huggingface
+/transformers/blob/main/docs/TRANSL
+
+GOLD RELEVANT:
+  [three.js]  shared=['documentation']
+  TITLE: Docs: Korean version
+  [three.js]  shared=['documentation']
+  TITLE: Docs: Spanish version
+  [storybook]  shared=['documentation']
+  TITLE: [Documentation]: Angular Translations - ngx-translate integrati
+
+LEXICAL TOP-5:
+  #1 score=0.1920  [pytorch]  labels=[]
+  TITLE: [fx] symbolic trace "is None" and "is not None" checks
+  #2 score=0.1815  [pytorch]  labels=['enhancement']
+  TITLE: xpu: implement aten::_linalg_eigvals for XPU backend (affecting
+  #3 score=0.1648  [stable-diffusion-webui]  labels=['enhancement']
+  TITLE: [Feature Request]: Make use of Optimum / BetterTransformer opti
+  #4 score=0.1596  [pytorch]  labels=[]
+  TITLE: [Dynamo] HuggingFace transformers configuration_utils graph bre
+  #5 score=0.1594  [pytorch]  labels=['module: nn']
+  TITLE: Add head_mask for transformers
+
+DENSE TOP-5:
+  #1 score=0.8286  [three.js]  labels=['documentation'] ← GOLD
+  TITLE: Docs: Korean version
+  #2 score=0.8214  [clean-code-javascript]  labels=['help wanted']
+  TITLE: Want to translate to Arabic, Japanese, French, etc.?
+  #3 score=0.8164  [electron]  labels=['enhancement :sparkles:']
+  TITLE: [Feature Request]: Please Add Korean Translation in Crowdin!
+  #4 score=0.8164  [java-design-patterns]  labels=[]
+  TITLE: Translate to Korean
+  #5 score=0.8030  [PowerToys]  labels=[]
+  TITLE: A number of mistranslation in Korean text
+────────────────────────────────────────────────────────────────────────
+[DENSE_WIN #2]  repo=neovim  split=test
+labels=['enhancement', 'platform:windows']
+Lexical  R@10=0.000  MRR=0.0000   Dense  R@10=0.333  MRR=0.2500
+
+QUERY:
+TITLE: Windows: use AF_UNIX instead of named pipes  BODY: `AF_UNIX` is
+supported on Windows now, and has some advantages over named pipes:
+https://devblogs.microsoft.com/commandline/af_unix-comes-to-windows/
+libuv issue: https://github.com/libuv/libuv/issues/2537
+
+GOLD RELEVANT:
+  [PowerToys]  shared=['enhancement']
+  TITLE: Feature Request: PowerToys Run > Folder > Respect Default Termi
+  [godot]  shared=['enhancement', 'platform:windows']
+  TITLE: Export to Windows: Missing export template for architecture arm
+  [thefuck]  shared=['enhancement']
+  TITLE: Doesn't handle pipes
+
+LEXICAL TOP-5:
+  #1 score=0.1800  [node]  labels=[]
+  TITLE: Add a new env var `UV_LOOP_ENABLE_IO_URING_SQPOLL`
+  #2 score=0.1606  [node]  labels=[]
+  TITLE: win: block running nodejs on Windows 8.1 and before?
+  #3 score=0.1578  [terminal]  labels=['help wanted']
+  TITLE: Apply C Build Insights to Solution to attempt to improve build 
+  #4 score=0.1547  [terminal]  labels=[]
+  TITLE: Build with ASAN (address sanitizer) and run against those build
+  #5 score=0.1546  [terminal]  labels=['help wanted']
+  TITLE: look into C++ build throughput
+
+DENSE TOP-5:
+  #1 score=0.7735  [go]  labels=['compiler']
+  TITLE: x/sys/windows: named pipes support on Windows
+  #2 score=0.7638  [go]  labels=['help wanted']
+  TITLE: os: Windows named pipes are listed as regular by Stat
+  #3 score=0.7600  [go]  labels=['proposal']
+  TITLE: x/sys/windows/namedpipe: new package
+  #4 score=0.7556  [thefuck]  labels=['enhancement', 'help wanted'] ← GOLD
+  TITLE: Doesn't handle pipes
+  #5 score=0.7439  [go]  labels=[]
+  TITLE: os: could not iterate over named pipes on Windows
+────────────────────────────────────────────────────────────────────────
+[DENSE_WIN #3]  repo=transformers  split=val
+labels=['documentation']
+Lexical  R@10=0.000  MRR=0.0000   Dense  R@10=0.333  MRR=0.1000
+
+QUERY:
+TITLE: Tranformers documentation translation to Italian  BODY: Hi!
+Let's bring the documentation to all the Italian-speaking community :)
+Who would want to translate? Please follow the 🤗 [TRANSLATING guide](h
+ttps://github.com/huggingface/transformers/blob/main/docs/TRANSLATING.
+md). Here is a l
+
+GOLD RELEVANT:
+  [storybook]  shared=['documentation']
+  TITLE: [Bug]: Docs for MDX builder support are incorrect
+  [three.js]  shared=['documentation']
+  TITLE: Docs: Spanish version
+  [three.js]  shared=['documentation']
+  TITLE: Docs: Korean version
+
+LEXICAL TOP-5:
+  #1 score=0.2558  [pytorch]  labels=[]
+  TITLE: [fx] symbolic trace "is None" and "is not None" checks
+  #2 score=0.2087  [pytorch]  labels=['module: nn']
+  TITLE: Add head_mask for transformers
+  #3 score=0.2004  [pytorch]  labels=['enhancement']
+  TITLE: xpu: implement aten::_linalg_eigvals for XPU backend (affecting
+  #4 score=0.1851  [pytorch]  labels=['module: docs']
+  TITLE: Torch dynamo deep dive and overview discrepancy
+  #5 score=0.1764  [pytorch]  labels=[]
+  TITLE: [Dynamo] HuggingFace transformers configuration_utils graph bre
+
+DENSE TOP-5:
+  #1 score=0.7813  [three.js]  labels=['documentation']
+  TITLE: Docs: Italian version
+  #2 score=0.7721  [stable-diffusion-webui]  labels=['documentation']
+  TITLE: Documentation translation
+  #3 score=0.7714  [java-design-patterns]  labels=[]
+  TITLE: Translation to Italian
+  #4 score=0.7572  [material-ui]  labels=[]
+  TITLE: [docs] Translate the documentation to Chinese / 将文档翻译成中文
+  #5 score=0.7530  [javascript-algorithms]  labels=['enhancement']
+  TITLE: Italian Language
+
+========================================================================
+              DENSE FAILURES  (lexical hit, dense missed)               
+========================================================================
+────────────────────────────────────────────────────────────────────────
+[DENSE_FAIL #1]  repo=vscode  split=val
+labels=['bug', 'help wanted', 'good first issue', 'terminal']
+Lexical  R@10=1.000  MRR=1.0000   Dense  R@10=0.000  MRR=0.0000
+
+QUERY:
+TITLE: DECSCUSR 0 should reset to the user-defined cursorStyle  BODY:
+VS Code Version: 1.88.1  OS: Linux    Steps to Reproduce:    1. Add
+`"terminal.integrated.cursorStyle": "line"` to your settings.json  2.
+Run these commands in the integrated terminal:  ```sh  printf "\033[4
+q" # set cursor style
+
+GOLD RELEVANT:
+  [terminal]  shared=['terminal']
+  TITLE: Refine customization around text color adjustment
+  [terminal]  shared=['terminal']
+  TITLE: Switching OS input method resets Terminal colors and zoom
+  [terminal]  shared=['terminal']
+  TITLE: Neither TIOCGWINSZ nor 14t allow introspection of the window si
+
+LEXICAL TOP-5:
+  #1 score=0.1940  [terminal]  labels=['terminal'] ← GOLD
+  TITLE: Refine customization around text color adjustment
+  #2 score=0.1686  [terminal]  labels=['terminal'] ← GOLD
+  TITLE: Switching OS input method resets Terminal colors and zoom
+  #3 score=0.1610  [terminal]  labels=['terminal'] ← GOLD
+  TITLE: Neither TIOCGWINSZ nor 14t allow introspection of the window si
+  #4 score=0.1547  [terminal]  labels=['terminal']
+  TITLE: Cursor attributes cannot be set with ANSI VT Sequences before a
+  #5 score=0.1413  [terminal]  labels=['terminal']
+  TITLE: Add support for `--file,-f configuration_file` for reading a li
+
+DENSE TOP-5:
+  #1 score=0.7866  [terminal]  labels=['help wanted', 'terminal']
+  TITLE: The CursorStyle in TerminalTheme does not seem to work
+  #2 score=0.7847  [terminal]  labels=['help wanted', 'terminal']
+  TITLE: Cursor doesn't change back to what's specified in the settings.
+  #3 score=0.7770  [opencv]  labels=['bug']
+  TITLE: negative cursor position overflow in python mouse callbacks
+  #4 score=0.7732  [godot]  labels=['bug']
+  TITLE: Editor text input cursor position resets on save
+  #5 score=0.7722  [terminal]  labels=['terminal']
+  TITLE: The Terminal needs to support `"cursorTextColor": null`
+────────────────────────────────────────────────────────────────────────
+[DENSE_FAIL #2]  repo=deno  split=val
+labels=['bug']
+Lexical  R@10=1.000  MRR=1.0000   Dense  R@10=0.000  MRR=0.0000
+
+QUERY:
+TITLE: Issues regarding integration of Clerk with NextJS  BODY:
+Version: Deno 2.0    ### What is the issue?  Basically, if you are
+trying to integrate Clerk with NextJS it will immediately crash when
+the first page is trying to compile.  It passes the middleware
+compilation, but when it hits the pag
+
+GOLD RELEVANT:
+  [next.js]  shared=['bug']
+  TITLE: Failed to parse source map: TypeError: Cannot read properties o
+  [next.js]  shared=['bug']
+  TITLE: NextJS does not work with FreeBSD
+  [next.js]  shared=['bug']
+  TITLE: WorkerError after updating Next.js from v13.2.4 to v13.4.16
+
+LEXICAL TOP-5:
+  #1 score=0.1748  [next.js]  labels=['bug'] ← GOLD
+  TITLE: Failed to parse source map: TypeError: Cannot read properties o
+  #2 score=0.1502  [next.js]  labels=['bug'] ← GOLD
+  TITLE: NextJS does not work with FreeBSD
+  #3 score=0.1448  [next.js]  labels=['bug'] ← GOLD
+  TITLE: WorkerError after updating Next.js from v13.2.4 to v13.4.16
+  #4 score=0.1408  [next.js]  labels=['bug']
+  TITLE: [NEXT-707] Next.js 13.2.1: Custom TypeScript ESLint setup fails
+  #5 score=0.1267  [create-react-app]  labels=[]
+  TITLE: npm start isssue
+
+DENSE TOP-5:
+  #1 score=0.7815  [next.js]  labels=['bug']
+  TITLE: Having both NextJS and Strapi in the same monorepo makes lintin
+  #2 score=0.7800  [next.js]  labels=[]
+  TITLE: NextJS 13 and Mongoose drop OverwriteModelError sometimes
+  #3 score=0.7797  [next.js]  labels=[]
+  TITLE: NextJS middleware crash does not target global-error.tsx
+  #4 score=0.7779  [next.js]  labels=['bug']
+  TITLE: nextjs server crashes a esm package with type="module"
+  #5 score=0.7775  [next.js]  labels=[]
+  TITLE: Next.js TypeError: Cannot read properties of undefined (reading
+────────────────────────────────────────────────────────────────────────
+[DENSE_FAIL #3]  repo=deno  split=val
+labels=['bug']
+Lexical  R@10=1.000  MRR=1.0000   Dense  R@10=0.000  MRR=0.0000
+
+QUERY:
+TITLE: npm compat: typescript-language-server  BODY: Version: Deno
+1.42.0    typescript-language-server@4.3.3 fails to work correctly
+```    2024-03-29T18:39:10.362 helix_lsp::transport [ERROR] typescript
+err <- "error: Uncaught (in promise) Error: tsserver process has
+exited (exit code: 1, signal:
+
+GOLD RELEVANT:
+  [storybook]  shared=['bug']
+  TITLE: [Bug]: Docs not created with storybook-dark-mode addon integrat
+  [godot]  shared=['bug']
+  TITLE: After initialize request LSP sometimes responds incorrectly
+  [storybook]  shared=['bug']
+  TITLE: [Bug]: Failed to run on sveltekit monorepo(pnpm workspace)
+
+LEXICAL TOP-5:
+  #1 score=0.1190  [storybook]  labels=['bug'] ← GOLD
+  TITLE: [Bug]: Docs not created with storybook-dark-mode addon integrat
+  #2 score=0.1161  [godot]  labels=['bug'] ← GOLD
+  TITLE: After initialize request LSP sometimes responds incorrectly
+  #3 score=0.1114  [go]  labels=['gopls', 'tools']
+  TITLE: x/tools/gopls: upstream feature requests
+  #4 score=0.1101  [storybook]  labels=['bug', 'help wanted'] ← GOLD
+  TITLE: [Bug]: Failed to run on sveltekit monorepo(pnpm workspace)
+  #5 score=0.1004  [create-react-app]  labels=['issue: proposal']
+  TITLE: Error in the demo project, can't do the first run with npm.
+
+DENSE TOP-5:
+  #1 score=0.8058  [next.js]  labels=['bug']
+  TITLE: SyntaxError: Unexpected token 'export' and type:module can't fi
+  #2 score=0.8038  [next.js]  labels=['bug']
+  TITLE: Type Error while trying to run dev server
+  #3 score=0.7965  [next.js]  labels=[]
+  TITLE: `export const { foo } = ...` broken
+  #4 score=0.7941  [create-react-app]  labels=['issue: bug report']
+  TITLE: tsconfig can't be read with some compilerOptions.baseUrl and re
+  #5 score=0.7937  [next.js]  labels=['bug']
+  TITLE: Exporting client components as an object throws an error.
+────────────────────────────────────────────────────────────────────────
+[DENSE_FAIL #4]  repo=tauri  split=val
+labels=['help wanted']
+Lexical  R@10=0.333  MRR=0.5000   Dense  R@10=0.000  MRR=0.0000
+
+QUERY:
+TITLE: v2 requiring an instance of App, AppHandle or Window to get
+access to path functions like home_dir()  BODY: in v1, all you needed
+was to import and you had access to paths:  ```rust  use
+tauri::api::path::home_dir;    #[tauri::command]  fn getPath() ->
+Result<PathBuf> {     home_dir()  ```
+
+GOLD RELEVANT:
+  [angular]  shared=['help wanted']
+  TITLE: docs: Inject `typescript-vfs.worker` instead of create an insta
+  [terminal]  shared=['help wanted']
+  TITLE: Add `bellSound` to the Settings UI
+  [gin]  shared=['help wanted']
+  TITLE: [PROJECT] Future steps
+
+LEXICAL TOP-5:
+  #1 score=0.1021  [electron]  labels=['enhancement :sparkles:']
+  TITLE: Feature request: Access to "user gesture" flag, especially in '
+  #2 score=0.0961  [angular]  labels=['help wanted'] ← GOLD
+  TITLE: docs: Inject `typescript-vfs.worker` instead of create an insta
+  #3 score=0.0899  [PowerToys]  labels=['enhancement', 'product-powertoys run']
+  TITLE: [Run] Switch to running app instead of opening a new one
+  #4 score=0.0892  [create-react-app]  labels=[]
+  TITLE: tsconfig compilerOptions paths alias config not working
+  #5 score=0.0883  [godot]  labels=['bug', 'usability']
+  TITLE: Can't access rotation and transform in Node2Ds and call functio
+
+DENSE TOP-5:
+  #1 score=0.7815  [create-react-app]  labels=['issue: proposal']
+  TITLE: Expose paths overrides as envvars
+  #2 score=0.7602  [next.js]  labels=['bug']
+  TITLE: Non-interactive `create-next-app ` with `--src-dir` or `--app` 
+  #3 score=0.7578  [go]  labels=[]
+  TITLE: net/http: ServeMux.Handler does not populate named path wildcar
+  #4 score=0.7568  [godot]  labels=['bug', 'needs testing']
+  TITLE: Resources: get_path() does not work anymore and the inspector s
+  #5 score=0.7551  [godot]  labels=['bug']
+  TITLE: Resources with paths containing `../` fail to import in exporte
+────────────────────────────────────────────────────────────────────────
+[DENSE_FAIL #5]  repo=neovim  split=test
+labels=['bug', 'platform:windows']
+Lexical  R@10=1.000  MRR=0.5000   Dense  R@10=0.000  MRR=0.0000
+
+QUERY:
+TITLE: Opening more than one file of an sshfs mount fails on windows
+BODY: I mounted a remote directory via SSHFS-Win (V2.7.17334) and
+WinFsp (2019.2).    Now when i open the first file in the mounted
+directory everything i tried worked as expected. Opening, writing, ...
+all work fine.    The probl
+
+GOLD RELEVANT:
+  [godot]  shared=['bug']
+  TITLE: LSP: Neovim not initilzing correctly
+  [godot]  shared=['bug', 'platform:windows']
+  TITLE: The FileDialog could not get the path to the file correctly
+  [godot]  shared=['bug']
+  TITLE: Cannot open res:// file from directory in exported project thro
+
+LEXICAL TOP-5:
+  #1 score=0.1142  [PowerToys]  labels=['enhancement']
+  TITLE: [Feature Request] File Location/Path Display and Label
+  #2 score=0.1106  [godot]  labels=['bug', 'needs testing'] ← GOLD
+  TITLE: LSP: Neovim not initilzing correctly
+  #3 score=0.1094  [kubernetes]  labels=['kind/bug', 'triage/accepted']
+  TITLE: Kubelet deletes CSI mount points if a "requiresrepublish" call 
+  #4 score=0.1078  [rustdesk]  labels=['enhancement', 'help wanted']
+  TITLE: mount local drive to remote (usb redirect)
+  #5 score=0.1032  [godot]  labels=['bug', 'platform:windows'] ← GOLD
+  TITLE: The FileDialog could not get the path to the file correctly
+
+DENSE TOP-5:
+  #1 score=0.7498  [kubernetes]  labels=['kind/bug', 'triage/accepted']
+  TITLE: One pv with NFS can be mounted by two pods even with ReadWriteO
+  #2 score=0.7357  [node]  labels=[]
+  TITLE: fs.realpath fails to provide a canonical path for mountpoints o
+  #3 score=0.7305  [node]  labels=[]
+  TITLE: createWriteStream has problems in a CIFS mount path with node 2
+  #4 score=0.7285  [go]  labels=[]
+  TITLE: os: file write blocks subsequent Open() with "sharing violation
+  #5 score=0.7274  [go]  labels=[]
+  TITLE: os: Readdir swallows partial results if it fails to Lstat any f
+────────────────────────────────────────────────────────────────────────
+[DENSE_FAIL #6]  repo=vscode  split=val
+labels=['bug', 'regression']
+Lexical  R@10=0.333  MRR=0.3333   Dense  R@10=0.000  MRR=0.0000
+
+QUERY:
+TITLE: Extension packs with only 1 walkthrough should open on that
+walkthrough registration  BODY:
+
+GOLD RELEVANT:
+  [ui]  shared=['bug']
+  TITLE: [bug]: combobox should open on ArrowDown key press when focused
+  [godot]  shared=['bug']
+  TITLE: Memory starvation while (re)importing assets
+  [godot]  shared=['bug']
+  TITLE: Detached script editor can become frozen with multiple, differi
+
+LEXICAL TOP-5:
+  #1 score=0.2273  [PowerToys]  labels=['enhancement']
+  TITLE: [SG] - open on Monitor where Cursor is
+  #2 score=0.2181  [excalidraw]  labels=[]
+  TITLE: docker excalidraw/excalidraw cannot upload own asset packs
+  #3 score=0.1349  [ui]  labels=['bug'] ← GOLD
+  TITLE: [bug]: combobox should open on ArrowDown key press when focused
+  #4 score=0.1337  [PowerToys]  labels=[]
+  TITLE: [Peek] Investigate if we can open on secondary monitor
+  #5 score=0.1186  [PowerToys]  labels=['idea-new powertoy']
+  TITLE: Screen-Specific Window Opening
+
+DENSE TOP-5:
+  #1 score=0.7420  [storybook]  labels=['bug']
+  TITLE: Symbols coming from multiple bundles
+  #2 score=0.7401  [terminal]  labels=['terminal']
+  TITLE: Use synchronous APIs for AppExtensionCatalog
+  #3 score=0.7386  [PowerToys]  labels=['enhancement', 'product-powertoys run']
+  TITLE: [Run][Plugin Manager] Direct shortcut to execute a single plugi
+  #4 score=0.7338  [excalidraw]  labels=['enhancement']
+  TITLE: support importing multiple excalidrawlib files at once
+  #5 score=0.7333  [nvm]  labels=[]
+  TITLE: Allow other package managers for `default-packages` installatio
+────────────────────────────────────────────────────────────────────────
+[DENSE_FAIL #7]  repo=vscode  split=val
+labels=['terminal']
+Lexical  R@10=1.000  MRR=0.3333   Dense  R@10=0.000  MRR=0.0000
+
+QUERY:
+TITLE: Git - Trial GIT_NO_OPT_LOCKS environment variable to avoid
+conflicts between git extension and git in terminal  BODY:
+
+GOLD RELEVANT:
+  [terminal]  shared=['terminal']
+  TITLE: Extension: Pipe output to command palette in Terminal
+  [terminal]  shared=['terminal']
+  TITLE: Launching Terminal Preview as an administrator causes the usern
+  [terminal]  shared=['terminal']
+  TITLE: How do I remove the right-click menu "open in Windows terminal"
+
+LEXICAL TOP-5:
+  #1 score=0.1871  [terminal]  labels=[]
+  TITLE: DISCUSSION: Is my app running in Terminal?
+  #2 score=0.1423  [PowerToys]  labels=[]
+  TITLE: Unset Environment Variable Using "Environment Variables" tool
+  #3 score=0.1397  [terminal]  labels=['terminal'] ← GOLD
+  TITLE: Extension: Pipe output to command palette in Terminal
+  #4 score=0.1322  [terminal]  labels=['terminal'] ← GOLD
+  TITLE: Launching Terminal Preview as an administrator causes the usern
+  #5 score=0.1317  [terminal]  labels=[]
+  TITLE: cmd: add environment variable to disable/enable 'Terminate batc
+
+DENSE TOP-5:
+  #1 score=0.7808  [terminal]  labels=['terminal']
+  TITLE: AtlasEngine does not respect bellStyle for git bash
+  #2 score=0.7610  [go]  labels=['builders']
+  TITLE: x/build: `git` errors with `gnutls_handshake() failed: Error in
+  #3 score=0.7560  [go]  labels=['help wanted']
+  TITLE: x/review/git-codereview: do not mail CLs with editor temp files
+  #4 score=0.7521  [go]  labels=['documentation']
+  TITLE: x/review/git-codereview: incomplete help documentation for `git
+  #5 score=0.7504  [terminal]  labels=['help wanted', 'terminal']
+  TITLE: Windows Terminal (Dev Build) should display version as git comm
+────────────────────────────────────────────────────────────────────────
+[DENSE_FAIL #8]  repo=ollama  split=test
+labels=['documentation', 'feature-request']
+Lexical  R@10=0.667  MRR=0.3333   Dense  R@10=0.000  MRR=0.0000
+
+QUERY:
+TITLE: Surface the embedding dimension of a model in docs/api  BODY:
+Currently, the embedding dimension isn't listed on the ollama docs or
+on the model card from ollama.
+
+GOLD RELEVANT:
+  [pytorch]  shared=['feature-request']
+  TITLE: Optionally include padding_idx items in the EmbeddingBag reduct
+  [pytorch]  shared=['feature-request']
+  TITLE: Feature request: Fix dimension convention for masks in transfor
+  [opencv]  shared=['feature-request']
+  TITLE: Add `DFT_COLS` to `cv::DftFlags`
+
+LEXICAL TOP-5:
+  #1 score=0.1644  [pytorch]  labels=['module: nn']
+  TITLE: AssertionError: was expecting embedding dimension of 22, but go
+  #2 score=0.1361  [stable-diffusion-webui]  labels=['enhancement']
+  TITLE: [Feature Request]: Enable the name of the embedding used to be 
+  #3 score=0.1095  [pytorch]  labels=['feature-request', 'module: nn'] ← GOLD
+  TITLE: Optionally include padding_idx items in the EmbeddingBag reduct
+  #4 score=0.1068  [langchain]  labels=[]
+  TITLE: DOC: sql-ollama leads to removed page
+  #5 score=0.1061  [stable-diffusion-webui]  labels=['enhancement']
+  TITLE: [Feature Request]: Save settings on train tab
+
+DENSE TOP-5:
+  #1 score=0.7192  [stable-diffusion-webui]  labels=['enhancement']
+  TITLE: [Feature Request]: A way to easy disable embendings
+  #2 score=0.7181  [pytorch]  labels=[]
+  TITLE: Allow add_embedding to have dict for metadata
+  #3 score=0.7077  [stable-diffusion-webui]  labels=['enhancement']
+  TITLE: Organize embeddings in directories
+  #4 score=0.7034  [pytorch]  labels=['module: docs']
+  TITLE: [Docs] Update broadcasting documentation for scalars / n-dimens
+  #5 score=0.7006  [pytorch]  labels=['module: docs']
+  TITLE: Named Tensors: size of a named dimension
+────────────────────────────────────────────────────────────────────────
+[DENSE_FAIL #9]  repo=svelte  split=val
+labels=['feature-request', 'compiler']
+Lexical  R@10=1.000  MRR=0.2500   Dense  R@10=0.000  MRR=0.0588
+
+QUERY:
+TITLE: Get access to a component's own class in the script and script
+module ("$$self" or else)  BODY: This is a proposal to add a `$$self`
+( or else ) reserved keyword that resolves into a reference to a
+component's own class, such as to make the following output `<h1>hello
+world !</h1>`  ```svelte
+
+GOLD RELEVANT:
+  [storybook]  shared=['feature-request']
+  TITLE: [Feature Request] Support ArgTypes inference from TS prop types
+  [storybook]  shared=['feature-request']
+  TITLE: [BUG] Svelte custom-elements not working
+  [animate.css]  shared=['feature-request']
+  TITLE: [Docs] Svelte-Animate
+
+LEXICAL TOP-5:
+  #1 score=0.1474  [storybook]  labels=['bug']
+  TITLE: [Bug]: Svelte 5 docgen crashes with `MyComponent is not defined
+  #2 score=0.1339  [storybook]  labels=['bug']
+  TITLE: [Bug] Svelte component documentation isn't added to autodocs do
+  #3 score=0.1332  [storybook]  labels=['bug']
+  TITLE: @storybook/svelte: component not render into .mdx
+  #4 score=0.1312  [storybook]  labels=['feature-request'] ← GOLD
+  TITLE: [Feature Request] Support ArgTypes inference from TS prop types
+  #5 score=0.1149  [storybook]  labels=['bug']
+  TITLE: [Bug]: Error when using `+page.svelte` files as `component` in 
+
+DENSE TOP-5:
+  #1 score=0.7739  [You-Dont-Know-JS]  labels=[]
+  TITLE: Ch 7 - ES6 and Beyond, typo.
+  #2 score=0.7726  [create-react-app]  labels=['issue: proposal']
+  TITLE: Remove `self` from confusing-browser-globals
+  #3 score=0.7719  [angular]  labels=[]
+  TITLE: [language-server] TypeScript interface for element definitions 
+  #4 score=0.7677  [storybook]  labels=['help wanted', 'documentation']
+  TITLE: [Documentation]: Svelte - Better documentation for decorators/r
+  #5 score=0.7659  [vue]  labels=['discussion']
+  TITLE: Make vue available to other libraries without having to import 
+────────────────────────────────────────────────────────────────────────
+[DENSE_FAIL #10]  repo=vscode  split=val
+labels=['bug', 'regression']
+Lexical  R@10=0.333  MRR=0.2000   Dense  R@10=0.000  MRR=0.0000
+
+QUERY:
+TITLE: When selecting a specific font (MonoLisa), weird symbols
+instead of characters on latest insiders build  BODY: <!-- ⚠️⚠️ Do Not
+Delete This! bug_report_template ⚠️⚠️ -->  <!-- Please read our Rules
+of Conduct: https://opensource.microsoft.com/codeofconduct/ -->  <!--
+🕮 Read our guide about su
+
+GOLD RELEVANT:
+  [next.js]  shared=['bug']
+  TITLE: Next.js v14.2 creates source map issues with various components
+  [godot]  shared=['bug']
+  TITLE: AudioStreamInteractive does not scale with editor & other minor
+  [stable-diffusion-webui]  shared=['bug']
+  TITLE: [Bug]: extensions 與 extranetworks 總是無法載入列表
+
+LEXICAL TOP-5:
+  #1 score=0.2053  [PowerToys]  labels=['product-powertoys run']
+  TITLE: PowerToys Run is slow at looking up VS Code workspaces
+  #2 score=0.1907  [create-react-app]  labels=['issue: proposal']
+  TITLE: Create-react-app should create a jsconfig.json file by default
+  #3 score=0.1703  [electron]  labels=[]
+  TITLE: [Bug]: Electron incorrectly detects light system theme instead 
+  #4 score=0.1506  [Web-Dev-For-Beginners]  labels=[]
+  TITLE: Add a note also to https://code.visualstudio.com/docs/editor/pr
+  #5 score=0.1457  [next.js]  labels=['bug'] ← GOLD
+  TITLE: Next.js v14.2 creates source map issues with various components
+
+DENSE TOP-5:
+  #1 score=0.8050  [terminal]  labels=['terminal']
+  TITLE: Some Unicode characters appear to be recognised incorrectly
+  #2 score=0.8042  [godot]  labels=['bug']
+  TITLE: [TextServer] Some texts are shaped accidently when use system f
+  #3 score=0.7945  [terminal]  labels=['help wanted', 'terminal']
+  TITLE: Add an option to toggle the width of ambiguous-width characters
+  #4 score=0.7917  [terminal]  labels=['terminal']
+  TITLE: Incorrect Font Fallback Behavior (we fall back to Segoe UI some
+  #5 score=0.7860  [storybook]  labels=['bug']
+  TITLE: [Bug]: Weird CSS added that affects docs styling
+
+========================================================================
+          BOTH FAIL  (neither retriever found gold in top-10)           
+========================================================================
+────────────────────────────────────────────────────────────────────────
+[BOTH_FAIL #1]  repo=TypeScript  split=test
+labels=['discussion']
+Lexical  R@10=0.000  MRR=0.0000   Dense  R@10=0.000  MRR=0.0000
+
+QUERY:
+TITLE: Native Node.js Integration/Support  BODY: ### 🔍 Search Terms
+native nodejs integration  nodejs support  nodejs integration  run
+nodejs  ### ✅ Viability Checklist  - [X] This wouldn't be a breaking
+change in existing TypeScript/JavaScript code - [X] This wouldn't
+change the runtime behavior o
+
+GOLD RELEVANT:
+  [material-ui]  shared=['discussion']
+  TITLE: [Discussion] Versioning strategy for the typings
+  [electron]  shared=['discussion']
+  TITLE: [Bug]: Electron 21 breaks node-api stability guarantees
+  [electron]  shared=['discussion']
+  TITLE: [API design]: Consistency of platform-specific methods: no-op v
+
+LEXICAL TOP-5:
+  #1 score=0.1720  [node]  labels=[]
+  TITLE: How could we support typescript without vendoring it?
+  #2 score=0.1703  [node]  labels=[]
+  TITLE: Add console.log() %c support for parity with browsers, Deno, an
+  #3 score=0.1510  [node]  labels=['feature-request']
+  TITLE: Please make Node.js embeddable (e.g. libnode)
+  #4 score=0.1391  [node]  labels=['help wanted']
+  TITLE: doc: troubleshooting FAQ?
+  #5 score=0.1343  [node]  labels=[]
+  TITLE: module.registerHooks() tracking issue
+
+DENSE TOP-5:
+  #1 score=0.8248  [node]  labels=[]
+  TITLE: How could we support typescript without vendoring it?
+  #2 score=0.8209  [node]  labels=['feature-request']
+  TITLE: Please make Node.js embeddable (e.g. libnode)
+  #3 score=0.7986  [node]  labels=[]
+  TITLE: Discussion: New “ESM by default” mode
+  #4 score=0.7959  [node]  labels=['feature-request']
+  TITLE: consider allowing libnode.h (libnode.a/ libnode.lib) and libnod
+  #5 score=0.7906  [react-native]  labels=[]
+  TITLE: TypeScript type definition ReactNode not compatible with React 
+────────────────────────────────────────────────────────────────────────
+[BOTH_FAIL #2]  repo=TypeScript  split=test
+labels=['discussion']
+Lexical  R@10=0.000  MRR=0.0000   Dense  R@10=0.000  MRR=0.0000
+
+QUERY:
+TITLE: Type Guards and CallBack Parameters are any, if worked, could
+successfully defined a callback type and respective guard  BODY:
+**TypeScript Version:**  typescript@3.2.0-dev.20181003    Two bugs in
+one, if both of these issues work, I would be able to properly defined
+a callback type function
+
+GOLD RELEVANT:
+  [godot]  shared=['discussion']
+  TITLE: Provide an error message for each function that currently retur
+  [material-ui]  shared=['discussion']
+  TITLE: [Discussion] Versioning strategy for the typings
+  [godot]  shared=['discussion']
+  TITLE: Erroneous Error: The signal is declared but never emitted.   UN
+
+LEXICAL TOP-5:
+  #1 score=0.1912  [storybook]  labels=['bug']
+  TITLE: [Bug]: yarn build errors in latest SB example code
+  #2 score=0.1564  [angular]  labels=['feature-request']
+  TITLE: [Feature] Introduce Type-safe Token Providing
+  #3 score=0.1506  [vue]  labels=[]
+  TITLE: Vue.component doesnt except argument of type `Component`
+  #4 score=0.1373  [create-react-app]  labels=[]
+  TITLE: Errors emitted by `react-scripts build` don't include any trace
+  #5 score=0.1349  [angular]  labels=[]
+  TITLE: Using ?. in template does not narrow type in *ngIf directive
+
+DENSE TOP-5:
+  #1 score=0.7951  [next.js]  labels=[]
+  TITLE: Correct type inference when using `fallback: true`
+  #2 score=0.7781  [angular]  labels=['bug']
+  TITLE: Functional guards/interceptors should not provide `DestroyRef`
+  #3 score=0.7761  [node]  labels=[]
+  TITLE: ContextifyContext::PropertyDefinerCallback() never intercepts t
+  #4 score=0.7742  [angular]  labels=['feature-request']
+  TITLE: Add a ghost property to `InjectionToken` for generic type param
+  #5 score=0.7727  [go]  labels=['proposal']
+  TITLE: proposal: spec: permit write defined type in type term
+────────────────────────────────────────────────────────────────────────
+[BOTH_FAIL #3]  repo=deno  split=val
+labels=['bug']
+Lexical  R@10=0.000  MRR=0.0625   Dense  R@10=0.000  MRR=0.0000
+
+QUERY:
+TITLE: zsh: illegal hardware instruction  deno run a.ts  BODY:
+Version: Deno 2.1.2  OS: Mac OS    a.ts  ```ts  export class Case {
+constructor() {      get() as any;    }    @doc    method() {}  }
+function get() {}  function doc(args: any): any {}  console.log(1);
+```  `deno run a.ts` terminal
+
+GOLD RELEVANT:
+  [angular]  shared=['bug']
+  TITLE: resource loader param `request` fails to exclude `undefined` fr
+  [next.js]  shared=['bug']
+  TITLE: Missed correct typings on DevBundlerService
+  [ui]  shared=['bug']
+  TITLE: [bug]: Combining Deno2 with NEXT.js and shadcn is failing
+
+LEXICAL TOP-5:
+  #1 score=0.1680  [create-react-app]  labels=['issue: proposal']
+  TITLE: Deno support
+  #2 score=0.1620  [node]  labels=['feature-request']
+  TITLE: import.meta.main
+  #3 score=0.1332  [node]  labels=[]
+  TITLE: Memory leak - Base class instance
+  #4 score=0.1152  [angular]  labels=[]
+  TITLE: @Injectable does not play well with other class decorators
+  #5 score=0.1137  [angular]  labels=[]
+  TITLE: Add more info to Angular Hydration warning message when app not
+
+DENSE TOP-5:
+  #1 score=0.7826  [go]  labels=['compiler']
+  TITLE: cmd/compile,runtime: SIGILL on `linux-loong64-3a5000`
+  #2 score=0.7758  [electron]  labels=['enhancement :sparkles:', 'discussion']
+  TITLE: [API design]: Consistency of platform-specific methods: no-op v
+  #3 score=0.7756  [next.js]  labels=['bug']
+  TITLE: Type error when compiling superstruct
+  #4 score=0.7660  [go]  labels=['compiler']
+  TITLE: runtime: "interface {} is nil, not *main.T" on linux-amd64-noop
+  #5 score=0.7629  [next.js]  labels=['bug']
+  TITLE: Server Actions that are hybrid types are compiled to `{}` causi
+────────────────────────────────────────────────────────────────────────
+[BOTH_FAIL #4]  repo=deno  split=val
+labels=['bug']
+Lexical  R@10=0.000  MRR=0.0833   Dense  R@10=0.000  MRR=0.0000
+
+QUERY:
+TITLE: Inconsistencies of unrelated but nested workspaces  BODY:
+Version: Deno 1.46.2    Repro repo: https://github.com/albnnc/deno-
+repro-20240830    Possibly related:
+https://github.com/denoland/deno/issues/25226    Should the following
+cases work, or do I have wrong understanding of workspaces in
+
+GOLD RELEVANT:
+  [godot]  shared=['bug']
+  TITLE: UV Map corruption on GLB import
+  [godot]  shared=['bug']
+  TITLE: invalid signal when as return variant, sometimes !
+  [godot]  shared=['bug']
+  TITLE: Ellipsis sometimes not being rendered for RTL text
+
+LEXICAL TOP-5:
+  #1 score=0.2210  [node]  labels=['feature-request']
+  TITLE: import.meta.main
+  #2 score=0.2116  [create-react-app]  labels=['issue: proposal']
+  TITLE: Deno support
+  #3 score=0.1410  [PowerToys]  labels=[]
+  TITLE: Workspaces doesn't recognize firefox developer edtion
+  #4 score=0.1404  [PowerToys]  labels=[]
+  TITLE: Change File Icon
+  #5 score=0.1390  [PowerToys]  labels=['product-powertoys run']
+  TITLE: Chinese Pinyin(拼音) search doesn't work when it corresponds to m
+
+DENSE TOP-5:
+  #1 score=0.7489  [storybook]  labels=['bug']
+  TITLE: Conflicting exports in `@storybook\components` and `@storybook\
+  #2 score=0.7437  [ui]  labels=['bug']
+  TITLE: [bug]: Mixed indentations in the same file
+  #3 score=0.7406  [godot]  labels=['bug']
+  TITLE: GDScript Editor Nesting bug
+  #4 score=0.7351  [godot]  labels=['bug']
+  TITLE: Nested resources are not always saved after being modified exte
+  #5 score=0.7346  [ui]  labels=['bug']
+  TITLE: [bug]: inconsistency in distinguishing files and folders in fil
+────────────────────────────────────────────────────────────────────────
+[BOTH_FAIL #5]  repo=flutter  split=test
+labels=['crash']
+Lexical  R@10=0.000  MRR=0.0000   Dense  R@10=0.000  MRR=0.0000
+
+QUERY:
+TITLE: Throwing in didChangeDependencies after establishing
+dependencies causes failures during test teardown  BODY: ```dart  //
+@dart = 2.8    import 'package:flutter/widgets.dart';  import
+'package:flutter_test/flutter_test.dart';    void main() {
+testWidgets('example', (WidgetTester tester) as
+
+GOLD RELEVANT:
+  [godot]  shared=['crash']
+  TITLE: VisualScript crashes when reconnecting _physics and  _process_p
+  [godot]  shared=['crash']
+  TITLE: Godot v4.3 & windows 11- crash when edit “Renderer: Forward+” p
+  [godot]  shared=['crash']
+  TITLE: Godot crashes in Debug when C# exception is thrown (VS Code and
+
+LEXICAL TOP-5:
+  #1 score=0.1161  [go]  labels=[]
+  TITLE: crypto/tls: TestBogoSuite failures
+  #2 score=0.1146  [storybook]  labels=['feature-request']
+  TITLE: Add Flutter Support
+  #3 score=0.1098  [opencv]  labels=['bug']
+  TITLE: DNN now predicts incorrectly in Universal Windows Platform buil
+  #4 score=0.0986  [electron]  labels=[]
+  TITLE: Crash when closing devtools after focus
+  #5 score=0.0980  [godot]  labels=['bug']
+  TITLE: Theme resource with default font changes on every save
+
+DENSE TOP-5:
+  #1 score=0.7784  [pytorch]  labels=[]
+  TITLE: issues flutter in android studio
+  #2 score=0.7554  [go]  labels=[]
+  TITLE: internal/trace/v2: TestTraceIterPull failures
+  #3 score=0.7505  [godot]  labels=['bug']
+  TITLE: Cyclic dependencies between References, even without any static
+  #4 score=0.7486  [go]  labels=[]
+  TITLE: internal/trace/v2: TestTraceWaitOnPipe failures
+  #5 score=0.7468  [angular]  labels=[]
+  TITLE: Unexpected supression (or undetected) ExpressionChangedAfterItH

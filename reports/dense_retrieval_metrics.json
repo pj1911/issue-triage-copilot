@@ -1,0 +1,587 @@
+{
+  "overall": {
+    "n": 37,
+    "recall@5": 0.045,
+    "recall@10": 0.0721,
+    "recall@20": 0.0811,
+    "mrr": 0.0985
+  },
+  "by_split": {
+    "test": {
+      "n": 12,
+      "recall@5": 0.0833,
+      "recall@10": 0.1111,
+      "recall@20": 0.1111,
+      "mrr": 0.1551
+    },
+    "val": {
+      "n": 25,
+      "recall@5": 0.0267,
+      "recall@10": 0.0533,
+      "recall@20": 0.0667,
+      "mrr": 0.0714
+    }
+  },
+  "by_repo": {
+    "TypeScript": {
+      "n": 3,
+      "recall@5": 0.1111,
+      "recall@10": 0.1111,
+      "recall@20": 0.1111,
+      "mrr": 0.3333
+    },
+    "deno": {
+      "n": 5,
+      "recall@5": 0.0667,
+      "recall@10": 0.0667,
+      "recall@20": 0.0667,
+      "mrr": 0.1
+    },
+    "flutter": {
+      "n": 3,
+      "recall@5": 0.1111,
+      "recall@10": 0.1111,
+      "recall@20": 0.1111,
+      "mrr": 0.1667
+    },
+    "neovim": {
+      "n": 3,
+      "recall@5": 0.1111,
+      "recall@10": 0.2222,
+      "recall@20": 0.2222,
+      "mrr": 0.1204
+    },
+    "ollama": {
+      "n": 3,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0,
+      "mrr": 0.0
+    },
+    "svelte": {
+      "n": 5,
+      "recall@5": 0.0,
+      "recall@10": 0.0667,
+      "recall@20": 0.1333,
+      "mrr": 0.0368
+    },
+    "tauri": {
+      "n": 5,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0,
+      "mrr": 0.0
+    },
+    "transformers": {
+      "n": 5,
+      "recall@5": 0.0667,
+      "recall@10": 0.1333,
+      "recall@20": 0.1333,
+      "mrr": 0.22
+    },
+    "vscode": {
+      "n": 5,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0,
+      "mrr": 0.0
+    }
+  },
+  "per_query": [
+    {
+      "query_id": 2576899734,
+      "query_repo": "deno",
+      "split": "val",
+      "labels": [
+        "bug"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 2505921033,
+      "query_repo": "deno",
+      "split": "val",
+      "labels": [
+        "bug"
+      ],
+      "n_gold": 3,
+      "rr": 0.5,
+      "recall@5": 0.3333333333333333,
+      "recall@10": 0.3333333333333333,
+      "recall@20": 0.3333333333333333
+    },
+    {
+      "query_id": 2215760324,
+      "query_repo": "deno",
+      "split": "val",
+      "labels": [
+        "bug"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 2744764213,
+      "query_repo": "deno",
+      "split": "val",
+      "labels": [
+        "bug"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 2497437001,
+      "query_repo": "deno",
+      "split": "val",
+      "labels": [
+        "bug"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 525387244,
+      "query_repo": "svelte",
+      "split": "val",
+      "labels": [
+        "documentation"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 2423859025,
+      "query_repo": "svelte",
+      "split": "val",
+      "labels": [
+        "compiler"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 718813034,
+      "query_repo": "svelte",
+      "split": "val",
+      "labels": [
+        "feature-request",
+        "compiler"
+      ],
+      "n_gold": 3,
+      "rr": 0.058823529411764705,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.3333333333333333
+    },
+    {
+      "query_id": 652500799,
+      "query_repo": "svelte",
+      "split": "val",
+      "labels": [
+        "feature-request",
+        "compiler"
+      ],
+      "n_gold": 3,
+      "rr": 0.125,
+      "recall@5": 0.0,
+      "recall@10": 0.3333333333333333,
+      "recall@20": 0.3333333333333333
+    },
+    {
+      "query_id": 526194760,
+      "query_repo": "svelte",
+      "split": "val",
+      "labels": [
+        "documentation"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 2447273640,
+      "query_repo": "tauri",
+      "split": "val",
+      "labels": [
+        "help wanted"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 2746614263,
+      "query_repo": "tauri",
+      "split": "val",
+      "labels": [
+        "help wanted"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 2076250496,
+      "query_repo": "tauri",
+      "split": "val",
+      "labels": [
+        "help wanted"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 1619812129,
+      "query_repo": "tauri",
+      "split": "val",
+      "labels": [
+        "help wanted"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 2770550726,
+      "query_repo": "tauri",
+      "split": "val",
+      "labels": [
+        "good first issue"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 1251151485,
+      "query_repo": "transformers",
+      "split": "val",
+      "labels": [
+        "documentation"
+      ],
+      "n_gold": 3,
+      "rr": 0.1,
+      "recall@5": 0.0,
+      "recall@10": 0.3333333333333333,
+      "recall@20": 0.3333333333333333
+    },
+    {
+      "query_id": 1446296960,
+      "query_repo": "transformers",
+      "split": "val",
+      "labels": [
+        "documentation"
+      ],
+      "n_gold": 3,
+      "rr": 1.0,
+      "recall@5": 0.3333333333333333,
+      "recall@10": 0.3333333333333333,
+      "recall@20": 0.3333333333333333
+    },
+    {
+      "query_id": 1117687164,
+      "query_repo": "transformers",
+      "split": "val",
+      "labels": [
+        "performance"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 2660515189,
+      "query_repo": "transformers",
+      "split": "val",
+      "labels": [
+        "documentation"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 2566513776,
+      "query_repo": "transformers",
+      "split": "val",
+      "labels": [
+        "discussion"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 1838556850,
+      "query_repo": "vscode",
+      "split": "val",
+      "labels": [
+        "bug",
+        "regression"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 2433799786,
+      "query_repo": "vscode",
+      "split": "val",
+      "labels": [
+        "bug",
+        "regression"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 2264582800,
+      "query_repo": "vscode",
+      "split": "val",
+      "labels": [
+        "bug",
+        "help wanted",
+        "good first issue",
+        "terminal"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 2614879249,
+      "query_repo": "vscode",
+      "split": "val",
+      "labels": [
+        "bug",
+        "regression"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 2753024551,
+      "query_repo": "vscode",
+      "split": "val",
+      "labels": [
+        "terminal"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 366435415,
+      "query_repo": "TypeScript",
+      "split": "test",
+      "labels": [
+        "discussion"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 2051707856,
+      "query_repo": "TypeScript",
+      "split": "test",
+      "labels": [
+        "discussion"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 2061457144,
+      "query_repo": "TypeScript",
+      "split": "test",
+      "labels": [
+        "discussion"
+      ],
+      "n_gold": 3,
+      "rr": 1.0,
+      "recall@5": 0.3333333333333333,
+      "recall@10": 0.3333333333333333,
+      "recall@20": 0.3333333333333333
+    },
+    {
+      "query_id": 1248394300,
+      "query_repo": "flutter",
+      "split": "test",
+      "labels": [
+        "performance"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 699667084,
+      "query_repo": "flutter",
+      "split": "test",
+      "labels": [
+        "crash"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 156637045,
+      "query_repo": "flutter",
+      "split": "test",
+      "labels": [
+        "crash"
+      ],
+      "n_gold": 3,
+      "rr": 0.5,
+      "recall@5": 0.3333333333333333,
+      "recall@10": 0.3333333333333333,
+      "recall@20": 0.3333333333333333
+    },
+    {
+      "query_id": 544527453,
+      "query_repo": "neovim",
+      "split": "test",
+      "labels": [
+        "bug",
+        "platform:windows"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 1550475755,
+      "query_repo": "neovim",
+      "split": "test",
+      "labels": [
+        "bug",
+        "documentation"
+      ],
+      "n_gold": 3,
+      "rr": 0.1111111111111111,
+      "recall@5": 0.0,
+      "recall@10": 0.3333333333333333,
+      "recall@20": 0.3333333333333333
+    },
+    {
+      "query_id": 520574738,
+      "query_repo": "neovim",
+      "split": "test",
+      "labels": [
+        "enhancement",
+        "platform:windows"
+      ],
+      "n_gold": 3,
+      "rr": 0.25,
+      "recall@5": 0.3333333333333333,
+      "recall@10": 0.3333333333333333,
+      "recall@20": 0.3333333333333333
+    },
+    {
+      "query_id": 2474097429,
+      "query_repo": "ollama",
+      "split": "test",
+      "labels": [
+        "feature-request",
+        "performance"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 2332190974,
+      "query_repo": "ollama",
+      "split": "test",
+      "labels": [
+        "documentation",
+        "feature-request"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    },
+    {
+      "query_id": 2528419723,
+      "query_repo": "ollama",
+      "split": "test",
+      "labels": [
+        "bug",
+        "performance"
+      ],
+      "n_gold": 3,
+      "rr": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.0
+    }
+  ]
+}

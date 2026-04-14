@@ -1,0 +1,2732 @@
+{
+  "dense_win": [
+    {
+      "query_id": 1446296960,
+      "query_repo": "transformers",
+      "query_split": "val",
+      "query_labels": [
+        "documentation"
+      ],
+      "query_snippet": "TITLE: \ud83c\udf10 [i18n-KO] Translating docs to Korean\n\nBODY:\nHi!\r\n\r\nLet's bring the documentation to all the Korean-speaking community \ud83c\udf0f  (currently 9 out of 77 complete)\r\n\r\nWould you want to translate? Please follow the \ud83e\udd17 [TRANSLATING guide](https://github.com/huggingface/transformers/blob/main/docs/TRANSL",
+      "lex_r10": 0.0,
+      "lex_mrr": 0.0,
+      "dense_r10": 0.3333333333333333,
+      "dense_mrr": 1.0,
+      "gold_relevant": [
+        {
+          "corpus_id": 742794197,
+          "corpus_repo": "three.js",
+          "shared_labels": [
+            "documentation"
+          ],
+          "score": 0.1133,
+          "text_snippet": "TITLE: Docs: Korean version\n\nBODY:\nHello I am a college student in South Korea.\r\nI want to translate the documentation into korean.\r\nhttps://threejs.org/docs/index.html#manual/en/introduction/*\r\n\r\nI w"
+        },
+        {
+          "corpus_id": 1611919592,
+          "corpus_repo": "three.js",
+          "shared_labels": [
+            "documentation"
+          ],
+          "score": 0.1019,
+          "text_snippet": "TITLE: Docs: Spanish version\n\nBODY:\n## Description\r\n\r\nHello, everyone. Thank you for this fantastic project and your hard work in maintaining it.\r\n\r\nI'm in love with Three.js and I'd like to contribut"
+        },
+        {
+          "corpus_id": 1841609057,
+          "corpus_repo": "storybook",
+          "shared_labels": [
+            "documentation"
+          ],
+          "score": 0.0738,
+          "text_snippet": "TITLE: [Documentation]: Angular Translations - ngx-translate integration (solution provided in ticket)\n\nBODY:\n### Describe the problem\n\nI see there's documentation for [setting up React translations]("
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.192,
+          "is_gold": false,
+          "corpus_id": 713094501,
+          "corpus_repo": "pytorch",
+          "labels": [],
+          "snippet": "TITLE: [fx] symbolic trace \"is None\" and \"is not None\" checks\n\nBODY:\nthere are many is None or is not None in \r\nhttps://github.com/huggingface/transformers/blob/master/src/transformers/modeling_bert.p"
+        },
+        {
+          "rank": 2,
+          "score": 0.1815,
+          "is_gold": false,
+          "corpus_id": 2669544964,
+          "corpus_repo": "pytorch",
+          "labels": [
+            "enhancement"
+          ],
+          "snippet": "TITLE: xpu: implement aten::_linalg_eigvals for XPU backend (affecting HF Transformers v4.46.0 and later)\n\nBODY:\nRecent changes in Huggingface Transformers (https://github.com/huggingface/transformers"
+        },
+        {
+          "rank": 3,
+          "score": 0.1648,
+          "is_gold": false,
+          "corpus_id": 1462847781,
+          "corpus_repo": "stable-diffusion-webui",
+          "labels": [
+            "enhancement"
+          ],
+          "snippet": "TITLE: [Feature Request]: Make use of Optimum / BetterTransformer optimisations\n\nBODY:\n### Is there an existing issue for this?\r\n\r\n- [X] I have searched the existing issues and checked the recent buil"
+        },
+        {
+          "rank": 4,
+          "score": 0.1596,
+          "is_gold": false,
+          "corpus_id": 1613932426,
+          "corpus_repo": "pytorch",
+          "labels": [],
+          "snippet": "TITLE: [Dynamo] HuggingFace transformers configuration_utils graph break workaround\n\nBODY:\n### \ud83d\udc1b Describe the bug\n\nHF worked around dynamo problem here https://github.com/huggingface/transformers/pull"
+        },
+        {
+          "rank": 5,
+          "score": 0.1594,
+          "is_gold": false,
+          "corpus_id": 2017419313,
+          "corpus_repo": "pytorch",
+          "labels": [
+            "module: nn"
+          ],
+          "snippet": "TITLE: Add head_mask for transformers\n\nBODY:\n### \ud83d\ude80 The feature, motivation and pitch\n\nI am wondering if we can also have the head_mask, which can manually alter the attention_weights after the softmax"
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.8286,
+          "is_gold": true,
+          "corpus_id": 742794197,
+          "corpus_repo": "three.js",
+          "labels": [
+            "documentation"
+          ],
+          "snippet": "TITLE: Docs: Korean version\n\nBODY:\nHello I am a college student in South Korea.\r\nI want to translate the documentation into korean.\r\nhttps://threejs.org/docs/index.html#manual/en/introduction/*\r\n\r\nI w"
+        },
+        {
+          "rank": 2,
+          "score": 0.8214,
+          "is_gold": false,
+          "corpus_id": 201037475,
+          "corpus_repo": "clean-code-javascript",
+          "labels": [
+            "help wanted"
+          ],
+          "snippet": "TITLE: Want to translate to Arabic, Japanese, French, etc.?\n\nBODY:\nStarting to translate to Korean.\r\nFeel free to collaborate.\r\n\r\nCheck it out [here](https://github.com/Hanney-Ryu/clean-code-javascrip"
+        },
+        {
+          "rank": 3,
+          "score": 0.8164,
+          "is_gold": false,
+          "corpus_id": 2439371667,
+          "corpus_repo": "electron",
+          "labels": [
+            "enhancement :sparkles:"
+          ],
+          "snippet": "TITLE: [Feature Request]: Please Add Korean Translation in Crowdin!\n\nBODY:\n### Preflight Checklist\n\n- [X] I have read the [Contributing Guidelines](https://github.com/electron/electron/blob/main/CONTR"
+        },
+        {
+          "rank": 4,
+          "score": 0.8164,
+          "is_gold": false,
+          "corpus_id": 1428665890,
+          "corpus_repo": "java-design-patterns",
+          "labels": [],
+          "snippet": "TITLE: Translate to Korean\n\nBODY:\nThis task tracks the translation of the patterns. More information about the translation process is available at https://github.com/iluwatar/java-design-patterns/wiki"
+        },
+        {
+          "rank": 5,
+          "score": 0.803,
+          "is_gold": false,
+          "corpus_id": 2782432917,
+          "corpus_repo": "PowerToys",
+          "labels": [],
+          "snippet": "TITLE: A number of mistranslation in Korean text\n\nBODY:\n### Microsoft PowerToys version\n\n0.87.1\n\n### Utility with translation issue\n\nGeneral\n\n### \ud83c\udf10 Language affected\n\nKorean\n\n### \u274c Actual phrase(s)\n\n1"
+        }
+      ]
+    },
+    {
+      "query_id": 520574738,
+      "query_repo": "neovim",
+      "query_split": "test",
+      "query_labels": [
+        "enhancement",
+        "platform:windows"
+      ],
+      "query_snippet": "TITLE: Windows: use AF_UNIX instead of named pipes\n\nBODY:\n`AF_UNIX` is supported on Windows now, and has some advantages over named pipes:\r\nhttps://devblogs.microsoft.com/commandline/af_unix-comes-to-windows/\r\n\r\nlibuv issue: https://github.com/libuv/libuv/issues/2537",
+      "lex_r10": 0.0,
+      "lex_mrr": 0.0,
+      "dense_r10": 0.3333333333333333,
+      "dense_mrr": 0.25,
+      "gold_relevant": [
+        {
+          "corpus_id": 1595372800,
+          "corpus_repo": "PowerToys",
+          "shared_labels": [
+            "enhancement"
+          ],
+          "score": 0.0974,
+          "text_snippet": "TITLE: Feature Request: PowerToys Run > Folder > Respect Default Terminal Settings\n\nBODY:\n### Description of the new feature / enhancement\n\nWhen using PowerToys Run, one of the folder context menu opt"
+        },
+        {
+          "corpus_id": 2072185619,
+          "corpus_repo": "godot",
+          "shared_labels": [
+            "enhancement",
+            "platform:windows"
+          ],
+          "score": 0.0768,
+          "text_snippet": "TITLE: Export to Windows: Missing export template for architecture arm64\n\nBODY:\n### Tested versions\n\n4.2.1\n\n### System information\n\nGodot v4.2.1.stable - macOS 14.2.1 - GLES3 (Compatibility) - Apple M"
+        },
+        {
+          "corpus_id": 70325245,
+          "corpus_repo": "thefuck",
+          "shared_labels": [
+            "enhancement"
+          ],
+          "score": 0.0739,
+          "text_snippet": "TITLE: Doesn't handle pipes\n\nBODY:\nIt looks like `fuck` doesn't handle pipes well. If I try to do this in Bash:\n\n``` bash\n$ pss -ef |\u00a0grep foo\n-bash: pss: command not found\n$ fuck\nps -ef | grep foo\nps"
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.18,
+          "is_gold": false,
+          "corpus_id": 2513211846,
+          "corpus_repo": "node",
+          "labels": [],
+          "snippet": "TITLE: Add a new env var `UV_LOOP_ENABLE_IO_URING_SQPOLL`\n\nBODY:\nlibuv disables SQPOLL by default and leaves it to the user/admin to enable/disable. However, I believe it's currently not possible to d"
+        },
+        {
+          "rank": 2,
+          "score": 0.1606,
+          "is_gold": false,
+          "corpus_id": 1551697995,
+          "corpus_repo": "node",
+          "labels": [],
+          "snippet": "TITLE: win: block running nodejs on Windows 8.1 and before?\n\nBODY:\nPer https://github.com/nodejs/node/pull/31954, the current nodejs policy appears to be do block running on EOL systems. Windows 8.1 e"
+        },
+        {
+          "rank": 3,
+          "score": 0.1578,
+          "is_gold": false,
+          "corpus_id": 527354768,
+          "corpus_repo": "terminal",
+          "labels": [
+            "help wanted"
+          ],
+          "snippet": "TITLE: Apply C Build Insights to Solution to attempt to improve build time\n\nBODY:\n@bitcrazed found this and sent e-mail about it.\r\n\r\nhttps://devblogs.microsoft.com/cppblog/introducing-c-build-insights"
+        },
+        {
+          "rank": 4,
+          "score": 0.1547,
+          "is_gold": false,
+          "corpus_id": 692578763,
+          "corpus_repo": "terminal",
+          "labels": [],
+          "snippet": "TITLE: Build with ASAN (address sanitizer) and run against those builds in Helix\n\nBODY:\n> ASan is a fast memory error detector that can find runtime memory issues such as use-after-free and perform ou"
+        },
+        {
+          "rank": 5,
+          "score": 0.1546,
+          "is_gold": false,
+          "corpus_id": 1078842100,
+          "corpus_repo": "terminal",
+          "labels": [
+            "help wanted"
+          ],
+          "snippet": "TITLE: look into C++ build throughput\n\nBODY:\nThe C++ team put out this blog post with information related to tuning up your build... could be something for us to investigate? https://devblogs.microsof"
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.7735,
+          "is_gold": false,
+          "corpus_id": 170349861,
+          "corpus_repo": "go",
+          "labels": [
+            "compiler"
+          ],
+          "snippet": "TITLE: x/sys/windows: named pipes support on Windows\n\nBODY:\n1. What version of Go are you using (`go version`)?\n   go version go1.7rc3 windows/amd64\n2. What operating system and processor architecture"
+        },
+        {
+          "rank": 2,
+          "score": 0.7638,
+          "is_gold": false,
+          "corpus_id": 713665935,
+          "corpus_repo": "go",
+          "labels": [
+            "help wanted"
+          ],
+          "snippet": "TITLE: os: Windows named pipes are listed as regular by Stat\n\nBODY:\n<!--\r\nPlease answer these questions before submitting your issue. Thanks!\r\nFor questions please use one of our forums: https://githu"
+        },
+        {
+          "rank": 3,
+          "score": 0.76,
+          "is_gold": false,
+          "corpus_id": 1056413304,
+          "corpus_repo": "go",
+          "labels": [
+            "proposal"
+          ],
+          "snippet": "TITLE: x/sys/windows/namedpipe: new package\n\nBODY:\n**Update, Dec 8 2021**: Proposed API is in https://github.com/golang/go/issues/49650#issuecomment-976797686 -rsc\r\n\r\n- - - \r\n\r\nhttps://go-review.googl"
+        },
+        {
+          "rank": 4,
+          "score": 0.7556,
+          "is_gold": true,
+          "corpus_id": 70325245,
+          "corpus_repo": "thefuck",
+          "labels": [
+            "enhancement",
+            "help wanted"
+          ],
+          "snippet": "TITLE: Doesn't handle pipes\n\nBODY:\nIt looks like `fuck` doesn't handle pipes well. If I try to do this in Bash:\n\n``` bash\n$ pss -ef |\u00a0grep foo\n-bash: pss: command not found\n$ fuck\nps -ef | grep foo\nps"
+        },
+        {
+          "rank": 5,
+          "score": 0.7439,
+          "is_gold": false,
+          "corpus_id": 451866872,
+          "corpus_repo": "go",
+          "labels": [],
+          "snippet": "TITLE: os: could not iterate over named pipes on Windows\n\nBODY:\n<!-- Please answer these questions before submitting your issue. Thanks! -->\r\n\r\n### What version of Go are you using (`go version`)?\r\n\r\n"
+        }
+      ]
+    },
+    {
+      "query_id": 1251151485,
+      "query_repo": "transformers",
+      "query_split": "val",
+      "query_labels": [
+        "documentation"
+      ],
+      "query_snippet": "TITLE: Tranformers documentation translation to Italian\n\nBODY:\nHi!\r\n\r\nLet's bring the documentation to all the Italian-speaking community :)\r\n\r\nWho would want to translate? Please follow the \ud83e\udd17 [TRANSLATING guide](https://github.com/huggingface/transformers/blob/main/docs/TRANSLATING.md). Here is a l",
+      "lex_r10": 0.0,
+      "lex_mrr": 0.0,
+      "dense_r10": 0.3333333333333333,
+      "dense_mrr": 0.1,
+      "gold_relevant": [
+        {
+          "corpus_id": 1433583725,
+          "corpus_repo": "storybook",
+          "shared_labels": [
+            "documentation"
+          ],
+          "score": 0.1038,
+          "text_snippet": "TITLE: [Bug]: Docs for MDX builder support are incorrect\n\nBODY:\n### Describe the bug\n\nIn the builder [documentation](https://github.com/storybookjs/storybook/blob/e414b9ed958057562e92551724991d325648b"
+        },
+        {
+          "corpus_id": 1611919592,
+          "corpus_repo": "three.js",
+          "shared_labels": [
+            "documentation"
+          ],
+          "score": 0.0997,
+          "text_snippet": "TITLE: Docs: Spanish version\n\nBODY:\n## Description\r\n\r\nHello, everyone. Thank you for this fantastic project and your hard work in maintaining it.\r\n\r\nI'm in love with Three.js and I'd like to contribut"
+        },
+        {
+          "corpus_id": 742794197,
+          "corpus_repo": "three.js",
+          "shared_labels": [
+            "documentation"
+          ],
+          "score": 0.0972,
+          "text_snippet": "TITLE: Docs: Korean version\n\nBODY:\nHello I am a college student in South Korea.\r\nI want to translate the documentation into korean.\r\nhttps://threejs.org/docs/index.html#manual/en/introduction/*\r\n\r\nI w"
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.2558,
+          "is_gold": false,
+          "corpus_id": 713094501,
+          "corpus_repo": "pytorch",
+          "labels": [],
+          "snippet": "TITLE: [fx] symbolic trace \"is None\" and \"is not None\" checks\n\nBODY:\nthere are many is None or is not None in \r\nhttps://github.com/huggingface/transformers/blob/master/src/transformers/modeling_bert.p"
+        },
+        {
+          "rank": 2,
+          "score": 0.2087,
+          "is_gold": false,
+          "corpus_id": 2017419313,
+          "corpus_repo": "pytorch",
+          "labels": [
+            "module: nn"
+          ],
+          "snippet": "TITLE: Add head_mask for transformers\n\nBODY:\n### \ud83d\ude80 The feature, motivation and pitch\n\nI am wondering if we can also have the head_mask, which can manually alter the attention_weights after the softmax"
+        },
+        {
+          "rank": 3,
+          "score": 0.2004,
+          "is_gold": false,
+          "corpus_id": 2669544964,
+          "corpus_repo": "pytorch",
+          "labels": [
+            "enhancement"
+          ],
+          "snippet": "TITLE: xpu: implement aten::_linalg_eigvals for XPU backend (affecting HF Transformers v4.46.0 and later)\n\nBODY:\nRecent changes in Huggingface Transformers (https://github.com/huggingface/transformers"
+        },
+        {
+          "rank": 4,
+          "score": 0.1851,
+          "is_gold": false,
+          "corpus_id": 2368359096,
+          "corpus_repo": "pytorch",
+          "labels": [
+            "module: docs"
+          ],
+          "snippet": "TITLE: Torch dynamo deep dive and overview discrepancy\n\nBODY:\n### \ud83d\udcda The doc issue\n\nPyTorch docs website has a [compiler_deepdive](https://pytorch.org/docs/stable/torch.compiler_deepdive.html), but the"
+        },
+        {
+          "rank": 5,
+          "score": 0.1764,
+          "is_gold": false,
+          "corpus_id": 1613932426,
+          "corpus_repo": "pytorch",
+          "labels": [],
+          "snippet": "TITLE: [Dynamo] HuggingFace transformers configuration_utils graph break workaround\n\nBODY:\n### \ud83d\udc1b Describe the bug\n\nHF worked around dynamo problem here https://github.com/huggingface/transformers/pull"
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.7813,
+          "is_gold": false,
+          "corpus_id": 1320047332,
+          "corpus_repo": "three.js",
+          "labels": [
+            "documentation"
+          ],
+          "snippet": "TITLE: Docs: Italian version\n\nBODY:\nHello, I'm a software developer and a three.js user. \r\n\r\nI'd like to contribute to the library and I think that the best way to start is by documentation. I'd like "
+        },
+        {
+          "rank": 2,
+          "score": 0.7721,
+          "is_gold": false,
+          "corpus_id": 1508088666,
+          "corpus_repo": "stable-diffusion-webui",
+          "labels": [
+            "documentation"
+          ],
+          "snippet": "TITLE: Documentation translation\n\nBODY:\n### Is there an existing issue for this?\n\n- [X] I have searched the existing issues and checked the recent builds/commits\n\n### What would your feature do ?\n\nIt "
+        },
+        {
+          "rank": 3,
+          "score": 0.7714,
+          "is_gold": false,
+          "corpus_id": 1437319047,
+          "corpus_repo": "java-design-patterns",
+          "labels": [],
+          "snippet": "TITLE: Translation to Italian\n\nBODY:\nThis task tracks the translation of the patterns. More information about the translation process is available at https://github.com/iluwatar/java-design-patterns/w"
+        },
+        {
+          "rank": 4,
+          "score": 0.7572,
+          "is_gold": false,
+          "corpus_id": 1952615430,
+          "corpus_repo": "material-ui",
+          "labels": [],
+          "snippet": "TITLE: [docs] Translate the documentation to Chinese / \u5c06\u6587\u6863\u7ffb\u8bd1\u6210\u4e2d\u6587\n\nBODY:\n### Summary \ud83d\udca1\r\n\r\nThere is a huge community of Chinese developers https://en.wikipedia.org/wiki/List_of_languages_by_total_number_"
+        },
+        {
+          "rank": 5,
+          "score": 0.753,
+          "is_gold": false,
+          "corpus_id": 362935797,
+          "corpus_repo": "javascript-algorithms",
+          "labels": [
+            "enhancement"
+          ],
+          "snippet": "TITLE: Italian Language\n\nBODY:\nCan I help you with the Italian translation? You did a great job!"
+        }
+      ]
+    }
+  ],
+  "dense_fail": [
+    {
+      "query_id": 2264582800,
+      "query_repo": "vscode",
+      "query_split": "val",
+      "query_labels": [
+        "bug",
+        "help wanted",
+        "good first issue",
+        "terminal"
+      ],
+      "query_snippet": "TITLE: DECSCUSR 0 should reset to the user-defined cursorStyle\n\nBODY:\nVS Code Version: 1.88.1\r\nOS: Linux\r\n\r\nSteps to Reproduce:\r\n\r\n1. Add `\"terminal.integrated.cursorStyle\": \"line\"` to your settings.json\r\n2. Run these commands in the integrated terminal:\r\n```sh\r\nprintf \"\\033[4 q\" # set cursor style ",
+      "lex_r10": 1.0,
+      "lex_mrr": 1.0,
+      "dense_r10": 0.0,
+      "dense_mrr": 0.0,
+      "gold_relevant": [
+        {
+          "corpus_id": 1605993683,
+          "corpus_repo": "terminal",
+          "shared_labels": [
+            "terminal"
+          ],
+          "score": 0.194,
+          "text_snippet": "TITLE: Refine customization around text color adjustment\n\nBODY:\n### Windows Terminal version\r\n\r\n1.16.10262.0\r\n\r\n### Windows build number\r\n\r\n10.0.22000.0\r\n\r\n### Other Software\r\n\r\nInside WSL\r\n\r\n### Step"
+        },
+        {
+          "corpus_id": 1028330481,
+          "corpus_repo": "terminal",
+          "shared_labels": [
+            "terminal"
+          ],
+          "score": 0.1686,
+          "text_snippet": "TITLE: Switching OS input method resets Terminal colors and zoom\n\nBODY:\n### Windows Terminal version (or Windows build number)\r\n\r\nWindows 11\r\nVersion: 10.0.22000.258\r\n\r\nWindows Terminal Preview\r\nVersi"
+        },
+        {
+          "corpus_id": 765887941,
+          "corpus_repo": "terminal",
+          "shared_labels": [
+            "terminal"
+          ],
+          "score": 0.161,
+          "text_snippet": "TITLE: Neither TIOCGWINSZ nor 14t allow introspection of the window size in pixels\n\nBODY:\n# Environment\r\n\r\nWindows 10 Pro 20H2 (amd64)\r\n\r\nLatest Windows Terminal Preview, running either msys2 or wsl\r\n"
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.194,
+          "is_gold": true,
+          "corpus_id": 1605993683,
+          "corpus_repo": "terminal",
+          "labels": [
+            "terminal"
+          ],
+          "snippet": "TITLE: Refine customization around text color adjustment\n\nBODY:\n### Windows Terminal version\r\n\r\n1.16.10262.0\r\n\r\n### Windows build number\r\n\r\n10.0.22000.0\r\n\r\n### Other Software\r\n\r\nInside WSL\r\n\r\n### Step"
+        },
+        {
+          "rank": 2,
+          "score": 0.1686,
+          "is_gold": true,
+          "corpus_id": 1028330481,
+          "corpus_repo": "terminal",
+          "labels": [
+            "terminal"
+          ],
+          "snippet": "TITLE: Switching OS input method resets Terminal colors and zoom\n\nBODY:\n### Windows Terminal version (or Windows build number)\r\n\r\nWindows 11\r\nVersion: 10.0.22000.258\r\n\r\nWindows Terminal Preview\r\nVersi"
+        },
+        {
+          "rank": 3,
+          "score": 0.161,
+          "is_gold": true,
+          "corpus_id": 765887941,
+          "corpus_repo": "terminal",
+          "labels": [
+            "terminal"
+          ],
+          "snippet": "TITLE: Neither TIOCGWINSZ nor 14t allow introspection of the window size in pixels\n\nBODY:\n# Environment\r\n\r\nWindows 10 Pro 20H2 (amd64)\r\n\r\nLatest Windows Terminal Preview, running either msys2 or wsl\r\n"
+        },
+        {
+          "rank": 4,
+          "score": 0.1547,
+          "is_gold": false,
+          "corpus_id": 2149529690,
+          "corpus_repo": "terminal",
+          "labels": [
+            "terminal"
+          ],
+          "snippet": "TITLE: Cursor attributes cannot be set with ANSI VT Sequences before any user input\n\nBODY:\n### Windows Terminal version\r\n\r\n1.20.10303.0\r\n\r\n### Windows build number\r\n\r\n10.0.22631.0\r\n\r\n### Other Softwar"
+        },
+        {
+          "rank": 5,
+          "score": 0.1413,
+          "is_gold": false,
+          "corpus_id": 604671087,
+          "corpus_repo": "terminal",
+          "labels": [
+            "terminal"
+          ],
+          "snippet": "TITLE: Add support for `--file,-f configuration_file` for reading a list of commands from a file\n\nBODY:\nFrom the original spec: \r\n> Run these commands in the given Windows Terminal session. Enables op"
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.7866,
+          "is_gold": false,
+          "corpus_id": 2019877394,
+          "corpus_repo": "terminal",
+          "labels": [
+            "help wanted",
+            "terminal"
+          ],
+          "snippet": "TITLE: The CursorStyle in TerminalTheme does not seem to work\n\nBODY:\n### Windows Terminal version\n\nbe9fc200c7b22c544103ec3304ca31c3b984031e\n\n### Windows build number\n\n10.0.22631.2715\n\n### Other Softwa"
+        },
+        {
+          "rank": 2,
+          "score": 0.7847,
+          "is_gold": false,
+          "corpus_id": 804382529,
+          "corpus_repo": "terminal",
+          "labels": [
+            "help wanted",
+            "terminal"
+          ],
+          "snippet": "TITLE: Cursor doesn't change back to what's specified in the settings.json\n\nBODY:\n<!-- \r\n\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\r\n\r\nI ACKNOWLEDGE THE FOLLOWING BEFORE PROCEEDING:\r\n1. If I delete this entire template and go my own"
+        },
+        {
+          "rank": 3,
+          "score": 0.777,
+          "is_gold": false,
+          "corpus_id": 97413106,
+          "corpus_repo": "opencv",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: negative cursor position overflow in python mouse callbacks\n\nBODY:\nTransferred from http://code.opencv.org/issues/1302\n\n```\n|| Alexander Mordvintsev on 2011-08-13 09:04\n|| Priority: Low\n|| Affe"
+        },
+        {
+          "rank": 4,
+          "score": 0.7732,
+          "is_gold": false,
+          "corpus_id": 802142607,
+          "corpus_repo": "godot",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: Editor text input cursor position resets on save\n\nBODY:\n**Godot version:**\r\n3.2.4-rc1\r\nnb. I have noticed this behaviour in 3.2.3 too.\r\n\r\n**OS/device including version:**\r\nUbuntu Linux 20.04\r\n\r"
+        },
+        {
+          "rank": 5,
+          "score": 0.7722,
+          "is_gold": false,
+          "corpus_id": 630287434,
+          "corpus_repo": "terminal",
+          "labels": [
+            "terminal"
+          ],
+          "snippet": "TITLE: The Terminal needs to support `\"cursorTextColor\": null`\n\nBODY:\nFollow up from #6337\r\n\r\nSpec'd in #6151\r\n\r\nCurrently, the terminal always draws the cursor on top of text. #6337 is going to chang"
+        }
+      ]
+    },
+    {
+      "query_id": 2576899734,
+      "query_repo": "deno",
+      "query_split": "val",
+      "query_labels": [
+        "bug"
+      ],
+      "query_snippet": "TITLE: Issues regarding integration of Clerk with NextJS\n\nBODY:\nVersion: Deno 2.0\r\n\r\n### What is the issue?\r\nBasically, if you are trying to integrate Clerk with NextJS it will immediately crash when the first page is trying to compile.\r\nIt passes the middleware compilation, but when it hits the pag",
+      "lex_r10": 1.0,
+      "lex_mrr": 1.0,
+      "dense_r10": 0.0,
+      "dense_mrr": 0.0,
+      "gold_relevant": [
+        {
+          "corpus_id": 2650299146,
+          "corpus_repo": "next.js",
+          "shared_labels": [
+            "bug"
+          ],
+          "score": 0.1748,
+          "text_snippet": "TITLE: Failed to parse source map: TypeError: Cannot read properties of undefined (reading 'bold') for deno\n\nBODY:\n### Link to the code that reproduces this issue\n\nhttps://github.com/howdoicomputer/is"
+        },
+        {
+          "corpus_id": 2340653590,
+          "corpus_repo": "next.js",
+          "shared_labels": [
+            "bug"
+          ],
+          "score": 0.1502,
+          "text_snippet": "TITLE: NextJS does not work with FreeBSD\n\nBODY:\n### Link to the code that reproduces this issue\n\nhttps://github.com/vercel/next-learn/tree/main/basics/learn-starter\n\n### To Reproduce\n\n I'm trying to r"
+        },
+        {
+          "corpus_id": 1853249957,
+          "corpus_repo": "next.js",
+          "shared_labels": [
+            "bug"
+          ],
+          "score": 0.1448,
+          "text_snippet": "TITLE: WorkerError after updating Next.js from v13.2.4 to v13.4.16\n\nBODY:\n### Verify canary release\r\n\r\n- [X] I verified that the issue exists in the latest Next.js canary release\r\n\r\n### Provide enviro"
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.1748,
+          "is_gold": true,
+          "corpus_id": 2650299146,
+          "corpus_repo": "next.js",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: Failed to parse source map: TypeError: Cannot read properties of undefined (reading 'bold') for deno\n\nBODY:\n### Link to the code that reproduces this issue\n\nhttps://github.com/howdoicomputer/is"
+        },
+        {
+          "rank": 2,
+          "score": 0.1502,
+          "is_gold": true,
+          "corpus_id": 2340653590,
+          "corpus_repo": "next.js",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: NextJS does not work with FreeBSD\n\nBODY:\n### Link to the code that reproduces this issue\n\nhttps://github.com/vercel/next-learn/tree/main/basics/learn-starter\n\n### To Reproduce\n\n I'm trying to r"
+        },
+        {
+          "rank": 3,
+          "score": 0.1448,
+          "is_gold": true,
+          "corpus_id": 1853249957,
+          "corpus_repo": "next.js",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: WorkerError after updating Next.js from v13.2.4 to v13.4.16\n\nBODY:\n### Verify canary release\r\n\r\n- [X] I verified that the issue exists in the latest Next.js canary release\r\n\r\n### Provide enviro"
+        },
+        {
+          "rank": 4,
+          "score": 0.1408,
+          "is_gold": false,
+          "corpus_id": 1603133012,
+          "corpus_repo": "next.js",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [NEXT-707] Next.js 13.2.1: Custom TypeScript ESLint setup fails \u2018next build\u2019\n\nBODY:\n### Verify canary release\r\n\r\n- [X] I verified that the issue exists in the latest Next.js canary release\r\n\r\n#"
+        },
+        {
+          "rank": 5,
+          "score": 0.1267,
+          "is_gold": false,
+          "corpus_id": 709662329,
+          "corpus_repo": "create-react-app",
+          "labels": [],
+          "snippet": "TITLE: npm start isssue\n\nBODY:\nevents.js:292\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: spawn powershell ENOENT\r\n    at Process.ChildProcess._handle.onexit (internal/child_process."
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.7815,
+          "is_gold": false,
+          "corpus_id": 1725806183,
+          "corpus_repo": "next.js",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: Having both NextJS and Strapi in the same monorepo makes linting fail (regression)\n\nBODY:\n### Verify canary release\r\n\r\n- [X] I verified that the issue exists in the latest Next.js canary releas"
+        },
+        {
+          "rank": 2,
+          "score": 0.78,
+          "is_gold": false,
+          "corpus_id": 1838253833,
+          "corpus_repo": "next.js",
+          "labels": [],
+          "snippet": "TITLE: NextJS 13 and Mongoose drop OverwriteModelError sometimes\n\nBODY:\n### Verify canary release\r\n\r\n- [X] I verified that the issue exists in the latest Next.js canary release\r\n\r\n### Provide environm"
+        },
+        {
+          "rank": 3,
+          "score": 0.7797,
+          "is_gold": false,
+          "corpus_id": 1733739413,
+          "corpus_repo": "next.js",
+          "labels": [],
+          "snippet": "TITLE: NextJS middleware crash does not target global-error.tsx\n\nBODY:\n### Verify canary release\n\n- [X] I verified that the issue exists in the latest Next.js canary release\n\n### Provide environment i"
+        },
+        {
+          "rank": 4,
+          "score": 0.7779,
+          "is_gold": false,
+          "corpus_id": 2109381416,
+          "corpus_repo": "next.js",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: nextjs server crashes a esm package with type=\"module\"\n\nBODY:\n### Link to the code that reproduces this issue\r\n\r\nhttps://github.com/jantimon/reproduction-webpack-import-module-bug/tree/nextjs\r\n"
+        },
+        {
+          "rank": 5,
+          "score": 0.7775,
+          "is_gold": false,
+          "corpus_id": 1924388081,
+          "corpus_repo": "next.js",
+          "labels": [],
+          "snippet": "TITLE: Next.js TypeError: Cannot read properties of undefined (reading 'bind') - caused by middleware.ts\n\nBODY:\n### Verify canary release\n\n- [X] I verified that the issue exists in the latest Next.js "
+        }
+      ]
+    },
+    {
+      "query_id": 2215760324,
+      "query_repo": "deno",
+      "query_split": "val",
+      "query_labels": [
+        "bug"
+      ],
+      "query_snippet": "TITLE: npm compat: typescript-language-server\n\nBODY:\nVersion: Deno 1.42.0\r\n\r\ntypescript-language-server@4.3.3 fails to work correctly\r\n```\r\n\r\n2024-03-29T18:39:10.362 helix_lsp::transport [ERROR] typescript err <- \"error: Uncaught (in promise) Error: tsserver process has exited (exit code: 1, signal:",
+      "lex_r10": 1.0,
+      "lex_mrr": 1.0,
+      "dense_r10": 0.0,
+      "dense_mrr": 0.0,
+      "gold_relevant": [
+        {
+          "corpus_id": 1480477588,
+          "corpus_repo": "storybook",
+          "shared_labels": [
+            "bug"
+          ],
+          "score": 0.119,
+          "text_snippet": "TITLE: [Bug]: Docs not created with storybook-dark-mode addon integration\n\nBODY:\n### Describe the bug\r\n\r\nI am getting an error when using the `storybook-dark-mode` addon. \r\n\r\nThis bug was originally r"
+        },
+        {
+          "corpus_id": 1777586834,
+          "corpus_repo": "godot",
+          "shared_labels": [
+            "bug"
+          ],
+          "score": 0.1161,
+          "text_snippet": "TITLE: After initialize request LSP sometimes responds incorrectly\n\nBODY:\n### Godot version\r\n\r\n4.1 dev [950f4c3b41]\r\n\r\n### System information\r\n\r\nGodot v4.1.rc (950f4c3b4) - Ubuntu 22.10\r\n\r\n### Issue d"
+        },
+        {
+          "corpus_id": 1843645812,
+          "corpus_repo": "storybook",
+          "shared_labels": [
+            "bug"
+          ],
+          "score": 0.1101,
+          "text_snippet": "TITLE: [Bug]: Failed to run on sveltekit monorepo(pnpm workspace)\n\nBODY:\n### Describe the bug\r\n\r\nI got error with sveltekit+pnpm monorepo\r\n\r\n### To Reproduce\r\n\r\n```sh\r\npnpx create-turbo@latest -e with"
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.119,
+          "is_gold": true,
+          "corpus_id": 1480477588,
+          "corpus_repo": "storybook",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [Bug]: Docs not created with storybook-dark-mode addon integration\n\nBODY:\n### Describe the bug\r\n\r\nI am getting an error when using the `storybook-dark-mode` addon. \r\n\r\nThis bug was originally r"
+        },
+        {
+          "rank": 2,
+          "score": 0.1161,
+          "is_gold": true,
+          "corpus_id": 1777586834,
+          "corpus_repo": "godot",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: After initialize request LSP sometimes responds incorrectly\n\nBODY:\n### Godot version\r\n\r\n4.1 dev [950f4c3b41]\r\n\r\n### System information\r\n\r\nGodot v4.1.rc (950f4c3b4) - Ubuntu 22.10\r\n\r\n### Issue d"
+        },
+        {
+          "rank": 3,
+          "score": 0.1114,
+          "is_gold": false,
+          "corpus_id": 2512577216,
+          "corpus_repo": "go",
+          "labels": [
+            "gopls",
+            "tools"
+          ],
+          "snippet": "TITLE: x/tools/gopls: upstream feature requests\n\nBODY:\nThis issue is a place to record all pending upstream requests for changes to LSP and/or VS Code.\r\n\r\n- [ ] https://github.com/microsoft/language-s"
+        },
+        {
+          "rank": 4,
+          "score": 0.1101,
+          "is_gold": true,
+          "corpus_id": 1843645812,
+          "corpus_repo": "storybook",
+          "labels": [
+            "bug",
+            "help wanted"
+          ],
+          "snippet": "TITLE: [Bug]: Failed to run on sveltekit monorepo(pnpm workspace)\n\nBODY:\n### Describe the bug\r\n\r\nI got error with sveltekit+pnpm monorepo\r\n\r\n### To Reproduce\r\n\r\n```sh\r\npnpx create-turbo@latest -e with"
+        },
+        {
+          "rank": 5,
+          "score": 0.1004,
+          "is_gold": false,
+          "corpus_id": 465229701,
+          "corpus_repo": "create-react-app",
+          "labels": [
+            "issue: proposal"
+          ],
+          "snippet": "TITLE: Error in the demo project, can't do the first run with npm.\n\nBODY:\n### Describe the bug\r\n\r\nThe raw project isn't running after the creation:\r\n\r\n`\r\nevents.js:170\r\n      throw er; // Unhandled 'e"
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.8058,
+          "is_gold": false,
+          "corpus_id": 1844714085,
+          "corpus_repo": "next.js",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: SyntaxError: Unexpected token 'export' and type:module can't fix it\n\nBODY:\n### Verify canary release\n\n- [X] I verified that the issue exists in the latest Next.js canary release\n\n### Provide en"
+        },
+        {
+          "rank": 2,
+          "score": 0.8038,
+          "is_gold": false,
+          "corpus_id": 1718160495,
+          "corpus_repo": "next.js",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: Type Error while trying to run dev server\n\nBODY:\n### Verify canary release\n\n- [x] I verified that the issue exists in the latest Next.js canary release\n\n### Provide environment information\n\n```"
+        },
+        {
+          "rank": 3,
+          "score": 0.7965,
+          "is_gold": false,
+          "corpus_id": 1658971239,
+          "corpus_repo": "next.js",
+          "labels": [],
+          "snippet": "TITLE: `export const { foo } = ...` broken\n\nBODY:\n### Verify canary release\r\n\r\n- [X] I verified that the issue exists in the latest Next.js canary release\r\n\r\n### Provide environment information\r\n\r\n```"
+        },
+        {
+          "rank": 4,
+          "score": 0.7941,
+          "is_gold": false,
+          "corpus_id": 789146607,
+          "corpus_repo": "create-react-app",
+          "labels": [
+            "issue: bug report"
+          ],
+          "snippet": "TITLE: tsconfig can't be read with some compilerOptions.baseUrl and react-scripts@4.0.1\n\nBODY:\n<!--\r\n    Please note that your issue will be fixed much faster if you spend about\r\n    half an hour prep"
+        },
+        {
+          "rank": 5,
+          "score": 0.7937,
+          "is_gold": false,
+          "corpus_id": 1512278601,
+          "corpus_repo": "next.js",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: Exporting client components as an object throws an error.\n\nBODY:\n### Verify canary release\n\n- [X] I verified that the issue exists in the latest Next.js canary release\n\n### Provide environment "
+        }
+      ]
+    },
+    {
+      "query_id": 2447273640,
+      "query_repo": "tauri",
+      "query_split": "val",
+      "query_labels": [
+        "help wanted"
+      ],
+      "query_snippet": "TITLE: v2 requiring an instance of App, AppHandle or Window to get access to path functions like home_dir()\n\nBODY:\nin v1, all you needed was to import and you had access to paths:\r\n```rust\r\nuse tauri::api::path::home_dir;\r\n\r\n#[tauri::command]\r\nfn getPath() -> Result<PathBuf> {\r\n   home_dir()\r\n```\r\n\r",
+      "lex_r10": 0.3333333333333333,
+      "lex_mrr": 0.5,
+      "dense_r10": 0.0,
+      "dense_mrr": 0.0,
+      "gold_relevant": [
+        {
+          "corpus_id": 1983726242,
+          "corpus_repo": "angular",
+          "shared_labels": [
+            "help wanted"
+          ],
+          "score": 0.0961,
+          "text_snippet": "TITLE: docs: Inject `typescript-vfs.worker` instead of create an instance in `code-mirror-editor.service.ts`\n\nBODY:\nTo improve unit testing, we can inject an instance of `typescript-vfs.worker` into `"
+        },
+        {
+          "corpus_id": 1095519902,
+          "corpus_repo": "terminal",
+          "shared_labels": [
+            "help wanted"
+          ],
+          "score": 0.0798,
+          "text_snippet": "TITLE: Add `bellSound` to the Settings UI\n\nBODY:\nIt's a little tricky since it can accept a single path or an array of paths. I suppose the crawl/walk/run is:\r\n* **crawl**: add a single path selector "
+        },
+        {
+          "corpus_id": 253082877,
+          "corpus_repo": "gin",
+          "shared_labels": [
+            "help wanted"
+          ],
+          "score": 0.0701,
+          "text_snippet": "TITLE: [PROJECT] Future steps\n\nBODY:\n# TL;DR\r\n\r\n- API stability and deprecation policy\r\n- v2?\r\n\r\n---\r\ncc @appleboy @tboerger @nazwa @easonlin404 @thinkerou \r\n\r\nI'm worried on how to keep going and sca"
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.1021,
+          "is_gold": false,
+          "corpus_id": 241902734,
+          "corpus_repo": "electron",
+          "labels": [
+            "enhancement :sparkles:"
+          ],
+          "snippet": "TITLE: Feature request: Access to \"user gesture\" flag, especially in 'new-window' event\n\nBODY:\nKnowing whether the user initiated the `new-window` event is important for blocking unwanted popups in a "
+        },
+        {
+          "rank": 2,
+          "score": 0.0961,
+          "is_gold": true,
+          "corpus_id": 1983726242,
+          "corpus_repo": "angular",
+          "labels": [
+            "help wanted"
+          ],
+          "snippet": "TITLE: docs: Inject `typescript-vfs.worker` instead of create an instance in `code-mirror-editor.service.ts`\n\nBODY:\nTo improve unit testing, we can inject an instance of `typescript-vfs.worker` into `"
+        },
+        {
+          "rank": 3,
+          "score": 0.0899,
+          "is_gold": false,
+          "corpus_id": 679321876,
+          "corpus_repo": "PowerToys",
+          "labels": [
+            "enhancement",
+            "product-powertoys run"
+          ],
+          "snippet": "TITLE: [Run] Switch to running app instead of opening a new one\n\nBODY:\n## \ud83d\udcdd PowerToys Run Auto Focus\r\n\r\nPowerToys opens a new instance of an app even if there is an instance. Focusing on that instance"
+        },
+        {
+          "rank": 4,
+          "score": 0.0892,
+          "is_gold": false,
+          "corpus_id": 855827705,
+          "corpus_repo": "create-react-app",
+          "labels": [],
+          "snippet": "TITLE: tsconfig compilerOptions paths alias config not working\n\nBODY:\nthere is a repo to recurrent this problem:\r\nhttps://github.com/NoTalk-ly/create-react-app-path-alias-test\r\nor\r\nhttps://codesandbox"
+        },
+        {
+          "rank": 5,
+          "score": 0.0883,
+          "is_gold": false,
+          "corpus_id": 434463077,
+          "corpus_repo": "godot",
+          "labels": [
+            "bug",
+            "usability"
+          ],
+          "snippet": "TITLE: Can't access rotation and transform in Node2Ds and call functions on Transform2Ds\n\nBODY:\nIn VisualScript you can only get access to members that show up in the inspector, which means that rotat"
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.7815,
+          "is_gold": false,
+          "corpus_id": 915285027,
+          "corpus_repo": "create-react-app",
+          "labels": [
+            "issue: proposal"
+          ],
+          "snippet": "TITLE: Expose paths overrides as envvars\n\nBODY:\n### Is your proposal related to a problem?\r\n\r\nWe are trying to stay un-ejected to simplify maintenance across repos, and identified `paths.js`  variable"
+        },
+        {
+          "rank": 2,
+          "score": 0.7602,
+          "is_gold": false,
+          "corpus_id": 2152606993,
+          "corpus_repo": "next.js",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: Non-interactive `create-next-app ` with `--src-dir` or `--app` flag still prompts question\n\nBODY:\n### Link to the code that reproduces this issue\r\n\r\nhttps://github.com/nattui/next.js\r\n\r\n### To "
+        },
+        {
+          "rank": 3,
+          "score": 0.7578,
+          "is_gold": false,
+          "corpus_id": 2548054488,
+          "corpus_repo": "go",
+          "labels": [],
+          "snippet": "TITLE: net/http: ServeMux.Handler does not populate named path wildcards\n\nBODY:\n### Go version\n\ngo version devel go1.24-b17a55d095 Tue Sep 24 23:20:50 2024 +0000 linux/amd64\n\n### Output of `go env` in"
+        },
+        {
+          "rank": 4,
+          "score": 0.7568,
+          "is_gold": false,
+          "corpus_id": 809222733,
+          "corpus_repo": "godot",
+          "labels": [
+            "bug",
+            "needs testing"
+          ],
+          "snippet": "TITLE: Resources: get_path() does not work anymore and the inspector show weird paths for resources.\n\nBODY:\n<!-- Please search existing issues for potential duplicates before filing yours:\r\nhttps://gi"
+        },
+        {
+          "rank": 5,
+          "score": 0.7551,
+          "is_gold": false,
+          "corpus_id": 897165999,
+          "corpus_repo": "godot",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: Resources with paths containing `../` fail to import in exported projects\n\nBODY:\n**Godot version:** 74174676b8c451702588a6e511090e62cc1a20f1\r\n\r\n**Issue description:**\r\nRelative paths work in re"
+        }
+      ]
+    },
+    {
+      "query_id": 544527453,
+      "query_repo": "neovim",
+      "query_split": "test",
+      "query_labels": [
+        "bug",
+        "platform:windows"
+      ],
+      "query_snippet": "TITLE: Opening more than one file of an sshfs mount fails on windows\n\nBODY:\nI mounted a remote directory via SSHFS-Win (V2.7.17334) and WinFsp (2019.2).\r\n\r\nNow when i open the first file in the mounted directory everything i tried worked as expected. Opening, writing, ... all work fine.\r\n\r\nThe probl",
+      "lex_r10": 1.0,
+      "lex_mrr": 0.5,
+      "dense_r10": 0.0,
+      "dense_mrr": 0.0,
+      "gold_relevant": [
+        {
+          "corpus_id": 1338352452,
+          "corpus_repo": "godot",
+          "shared_labels": [
+            "bug"
+          ],
+          "score": 0.1106,
+          "text_snippet": "TITLE: LSP: Neovim not initilzing correctly\n\nBODY:\n### Godot version\n\nv4.0.dev.custom_build\n\n### System information\n\nWindows 10, Vulkan, GTX 780Ti\n\n### Issue description\n\nVScode work fine but when i d"
+        },
+        {
+          "corpus_id": 803442420,
+          "corpus_repo": "godot",
+          "shared_labels": [
+            "bug",
+            "platform:windows"
+          ],
+          "score": 0.1032,
+          "text_snippet": "TITLE: The FileDialog could not get the path to the file correctly\n\nBODY:\n**Godot version:**\r\n3.2.3 and also 3.2.4 rc1\r\n\r\n**OS/device including version:**\r\nat least windows 10\r\n\r\n**Issue description:*"
+        },
+        {
+          "corpus_id": 1100943567,
+          "corpus_repo": "godot",
+          "shared_labels": [
+            "bug"
+          ],
+          "score": 0.095,
+          "text_snippet": "TITLE: Cannot open res:// file from directory in exported project through FileDialog\n\nBODY:\n### Godot version\r\n\r\nv3.4.2.stable.official [45eaa2daf]\r\n\r\n### System information\r\n\r\nUbuntu 21.10, Linux 5.1"
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.1142,
+          "is_gold": false,
+          "corpus_id": 1784453624,
+          "corpus_repo": "PowerToys",
+          "labels": [
+            "enhancement"
+          ],
+          "snippet": "TITLE: [Feature Request] File Location/Path Display and Label\n\nBODY:\n### Description of the new feature / enhancement\n\nThe proposed feature allows the user to select more than one file and rename them"
+        },
+        {
+          "rank": 2,
+          "score": 0.1106,
+          "is_gold": true,
+          "corpus_id": 1338352452,
+          "corpus_repo": "godot",
+          "labels": [
+            "bug",
+            "needs testing"
+          ],
+          "snippet": "TITLE: LSP: Neovim not initilzing correctly\n\nBODY:\n### Godot version\n\nv4.0.dev.custom_build\n\n### System information\n\nWindows 10, Vulkan, GTX 780Ti\n\n### Issue description\n\nVScode work fine but when i d"
+        },
+        {
+          "rank": 3,
+          "score": 0.1094,
+          "is_gold": false,
+          "corpus_id": 1945883451,
+          "corpus_repo": "kubernetes",
+          "labels": [
+            "kind/bug",
+            "triage/accepted"
+          ],
+          "snippet": "TITLE: Kubelet deletes CSI mount points if a \"requiresrepublish\" call to NodePublishVolume returns an error\n\nBODY:\n### What happened?\r\n\r\nWhen a CSI driver uses `spec.requiresRepublish` to request repe"
+        },
+        {
+          "rank": 4,
+          "score": 0.1078,
+          "is_gold": false,
+          "corpus_id": 1441705229,
+          "corpus_repo": "rustdesk",
+          "labels": [
+            "enhancement",
+            "help wanted"
+          ],
+          "snippet": "TITLE: mount local drive to remote (usb redirect)\n\nBODY:\nhi.\r\n\r\nRDP and maybe vnc i think has this mount drive feature,  you set a \"mount this folder\" and that gets shown to the remote machine as a lo"
+        },
+        {
+          "rank": 5,
+          "score": 0.1032,
+          "is_gold": true,
+          "corpus_id": 803442420,
+          "corpus_repo": "godot",
+          "labels": [
+            "bug",
+            "platform:windows"
+          ],
+          "snippet": "TITLE: The FileDialog could not get the path to the file correctly\n\nBODY:\n**Godot version:**\r\n3.2.3 and also 3.2.4 rc1\r\n\r\n**OS/device including version:**\r\nat least windows 10\r\n\r\n**Issue description:*"
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.7498,
+          "is_gold": false,
+          "corpus_id": 2233284476,
+          "corpus_repo": "kubernetes",
+          "labels": [
+            "kind/bug",
+            "triage/accepted"
+          ],
+          "snippet": "TITLE: One pv with NFS can be mounted by two pods even with ReadWriteOncePod enabled\n\nBODY:\n### What happened?\r\n\r\nCloud provider: openstack\r\nCsi driver: NFS(Manila)\r\n\r\n- First, I got one replicaSet wi"
+        },
+        {
+          "rank": 2,
+          "score": 0.7357,
+          "is_gold": false,
+          "corpus_id": 1923194232,
+          "corpus_repo": "node",
+          "labels": [],
+          "snippet": "TITLE: fs.realpath fails to provide a canonical path for mountpoints on windows.\n\nBODY:\n### Version\n\n20\n\n### Platform\n\nWindows\n\n### Subsystem\n\nfs\n\n### What steps will reproduce the bug?\n\nWindows has t"
+        },
+        {
+          "rank": 3,
+          "score": 0.7305,
+          "is_gold": false,
+          "corpus_id": 1929753541,
+          "corpus_repo": "node",
+          "labels": [],
+          "snippet": "TITLE: createWriteStream has problems in a CIFS mount path with node 20.x.x and node 18.18.0\n\nBODY:\n### Version\r\n\r\n18.18.0 and 20.x.x\r\n\r\n### Platform\r\n\r\nLinux iob-node20 6.2.16-5-pve #1 SMP PREEMPT_DY"
+        },
+        {
+          "rank": 4,
+          "score": 0.7285,
+          "is_gold": false,
+          "corpus_id": 513546778,
+          "corpus_repo": "go",
+          "labels": [],
+          "snippet": "TITLE: os: file write blocks subsequent Open() with \"sharing violation\" in OneDrive\n\nBODY:\n<!-- Please answer these questions before submitting your issue. Thanks! -->\r\n\r\n### What version of Go are yo"
+        },
+        {
+          "rank": 5,
+          "score": 0.7274,
+          "is_gold": false,
+          "corpus_id": 356043471,
+          "corpus_repo": "go",
+          "labels": [],
+          "snippet": "TITLE: os: Readdir swallows partial results if it fails to Lstat any file in the listing\n\nBODY:\nPlease answer these questions before submitting your issue. Thanks!\r\n\r\n\r\n### What version of Go are you "
+        }
+      ]
+    },
+    {
+      "query_id": 2614879249,
+      "query_repo": "vscode",
+      "query_split": "val",
+      "query_labels": [
+        "bug",
+        "regression"
+      ],
+      "query_snippet": "TITLE: Extension packs with only 1 walkthrough should open on that walkthrough registration\n\nBODY:\n",
+      "lex_r10": 0.3333333333333333,
+      "lex_mrr": 0.3333,
+      "dense_r10": 0.0,
+      "dense_mrr": 0.0,
+      "gold_relevant": [
+        {
+          "corpus_id": 2384655171,
+          "corpus_repo": "ui",
+          "shared_labels": [
+            "bug"
+          ],
+          "score": 0.1349,
+          "text_snippet": "TITLE: [bug]: combobox should open on ArrowDown key press when focused\n\nBODY:\n### Describe the bug\n\nwhen a Combobox input is focused, the combobox popover should open when pressing ArrowDown (similar "
+        },
+        {
+          "corpus_id": 2800431461,
+          "corpus_repo": "godot",
+          "shared_labels": [
+            "bug"
+          ],
+          "score": 0.0868,
+          "text_snippet": "TITLE: Memory starvation while (re)importing assets\n\nBODY:\n### Tested versions\n\n- Reproducible in Godot 4.3 stable and 4.4 beta 01\n\n### System information\n\nGodot v4.4.beta1 - macOS Sequoia (15.2.0) - "
+        },
+        {
+          "corpus_id": 1794783030,
+          "corpus_repo": "godot",
+          "shared_labels": [
+            "bug"
+          ],
+          "score": 0.0791,
+          "text_snippet": "TITLE: Detached script editor can become frozen with multiple, differing resolution monitors on Windows\n\nBODY:\n### Godot version\n\n4.1.stable\n\n### System information\n\nWindows 11, geForce 3070 TI\n\n### I"
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.2273,
+          "is_gold": false,
+          "corpus_id": 1086989176,
+          "corpus_repo": "PowerToys",
+          "labels": [
+            "enhancement"
+          ],
+          "snippet": "TITLE: [SG] - open on Monitor where Cursor is\n\nBODY:\n### Description of the new feature / enhancement\n\nShortcut guide should open on the display that the mouse pointer is currently on \r\n\r\nAdditionally"
+        },
+        {
+          "rank": 2,
+          "score": 0.2181,
+          "is_gold": false,
+          "corpus_id": 1319084291,
+          "corpus_repo": "excalidraw",
+          "labels": [],
+          "snippet": "TITLE: docker excalidraw/excalidraw cannot upload own asset packs\n\nBODY:\ndocker excalidraw/excalidraw cannot upload own asset packs"
+        },
+        {
+          "rank": 3,
+          "score": 0.1349,
+          "is_gold": true,
+          "corpus_id": 2384655171,
+          "corpus_repo": "ui",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [bug]: combobox should open on ArrowDown key press when focused\n\nBODY:\n### Describe the bug\n\nwhen a Combobox input is focused, the combobox popover should open when pressing ArrowDown (similar "
+        },
+        {
+          "rank": 4,
+          "score": 0.1337,
+          "is_gold": false,
+          "corpus_id": 1482503491,
+          "corpus_repo": "PowerToys",
+          "labels": [],
+          "snippet": "TITLE: [Peek] Investigate if we can open on secondary monitor\n\nBODY:\n"
+        },
+        {
+          "rank": 5,
+          "score": 0.1186,
+          "is_gold": false,
+          "corpus_id": 2453555112,
+          "corpus_repo": "PowerToys",
+          "labels": [
+            "idea-new powertoy"
+          ],
+          "snippet": "TITLE: Screen-Specific Window Opening\n\nBODY:\n### Description of the new feature / enhancement\n\nThe idea is that when having two or more screens connected to my PC, the windows or programs I open shoul"
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.742,
+          "is_gold": false,
+          "corpus_id": 1394061056,
+          "corpus_repo": "storybook",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: Symbols coming from multiple bundles\n\nBODY:\n"
+        },
+        {
+          "rank": 2,
+          "score": 0.7401,
+          "is_gold": false,
+          "corpus_id": 1687666639,
+          "corpus_repo": "terminal",
+          "labels": [
+            "terminal"
+          ],
+          "snippet": "TITLE: Use synchronous APIs for AppExtensionCatalog\n\nBODY:\nMSFT-43215694 added `IAppExtensionCatalog2::FindAll` and `IAppExtension3::GetPublicFolder`. _If_ they release publicly, we should use those i"
+        },
+        {
+          "rank": 3,
+          "score": 0.7386,
+          "is_gold": false,
+          "corpus_id": 806593835,
+          "corpus_repo": "PowerToys",
+          "labels": [
+            "enhancement",
+            "product-powertoys run"
+          ],
+          "snippet": "TITLE: [Run][Plugin Manager] Direct shortcut to execute a single plugin\n\nBODY:\nLink to parent issue #5273."
+        },
+        {
+          "rank": 4,
+          "score": 0.7338,
+          "is_gold": false,
+          "corpus_id": 1213288203,
+          "corpus_repo": "excalidraw",
+          "labels": [
+            "enhancement"
+          ],
+          "snippet": "TITLE: support importing multiple excalidrawlib files at once\n\nBODY:\nEither via file picker or drag & drop."
+        },
+        {
+          "rank": 5,
+          "score": 0.7333,
+          "is_gold": false,
+          "corpus_id": 573524691,
+          "corpus_repo": "nvm",
+          "labels": [],
+          "snippet": "TITLE: Allow other package managers for `default-packages` installation\n\nBODY:\nI have recently switched to [pnpm](https://pnpm.js.org/en/) and would like to install my default global packages to be in"
+        }
+      ]
+    },
+    {
+      "query_id": 2753024551,
+      "query_repo": "vscode",
+      "query_split": "val",
+      "query_labels": [
+        "terminal"
+      ],
+      "query_snippet": "TITLE: Git - Trial GIT_NO_OPT_LOCKS environment variable to avoid conflicts between git extension and git in terminal\n\nBODY:\n",
+      "lex_r10": 1.0,
+      "lex_mrr": 0.3333,
+      "dense_r10": 0.0,
+      "dense_mrr": 0.0,
+      "gold_relevant": [
+        {
+          "corpus_id": 786890898,
+          "corpus_repo": "terminal",
+          "shared_labels": [
+            "terminal"
+          ],
+          "score": 0.1397,
+          "text_snippet": "TITLE: Extension: Pipe output to command palette in Terminal\n\nBODY:\nOkay, this is gonna sound crazy so bear with me. I was switching git branches, and thought, \"I really do not know how to use `less` "
+        },
+        {
+          "corpus_id": 1807968316,
+          "corpus_repo": "terminal",
+          "shared_labels": [
+            "terminal"
+          ],
+          "score": 0.1322,
+          "text_snippet": "TITLE: Launching Terminal Preview as an administrator causes the username environment variable to be \"SYSTEM\"\n\nBODY:\n### Windows Terminal version\n\n1.18.1462.0\n\n### Windows build number\n\n10.0.22621.0\n\n"
+        },
+        {
+          "corpus_id": 732826401,
+          "corpus_repo": "terminal",
+          "shared_labels": [
+            "terminal"
+          ],
+          "score": 0.1117,
+          "text_snippet": "TITLE: How do I remove the right-click menu \"open in Windows terminal\"?\n\nBODY:\nIs it possible to turn this feature on or off with an option?"
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.1871,
+          "is_gold": false,
+          "corpus_id": 687404991,
+          "corpus_repo": "terminal",
+          "labels": [],
+          "snippet": "TITLE: DISCUSSION: Is my app running in Terminal?\n\nBODY:\nI've been using\r\n\r\n!((BOOL) SendMessage(GetConsoleWindow(), WM_GETICON, 0, 0))\r\n\r\nOther ideas?  Thanks.   - Vince"
+        },
+        {
+          "rank": 2,
+          "score": 0.1423,
+          "is_gold": false,
+          "corpus_id": 2346958511,
+          "corpus_repo": "PowerToys",
+          "labels": [],
+          "snippet": "TITLE: Unset Environment Variable Using \"Environment Variables\" tool\n\nBODY:\n### Microsoft PowerToys version\n\n0.81.1\n\n### Installation method\n\nMicrosoft Store\n\n### Running as admin\n\nYes\n\n### Area(s) wi"
+        },
+        {
+          "rank": 3,
+          "score": 0.1397,
+          "is_gold": true,
+          "corpus_id": 786890898,
+          "corpus_repo": "terminal",
+          "labels": [
+            "terminal"
+          ],
+          "snippet": "TITLE: Extension: Pipe output to command palette in Terminal\n\nBODY:\nOkay, this is gonna sound crazy so bear with me. I was switching git branches, and thought, \"I really do not know how to use `less` "
+        },
+        {
+          "rank": 4,
+          "score": 0.1322,
+          "is_gold": true,
+          "corpus_id": 1807968316,
+          "corpus_repo": "terminal",
+          "labels": [
+            "terminal"
+          ],
+          "snippet": "TITLE: Launching Terminal Preview as an administrator causes the username environment variable to be \"SYSTEM\"\n\nBODY:\n### Windows Terminal version\n\n1.18.1462.0\n\n### Windows build number\n\n10.0.22621.0\n\n"
+        },
+        {
+          "rank": 5,
+          "score": 0.1317,
+          "is_gold": false,
+          "corpus_id": 339128312,
+          "corpus_repo": "terminal",
+          "labels": [],
+          "snippet": "TITLE: cmd: add environment variable to disable/enable 'Terminate batch job (Y/N)?' confirmation\n\nBODY:\n(migrated from https://github.com/PowerShell/PowerShell/issues/7080 per @BrucePay's suggestion) "
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.7808,
+          "is_gold": false,
+          "corpus_id": 1596468181,
+          "corpus_repo": "terminal",
+          "labels": [
+            "terminal"
+          ],
+          "snippet": "TITLE: AtlasEngine does not respect bellStyle for git bash\n\nBODY:\n### Windows Terminal version\n\n1.16.10262.0\n\n### Windows build number\n\n10.0.22621.1265\n\n### Other Software\n\ngit bash (git for windows v"
+        },
+        {
+          "rank": 2,
+          "score": 0.761,
+          "is_gold": false,
+          "corpus_id": 1231202407,
+          "corpus_repo": "go",
+          "labels": [
+            "builders"
+          ],
+          "snippet": "TITLE: x/build: `git` errors with `gnutls_handshake() failed: Error in the pull function.`\n\nBODY:\n```\r\n#!watchflakes\r\npost <- pkg ~ `^cmd/go` && `Error in the pull function`\r\n```\r\n\r\n```\r\n            >"
+        },
+        {
+          "rank": 3,
+          "score": 0.756,
+          "is_gold": false,
+          "corpus_id": 300408364,
+          "corpus_repo": "go",
+          "labels": [
+            "help wanted"
+          ],
+          "snippet": "TITLE: x/review/git-codereview: do not mail CLs with editor temp files, binaries\n\nBODY:\nMotivated by #23800, git-codereview should probably refuse to mail CLs with editor temp files and binaries."
+        },
+        {
+          "rank": 4,
+          "score": 0.7521,
+          "is_gold": false,
+          "corpus_id": 734897772,
+          "corpus_repo": "go",
+          "labels": [
+            "documentation"
+          ],
+          "snippet": "TITLE: x/review/git-codereview: incomplete help documentation for `git codereview`\n\nBODY:\n<!--\r\nPlease answer these questions before submitting your issue. Thanks!\r\nFor questions please use one of our"
+        },
+        {
+          "rank": 5,
+          "score": 0.7504,
+          "is_gold": false,
+          "corpus_id": 494321412,
+          "corpus_repo": "terminal",
+          "labels": [
+            "help wanted",
+            "terminal"
+          ],
+          "snippet": "TITLE: Windows Terminal (Dev Build) should display version as git commit instead of \"0.1.0.0\"\n\nBODY:\n<!-- \r\n\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\r\n\r\nI ACKNOWLEDGE THE FOLLOWING BEFORE PROCEEDING:\r\n1. If I delete this entire tem"
+        }
+      ]
+    },
+    {
+      "query_id": 2332190974,
+      "query_repo": "ollama",
+      "query_split": "test",
+      "query_labels": [
+        "documentation",
+        "feature-request"
+      ],
+      "query_snippet": "TITLE: Surface the embedding dimension of a model in docs/api\n\nBODY:\nCurrently, the embedding dimension isn't listed on the ollama docs or on the model card from ollama.",
+      "lex_r10": 0.6666666666666666,
+      "lex_mrr": 0.3333,
+      "dense_r10": 0.0,
+      "dense_mrr": 0.0,
+      "gold_relevant": [
+        {
+          "corpus_id": 858259802,
+          "corpus_repo": "pytorch",
+          "shared_labels": [
+            "feature-request"
+          ],
+          "score": 0.1095,
+          "text_snippet": "TITLE: Optionally include padding_idx items in the EmbeddingBag reduction\n\nBODY:\n## \ud83d\ude80 Feature\r\nThe current implementation of `EmbeddingBag` specifically excludes the embedding vector at `padding_idx` "
+        },
+        {
+          "corpus_id": 484731423,
+          "corpus_repo": "pytorch",
+          "shared_labels": [
+            "feature-request"
+          ],
+          "score": 0.1012,
+          "text_snippet": "TITLE: Feature request: Fix dimension convention for masks in transformer\n\nBODY:\nIn PyTorch 1.2,\r\n\r\nFor `nn.Transformer`, the `src` dimensions correspond to `S, N, E` (sequence position, batch index, "
+        },
+        {
+          "corpus_id": 1564106760,
+          "corpus_repo": "opencv",
+          "shared_labels": [
+            "feature-request"
+          ],
+          "score": 0.0851,
+          "text_snippet": "TITLE: Add `DFT_COLS` to `cv::DftFlags`\n\nBODY:\n### Descripe the feature and motivation\r\n\r\n`cv::dft` accepts a  `DFT_ROWS` flag (and `DCT_ROWS`) which helps a bit to process a single dimension of n-dim"
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.1644,
+          "is_gold": false,
+          "corpus_id": 1651620096,
+          "corpus_repo": "pytorch",
+          "labels": [
+            "module: nn"
+          ],
+          "snippet": "TITLE: AssertionError: was expecting embedding dimension of 22, but got 1320\n\nBODY:\n### \ud83d\udc1b Describe the bug\n\nI am new to pytorch on Colab. I used Transformer encoder as feature extractor to build DQN. "
+        },
+        {
+          "rank": 2,
+          "score": 0.1361,
+          "is_gold": false,
+          "corpus_id": 1459894792,
+          "corpus_repo": "stable-diffusion-webui",
+          "labels": [
+            "enhancement"
+          ],
+          "snippet": "TITLE: [Feature Request]: Enable the name of the embedding used to be included with the prompt and model  info in the text file\n\nBODY:\n### Is there an existing issue for this?\n\n- [X] I have searched t"
+        },
+        {
+          "rank": 3,
+          "score": 0.1095,
+          "is_gold": true,
+          "corpus_id": 858259802,
+          "corpus_repo": "pytorch",
+          "labels": [
+            "feature-request",
+            "module: nn"
+          ],
+          "snippet": "TITLE: Optionally include padding_idx items in the EmbeddingBag reduction\n\nBODY:\n## \ud83d\ude80 Feature\r\nThe current implementation of `EmbeddingBag` specifically excludes the embedding vector at `padding_idx` "
+        },
+        {
+          "rank": 4,
+          "score": 0.1068,
+          "is_gold": false,
+          "corpus_id": 2648383854,
+          "corpus_repo": "langchain",
+          "labels": [],
+          "snippet": "TITLE: DOC: sql-ollama leads to removed page\n\nBODY:\n### URL\n\nhttps://python.langchain.com/docs/templates/sql-ollama/\n\n### Checklist\n\n- [X] I added a very descriptive title to this issue.\n- [X] I inclu"
+        },
+        {
+          "rank": 5,
+          "score": 0.1061,
+          "is_gold": false,
+          "corpus_id": 1593932003,
+          "corpus_repo": "stable-diffusion-webui",
+          "labels": [
+            "enhancement"
+          ],
+          "snippet": "TITLE: [Feature Request]: Save settings on train tab\n\nBODY:\n### Is there an existing issue for this?\n\n- [X] I have searched the existing issues and checked the recent builds/commits\n\n### What would yo"
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.7192,
+          "is_gold": false,
+          "corpus_id": 1656590122,
+          "corpus_repo": "stable-diffusion-webui",
+          "labels": [
+            "enhancement"
+          ],
+          "snippet": "TITLE: [Feature Request]: A way to easy disable embendings\n\nBODY:\n### Is there an existing issue for this?\n\n- [X] I have searched the existing issues and checked the recent builds/commits\n\n### What wo"
+        },
+        {
+          "rank": 2,
+          "score": 0.7181,
+          "is_gold": false,
+          "corpus_id": 739384696,
+          "corpus_repo": "pytorch",
+          "labels": [],
+          "snippet": "TITLE: Allow add_embedding to have dict for metadata\n\nBODY:\n## \ud83d\ude80 Feature\r\nI would like to be able to see in tensorboard more than one metadata type. Therefore, it should allow me to send a dictionary "
+        },
+        {
+          "rank": 3,
+          "score": 0.7077,
+          "is_gold": false,
+          "corpus_id": 1414412950,
+          "corpus_repo": "stable-diffusion-webui",
+          "labels": [
+            "enhancement"
+          ],
+          "snippet": "TITLE: Organize embeddings in directories\n\nBODY:\n**Is your feature request related to a problem? Please describe.**\r\nI don't like the fact, that all embedding files are in one directory and can be use"
+        },
+        {
+          "rank": 4,
+          "score": 0.7034,
+          "is_gold": false,
+          "corpus_id": 349144296,
+          "corpus_repo": "pytorch",
+          "labels": [
+            "module: docs"
+          ],
+          "snippet": "TITLE: [Docs] Update broadcasting documentation for scalars / n-dimensional empty tensors\n\nBODY:\n`Each tensor has at least one dimension.` is out of date.\r\n`Then, for each dimension size, the resultin"
+        },
+        {
+          "rank": 5,
+          "score": 0.7006,
+          "is_gold": false,
+          "corpus_id": 515964064,
+          "corpus_repo": "pytorch",
+          "labels": [
+            "module: docs"
+          ],
+          "snippet": "TITLE: Named Tensors: size of a named dimension\n\nBODY:\nhow do we get the size of a particular named dimension ? Today, I get it as shown below, but it seems round about. Is there a better way to doing"
+        }
+      ]
+    },
+    {
+      "query_id": 718813034,
+      "query_repo": "svelte",
+      "query_split": "val",
+      "query_labels": [
+        "feature-request",
+        "compiler"
+      ],
+      "query_snippet": "TITLE: Get access to a component's own class in the script and script module (\"$$self\" or else)\n\nBODY:\nThis is a proposal to add a `$$self` ( or else ) reserved keyword that resolves into a reference to a component's own class, such as to make the following output `<h1>hello world !</h1>`\r\n```svelte",
+      "lex_r10": 1.0,
+      "lex_mrr": 0.25,
+      "dense_r10": 0.0,
+      "dense_mrr": 0.0588,
+      "gold_relevant": [
+        {
+          "corpus_id": 2350355496,
+          "corpus_repo": "storybook",
+          "shared_labels": [
+            "feature-request"
+          ],
+          "score": 0.1312,
+          "text_snippet": "TITLE: [Feature Request] Support ArgTypes inference from TS prop types in Svelte\n\nBODY:\n### Describe the bug\r\n\r\nThe Typescript types in a Svelte component don't come through to the props table in Stor"
+        },
+        {
+          "corpus_id": 843768791,
+          "corpus_repo": "storybook",
+          "shared_labels": [
+            "feature-request"
+          ],
+          "score": 0.1064,
+          "text_snippet": "TITLE: [BUG] Svelte custom-elements not working\n\nBODY:\n**Describe the bug**\r\nIf using svelte with custom-element, you have to set `customElement: true` in `main.js`.\r\nThis breaks the UI of Storybook, "
+        },
+        {
+          "corpus_id": 2650355573,
+          "corpus_repo": "animate.css",
+          "shared_labels": [
+            "feature-request"
+          ],
+          "score": 0.1014,
+          "text_snippet": "TITLE: [Docs] Svelte-Animate\n\nBODY:\n### Is your feature request related to a problem? Please describe.\n\nI just created [Svelte-Animate](https://svelte-animate.codewithshin.com/) based on animate.css. "
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.1474,
+          "is_gold": false,
+          "corpus_id": 2773705140,
+          "corpus_repo": "storybook",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [Bug]: Svelte 5 docgen crashes with `MyComponent is not defined` if a variable has the same name as the filename\n\nBODY:\n### Describe the bug\n\nIn Svelte 5+Vite (or SvelteKit), if you have a vari"
+        },
+        {
+          "rank": 2,
+          "score": 0.1339,
+          "is_gold": false,
+          "corpus_id": 1859222701,
+          "corpus_repo": "storybook",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [Bug] Svelte component documentation isn't added to autodocs documentation\n\nBODY:\n### Describe the bug\r\n\r\nFollowing the [official svelte component documentation guidelines](https://svelte.dev/d"
+        },
+        {
+          "rank": 3,
+          "score": 0.1332,
+          "is_gold": false,
+          "corpus_id": 1391102240,
+          "corpus_repo": "storybook",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: @storybook/svelte: component not render into .mdx\n\nBODY:\nHello,\r\nI have issue with svelte on my mdx storybook. Let me explain.\r\n\r\n## I can't see my svelte component\r\n\r\nI want to inject directly"
+        },
+        {
+          "rank": 4,
+          "score": 0.1312,
+          "is_gold": true,
+          "corpus_id": 2350355496,
+          "corpus_repo": "storybook",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: [Feature Request] Support ArgTypes inference from TS prop types in Svelte\n\nBODY:\n### Describe the bug\r\n\r\nThe Typescript types in a Svelte component don't come through to the props table in Stor"
+        },
+        {
+          "rank": 5,
+          "score": 0.1149,
+          "is_gold": false,
+          "corpus_id": 2666585465,
+          "corpus_repo": "storybook",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [Bug]: Error when using `+page.svelte` files as `component` in stories\n\nBODY:\n### Describe the bug\n\nWhen using Svelte 5 and SvelteKit, there's an error thrown for any story that uses a `+page.s"
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.7739,
+          "is_gold": false,
+          "corpus_id": 231440413,
+          "corpus_repo": "You-Dont-Know-JS",
+          "labels": [],
+          "snippet": "TITLE: Ch 7 - ES6 and Beyond, typo.\n\nBODY:\nThe contribution guidelines says not to worry about typo(s), but I'm not sure I can let a mis-spelled method name slide (:\r\n\r\nIn the proxies section, right a"
+        },
+        {
+          "rank": 2,
+          "score": 0.7726,
+          "is_gold": false,
+          "corpus_id": 1446161526,
+          "corpus_repo": "create-react-app",
+          "labels": [
+            "issue: proposal"
+          ],
+          "snippet": "TITLE: Remove `self` from confusing-browser-globals\n\nBODY:\n### Is your proposal related to a problem?\r\n\r\nYes.\r\n\r\nWhen writing code for a service worker, the global variable `self` is used the same way"
+        },
+        {
+          "rank": 3,
+          "score": 0.7719,
+          "is_gold": false,
+          "corpus_id": 2630875269,
+          "corpus_repo": "angular",
+          "labels": [],
+          "snippet": "TITLE: [language-server] TypeScript interface for element definitions (including for custom elements)\n\nBODY:\nWasn't sure if this belongs here or in https://github.com/angular/vscode-ng-language-servic"
+        },
+        {
+          "rank": 4,
+          "score": 0.7677,
+          "is_gold": false,
+          "corpus_id": 2254664349,
+          "corpus_repo": "storybook",
+          "labels": [
+            "help wanted",
+            "documentation"
+          ],
+          "snippet": "TITLE: [Documentation]: Svelte - Better documentation for decorators/render function\n\nBODY:\n### Describe the problem\r\n\r\nIt's not very clear how to use decorators/the render function in Svelte correctl"
+        },
+        {
+          "rank": 5,
+          "score": 0.7659,
+          "is_gold": false,
+          "corpus_id": 327723946,
+          "corpus_repo": "vue",
+          "labels": [
+            "discussion"
+          ],
+          "snippet": "TITLE: Make vue available to other libraries without having to import it\n\nBODY:\nTitle needs work, idk what to call this. \r\n\r\n### What problem does this feature solve?\r\nWriting a component library with"
+        }
+      ]
+    },
+    {
+      "query_id": 2433799786,
+      "query_repo": "vscode",
+      "query_split": "val",
+      "query_labels": [
+        "bug",
+        "regression"
+      ],
+      "query_snippet": "TITLE: When selecting a specific font (MonoLisa), weird symbols instead of characters on latest insiders build\n\nBODY:\n<!-- \u26a0\ufe0f\u26a0\ufe0f Do Not Delete This! bug_report_template \u26a0\ufe0f\u26a0\ufe0f -->\r\n<!-- Please read our Rules of Conduct: https://opensource.microsoft.com/codeofconduct/ -->\r\n<!-- \ud83d\udd6e Read our guide about su",
+      "lex_r10": 0.3333333333333333,
+      "lex_mrr": 0.2,
+      "dense_r10": 0.0,
+      "dense_mrr": 0.0,
+      "gold_relevant": [
+        {
+          "corpus_id": 2298056224,
+          "corpus_repo": "next.js",
+          "shared_labels": [
+            "bug"
+          ],
+          "score": 0.1457,
+          "text_snippet": "TITLE: Next.js v14.2 creates source map issues with various components in VS Code debugger\n\nBODY:\n### Link to the code that reproduces this issue\n\nhttps://github.com/andyvanosdale/nextjs-vscode-debug-"
+        },
+        {
+          "corpus_id": 2398653427,
+          "corpus_repo": "godot",
+          "shared_labels": [
+            "bug"
+          ],
+          "score": 0.1216,
+          "text_snippet": "TITLE: AudioStreamInteractive does not scale with editor & other minor visual issues\n\nBODY:\n### Tested versions\r\n\r\n- Reproducible in godot v4.3 beta 2. \r\n\r\n### System information\r\n\r\nGodot v4.3.beta2 -"
+        },
+        {
+          "corpus_id": 2458828980,
+          "corpus_repo": "stable-diffusion-webui",
+          "shared_labels": [
+            "bug"
+          ],
+          "score": 0.116,
+          "text_snippet": "TITLE: [Bug]: extensions \u8207 extranetworks \u7e3d\u662f\u7121\u6cd5\u8f09\u5165\u5217\u8868\n\nBODY:\n### Checklist\n\n- [ ] The issue exists after disabling all extensions\n- [ ] The issue exists on a clean installation of webui\n- [ ] The issue is"
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.2053,
+          "is_gold": false,
+          "corpus_id": 2508507111,
+          "corpus_repo": "PowerToys",
+          "labels": [
+            "product-powertoys run"
+          ],
+          "snippet": "TITLE: PowerToys Run is slow at looking up VS Code workspaces\n\nBODY:\n### Microsoft PowerToys version\n\n0.84.0\n\n### Installation method\n\nPowerToys auto-update\n\n### Running as admin\n\nYes\n\n### Area(s) wit"
+        },
+        {
+          "rank": 2,
+          "score": 0.1907,
+          "is_gold": false,
+          "corpus_id": 2506616394,
+          "corpus_repo": "create-react-app",
+          "labels": [
+            "issue: proposal"
+          ],
+          "snippet": "TITLE: Create-react-app should create a jsconfig.json file by default\n\nBODY:\n### Is your proposal related to a problem?\r\n\r\nWhen creating a JS project, IDE's like VS Code won't provide import suggestio"
+        },
+        {
+          "rank": 3,
+          "score": 0.1703,
+          "is_gold": false,
+          "corpus_id": 2479891730,
+          "corpus_repo": "electron",
+          "labels": [],
+          "snippet": "TITLE: [Bug]: Electron incorrectly detects light system theme instead of dark\n\nBODY:\n### Preflight Checklist\n\n- [X] I have read the [Contributing Guidelines](https://github.com/electron/electron/blob/"
+        },
+        {
+          "rank": 4,
+          "score": 0.1506,
+          "is_gold": false,
+          "corpus_id": 2274430206,
+          "corpus_repo": "Web-Dev-For-Beginners",
+          "labels": [],
+          "snippet": "TITLE: Add a note also to https://code.visualstudio.com/docs/editor/profiles about this, as well as https://code.visualstudio.com/docs/editor/extension-marketplace.\n\nBODY:\nAdd a note also to https://c"
+        },
+        {
+          "rank": 5,
+          "score": 0.1457,
+          "is_gold": true,
+          "corpus_id": 2298056224,
+          "corpus_repo": "next.js",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: Next.js v14.2 creates source map issues with various components in VS Code debugger\n\nBODY:\n### Link to the code that reproduces this issue\n\nhttps://github.com/andyvanosdale/nextjs-vscode-debug-"
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.805,
+          "is_gold": false,
+          "corpus_id": 818223370,
+          "corpus_repo": "terminal",
+          "labels": [
+            "terminal"
+          ],
+          "snippet": "TITLE: Some Unicode characters appear to be recognised incorrectly\n\nBODY:\n<!-- \r\n\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\r\n\r\nI ACKNOWLEDGE THE FOLLOWING BEFORE PROCEEDING:\r\n1. If I delete this entire template and go my own path, t"
+        },
+        {
+          "rank": 2,
+          "score": 0.8042,
+          "is_gold": false,
+          "corpus_id": 2752394938,
+          "corpus_repo": "godot",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [TextServer] Some texts are shaped accidently when use system font\n\nBODY:\n### Tested versions\n\n- Reproducible in: v4.3.stable, v4.4.dev.mono.custom_build [89001f91d] \n\n### System information\n\nG"
+        },
+        {
+          "rank": 3,
+          "score": 0.7945,
+          "is_gold": false,
+          "corpus_id": 314194066,
+          "corpus_repo": "terminal",
+          "labels": [
+            "help wanted",
+            "terminal"
+          ],
+          "snippet": "TITLE: Add an option to toggle the width of ambiguous-width characters\n\nBODY:\nThis bug-tracker is monitored by Windows Console development team and other technical types.  **We like detail!**\r\n\r\nIf yo"
+        },
+        {
+          "rank": 4,
+          "score": 0.7917,
+          "is_gold": false,
+          "corpus_id": 546253814,
+          "corpus_repo": "terminal",
+          "labels": [
+            "terminal"
+          ],
+          "snippet": "TITLE: Incorrect Font Fallback Behavior (we fall back to Segoe UI sometimes!)\n\nBODY:\n_notes from @DHowett_ - we're also falling back to `Segoe UI Symbol` when box-drawing glyphs don't exist. We should"
+        },
+        {
+          "rank": 5,
+          "score": 0.786,
+          "is_gold": false,
+          "corpus_id": 2460788419,
+          "corpus_repo": "storybook",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [Bug]: Weird CSS added that affects docs styling\n\nBODY:\n### Describe the bug\n\nIn my Storybook, there is following CSS added to some iframes that shows a docs page:\r\n\r\n```css\r\n.css-qa4clq :where"
+        }
+      ]
+    }
+  ],
+  "both_fail": [
+    {
+      "query_id": 2051707856,
+      "query_repo": "TypeScript",
+      "query_split": "test",
+      "query_labels": [
+        "discussion"
+      ],
+      "query_snippet": "TITLE: Native Node.js Integration/Support\n\nBODY:\n### \ud83d\udd0d Search Terms\n\nnative nodejs integration\r\nnodejs support\r\nnodejs integration\r\nrun nodejs\n\n### \u2705 Viability Checklist\n\n- [X] This wouldn't be a breaking change in existing TypeScript/JavaScript code\n- [X] This wouldn't change the runtime behavior o",
+      "lex_r10": 0.0,
+      "lex_mrr": 0.0,
+      "dense_r10": 0.0,
+      "dense_mrr": 0.0,
+      "gold_relevant": [
+        {
+          "corpus_id": 1108335078,
+          "corpus_repo": "material-ui",
+          "shared_labels": [
+            "discussion"
+          ],
+          "score": 0.0922,
+          "text_snippet": "TITLE: [Discussion] Versioning strategy for the typings\n\nBODY:\n### Summary \ud83d\udca1\r\n\r\nOn https://github.com/mui-org/material-ui-x, we had a discussion this week around the breaking changes on the TypeScript"
+        },
+        {
+          "corpus_id": 1384756134,
+          "corpus_repo": "electron",
+          "shared_labels": [
+            "discussion"
+          ],
+          "score": 0.0891,
+          "text_snippet": "TITLE: [Bug]: Electron 21 breaks node-api stability guarantees\n\nBODY:\n### Preflight Checklist\n\n- [X] I have read the [Contributing Guidelines](https://github.com/electron/electron/blob/main/CONTRIBUTI"
+        },
+        {
+          "corpus_id": 858102759,
+          "corpus_repo": "electron",
+          "shared_labels": [
+            "discussion"
+          ],
+          "score": 0.0804,
+          "text_snippet": "TITLE: [API design]: Consistency of platform-specific methods: no-op vs error\n\nBODY:\n### Preflight Checklist\n\nI have read the [Contributing Guidelines](https://github.com/electron/electron/blob/master"
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.172,
+          "is_gold": false,
+          "corpus_id": 1303418894,
+          "corpus_repo": "node",
+          "labels": [],
+          "snippet": "TITLE: How could we support typescript without vendoring it?\n\nBODY:\nI would like Node.js to support the following user experience\r\n\r\n```bash\r\n$ node script.ts\r\nTypescript support is missing, install i"
+        },
+        {
+          "rank": 2,
+          "score": 0.1703,
+          "is_gold": false,
+          "corpus_id": 2223147143,
+          "corpus_repo": "node",
+          "labels": [],
+          "snippet": "TITLE: Add console.log() %c support for parity with browsers, Deno, and Bun\n\nBODY:\nwould be fixed by https://github.com/nodejs/node/pull/49205\r\n\r\nMy attempt at a compat table of ANSI and %c:\r\n\r\n||%c|A"
+        },
+        {
+          "rank": 3,
+          "score": 0.151,
+          "is_gold": false,
+          "corpus_id": 2216816388,
+          "corpus_repo": "node",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: Please make Node.js embeddable (e.g. libnode)\n\nBODY:\n### What is the problem this feature will solve?\r\n\r\nNode.js is prolific throughout the server-side world with many projects wanting to repac"
+        },
+        {
+          "rank": 4,
+          "score": 0.1391,
+          "is_gold": false,
+          "corpus_id": 338371416,
+          "corpus_repo": "node",
+          "labels": [
+            "help wanted"
+          ],
+          "snippet": "TITLE: doc: troubleshooting FAQ?\n\nBODY:\nWe have some frequently emerged issues mostly concerned Node.js installation. Just two classic examples:\r\n\r\n1. Windows issue with antivirus and \"Performance cou"
+        },
+        {
+          "rank": 5,
+          "score": 0.1343,
+          "is_gold": false,
+          "corpus_id": 2736329518,
+          "corpus_repo": "node",
+          "labels": [],
+          "snippet": "TITLE: module.registerHooks() tracking issue\n\nBODY:\n- [x] Initial proposal: https://github.com/nodejs/node/issues/52219\n- [x] Loaders design proposal: https://github.com/nodejs/loaders/pull/198\n- [x] "
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.8248,
+          "is_gold": false,
+          "corpus_id": 1303418894,
+          "corpus_repo": "node",
+          "labels": [],
+          "snippet": "TITLE: How could we support typescript without vendoring it?\n\nBODY:\nI would like Node.js to support the following user experience\r\n\r\n```bash\r\n$ node script.ts\r\nTypescript support is missing, install i"
+        },
+        {
+          "rank": 2,
+          "score": 0.8209,
+          "is_gold": false,
+          "corpus_id": 2216816388,
+          "corpus_repo": "node",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: Please make Node.js embeddable (e.g. libnode)\n\nBODY:\n### What is the problem this feature will solve?\r\n\r\nNode.js is prolific throughout the server-side world with many projects wanting to repac"
+        },
+        {
+          "rank": 3,
+          "score": 0.7986,
+          "is_gold": false,
+          "corpus_id": 1877773681,
+          "corpus_repo": "node",
+          "labels": [],
+          "snippet": "TITLE: Discussion: New \u201cESM by default\u201d mode\n\nBODY:\nBuilding off of https://github.com/nodejs/node/pull/49295#issuecomment-1699430613, we\u2019re considering a new mode where all of the current places wher"
+        },
+        {
+          "rank": 4,
+          "score": 0.7959,
+          "is_gold": false,
+          "corpus_id": 2140166032,
+          "corpus_repo": "node",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: consider allowing libnode.h (libnode.a/ libnode.lib) and libnode.wasm for nodejs\n\nBODY:\n### What is the problem this feature will solve?\r\n\r\nuse `standard interpreter` in different languages out"
+        },
+        {
+          "rank": 5,
+          "score": 0.7906,
+          "is_gold": false,
+          "corpus_id": 2123155528,
+          "corpus_repo": "react-native",
+          "labels": [],
+          "snippet": "TITLE: TypeScript type definition ReactNode not compatible with React Native strings.\n\nBODY:\n### Description\r\n\r\n**Note**\r\nThis report is similar to [this existing bug report](https://github.com/facebo"
+        }
+      ]
+    },
+    {
+      "query_id": 366435415,
+      "query_repo": "TypeScript",
+      "query_split": "test",
+      "query_labels": [
+        "discussion"
+      ],
+      "query_snippet": "TITLE: Type Guards and CallBack Parameters are any, if worked, could successfully defined a callback type and respective guard\n\nBODY:\n**TypeScript Version:**  typescript@3.2.0-dev.20181003\r\n\r\nTwo bugs in one, if both of these issues work, I would be able to properly defined a callback type function ",
+      "lex_r10": 0.0,
+      "lex_mrr": 0.0,
+      "dense_r10": 0.0,
+      "dense_mrr": 0.0,
+      "gold_relevant": [
+        {
+          "corpus_id": 481232197,
+          "corpus_repo": "godot",
+          "shared_labels": [
+            "discussion"
+          ],
+          "score": 0.0923,
+          "text_snippet": "TITLE: Provide an error message for each function that currently returns an Error enum\n\nBODY:\nFollowing on from https://github.com/godotengine/godot/issues/31393, I noticed that I get the following er"
+        },
+        {
+          "corpus_id": 1108335078,
+          "corpus_repo": "material-ui",
+          "shared_labels": [
+            "discussion"
+          ],
+          "score": 0.0898,
+          "text_snippet": "TITLE: [Discussion] Versioning strategy for the typings\n\nBODY:\n### Summary \ud83d\udca1\r\n\r\nOn https://github.com/mui-org/material-ui-x, we had a discussion this week around the breaking changes on the TypeScript"
+        },
+        {
+          "corpus_id": 660265773,
+          "corpus_repo": "godot",
+          "shared_labels": [
+            "discussion"
+          ],
+          "score": 0.086,
+          "text_snippet": "TITLE: Erroneous Error: The signal is declared but never emitted.   UNUSED_SIGNAL\n\nBODY:\n**Godot version:**\r\n3.2.1\r\n\r\n**OS/device including version:**\r\nWin 10, PC\r\n\r\n**Issue description:**\r\nErroneous "
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.1912,
+          "is_gold": false,
+          "corpus_id": 2048382149,
+          "corpus_repo": "storybook",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [Bug]: yarn build errors in latest SB example code\n\nBODY:\n### Describe the bug\r\n\r\nStandard SB install in a fresh react-ts-vite environment, running the default yarn build (build\": \"tsc && vite "
+        },
+        {
+          "rank": 2,
+          "score": 0.1564,
+          "is_gold": false,
+          "corpus_id": 2264661352,
+          "corpus_repo": "angular",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: [Feature] Introduce Type-safe Token Providing\n\nBODY:\n### Which @angular/* package(s) are relevant/related to the feature request?\r\n\r\ncore\r\n\r\n### Description\r\n\r\nThe current object-literal-based "
+        },
+        {
+          "rank": 3,
+          "score": 0.1506,
+          "is_gold": false,
+          "corpus_id": 354529736,
+          "corpus_repo": "vue",
+          "labels": [],
+          "snippet": "TITLE: Vue.component doesnt except argument of type `Component`\n\nBODY:\n### Version\r\n2.5.17\r\n\r\n### Reproduction link\r\n[https://codesandbox.io/s/8z04jxj3y8](https://codesandbox.io/s/8z04jxj3y8)\r\n\r\n\r\n\r\n\r"
+        },
+        {
+          "rank": 4,
+          "score": 0.1373,
+          "is_gold": false,
+          "corpus_id": 1130366829,
+          "corpus_repo": "create-react-app",
+          "labels": [],
+          "snippet": "TITLE: Errors emitted by `react-scripts build` don't include any trace after upgrading to `5.0.0`\n\nBODY:\nI'm not sure if this is a bug or intended so I've marked it as a question for now...\r\n\r\nI am up"
+        },
+        {
+          "rank": 5,
+          "score": 0.1349,
+          "is_gold": false,
+          "corpus_id": 1331721130,
+          "corpus_repo": "angular",
+          "labels": [],
+          "snippet": "TITLE: Using ?. in template does not narrow type in *ngIf directive\n\nBODY:\n### Which @angular/* package(s) are the source of the bug?\n\ncompiler, core, language-service\n\n### Is this a regression?\n\nNo\n\n"
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.7951,
+          "is_gold": false,
+          "corpus_id": 734793465,
+          "corpus_repo": "next.js",
+          "labels": [],
+          "snippet": "TITLE: Correct type inference when using `fallback: true`\n\nBODY:\n# Feature request\r\n\r\n## Is your feature request related to a problem? Please describe.\r\n\r\nWhen I'm using `fallback: true` in `getStatic"
+        },
+        {
+          "rank": 2,
+          "score": 0.7781,
+          "is_gold": false,
+          "corpus_id": 1839773677,
+          "corpus_repo": "angular",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: Functional guards/interceptors should not provide `DestroyRef`\n\nBODY:\nFunctional guards with injection context allow easy access to DI:\r\n\r\n```typescript\r\nfunction authGuard() {\r\n  return inject"
+        },
+        {
+          "rank": 3,
+          "score": 0.7761,
+          "is_gold": false,
+          "corpus_id": 2256244436,
+          "corpus_repo": "node",
+          "labels": [],
+          "snippet": "TITLE: ContextifyContext::PropertyDefinerCallback() never intercepts the request\n\nBODY:\n### Version\r\n\r\nv22.0.0-pre\r\n\r\n### Platform\r\n\r\n_No response_\r\n\r\n### Subsystem\r\n\r\n_No response_\r\n\r\n### What steps "
+        },
+        {
+          "rank": 4,
+          "score": 0.7742,
+          "is_gold": false,
+          "corpus_id": 1303026517,
+          "corpus_repo": "angular",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: Add a ghost property to `InjectionToken` for generic type parameter type safety\n\nBODY:\n### Which @angular/* package(s) are relevant/related to the feature request?\n\ncore\n\n### Description\n\nCurre"
+        },
+        {
+          "rank": 5,
+          "score": 0.7727,
+          "is_gold": false,
+          "corpus_id": 1202619904,
+          "corpus_repo": "go",
+          "labels": [
+            "proposal"
+          ],
+          "snippet": "TITLE: proposal: spec: permit write defined type in type term\n\nBODY:\n### Author background\r\n\r\n**Would you consider yourself a novice, intermediate, or experienced Go programmer?**\r\n\r\nDepends on who am"
+        }
+      ]
+    },
+    {
+      "query_id": 2744764213,
+      "query_repo": "deno",
+      "query_split": "val",
+      "query_labels": [
+        "bug"
+      ],
+      "query_snippet": "TITLE: zsh: illegal hardware instruction  deno run a.ts\n\nBODY:\nVersion: Deno 2.1.2\r\nOS: Mac OS\r\n\r\na.ts\r\n```ts\r\nexport class Case {\r\n  constructor() {\r\n    get() as any;\r\n  }\r\n  @doc\r\n  method() {}\r\n}\r\nfunction get() {}\r\nfunction doc(args: any): any {}\r\nconsole.log(1);\r\n```\r\n`deno run a.ts` terminal ",
+      "lex_r10": 0.0,
+      "lex_mrr": 0.0625,
+      "dense_r10": 0.0,
+      "dense_mrr": 0.0,
+      "gold_relevant": [
+        {
+          "corpus_id": 2690465745,
+          "corpus_repo": "angular",
+          "shared_labels": [
+            "bug"
+          ],
+          "score": 0.0825,
+          "text_snippet": "TITLE: resource loader param `request` fails to exclude `undefined` from `request` returned value\n\nBODY:\n### Which @angular/* package(s) are the source of the bug?\n\ncore\n\n### Is this a regression?\n\nNo"
+        },
+        {
+          "corpus_id": 2017973987,
+          "corpus_repo": "next.js",
+          "shared_labels": [
+            "bug"
+          ],
+          "score": 0.0811,
+          "text_snippet": "TITLE: Missed correct typings on DevBundlerService\n\nBODY:\n### Link to the code that reproduces this issue\n\nhttps://github.com/hyperse-io/next-mate/tree/main/packages/next-auth\n\n### To Reproduce\n\n\r\n```"
+        },
+        {
+          "corpus_id": 2583255857,
+          "corpus_repo": "ui",
+          "shared_labels": [
+            "bug"
+          ],
+          "score": 0.0739,
+          "text_snippet": "TITLE: [bug]: Combining Deno2 with NEXT.js and shadcn is failing\n\nBODY:\n### Describe the bug\n\nCurrently, I am trying to run NEXT.js with Deno2 and shadcn. Everything is working till I want to start ad"
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.168,
+          "is_gold": false,
+          "corpus_id": 1309919592,
+          "corpus_repo": "create-react-app",
+          "labels": [
+            "issue: proposal"
+          ],
+          "snippet": "TITLE: Deno support\n\nBODY:\nAre there plans to support Deno?"
+        },
+        {
+          "rank": 2,
+          "score": 0.162,
+          "is_gold": false,
+          "corpus_id": 1878153821,
+          "corpus_repo": "node",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: import.meta.main\n\nBODY:\nDeno just added this.\r\n\r\nShould we?\r\n\r\nhttps://github.com/denoland/deno/pull/1835"
+        },
+        {
+          "rank": 3,
+          "score": 0.1332,
+          "is_gold": false,
+          "corpus_id": 1824303342,
+          "corpus_repo": "node",
+          "labels": [],
+          "snippet": "TITLE: Memory leak - Base class instance\n\nBODY:\n### Version\r\n\r\n16.6.0\r\n\r\n### Platform\r\n\r\nwindow\r\n\r\n### Subsystem\r\n\r\n_No response_\r\n\r\n### What steps will reproduce the bug?\r\n\r\nI have created Node.js Ty"
+        },
+        {
+          "rank": 4,
+          "score": 0.1152,
+          "is_gold": false,
+          "corpus_id": 1199219676,
+          "corpus_repo": "angular",
+          "labels": [],
+          "snippet": "TITLE: @Injectable does not play well with other class decorators\n\nBODY:\n### Which @angular/* package(s) are relevant/related to the feature request?\r\n\r\n_No response_\r\n\r\n### Description\r\n\r\nClass decor"
+        },
+        {
+          "rank": 5,
+          "score": 0.1137,
+          "is_gold": false,
+          "corpus_id": 1993516864,
+          "corpus_repo": "angular",
+          "labels": [],
+          "snippet": "TITLE: Add more info to Angular Hydration warning message when app not stable within 10 seconds\n\nBODY:\n### Which @angular/* package(s) are relevant/related to the feature request?\n\n_No response_\n\n### "
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.7826,
+          "is_gold": false,
+          "corpus_id": 1249675560,
+          "corpus_repo": "go",
+          "labels": [
+            "compiler"
+          ],
+          "snippet": "TITLE: cmd/compile,runtime: SIGILL on `linux-loong64-3a5000`\n\nBODY:\n```\r\n#!watchflakes\r\npost <- builder ~ `^linux-loong64` && `signal: illegal instruction \\(core dumped\\)`\r\n```\r\n\r\n```\r\nsignal: illegal"
+        },
+        {
+          "rank": 2,
+          "score": 0.7758,
+          "is_gold": false,
+          "corpus_id": 858102759,
+          "corpus_repo": "electron",
+          "labels": [
+            "enhancement :sparkles:",
+            "discussion"
+          ],
+          "snippet": "TITLE: [API design]: Consistency of platform-specific methods: no-op vs error\n\nBODY:\n### Preflight Checklist\n\nI have read the [Contributing Guidelines](https://github.com/electron/electron/blob/master"
+        },
+        {
+          "rank": 3,
+          "score": 0.7756,
+          "is_gold": false,
+          "corpus_id": 1923435882,
+          "corpus_repo": "next.js",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: Type error when compiling superstruct\n\nBODY:\n### Link to the code that reproduces this issue\n\nhttps://github.com/elliott-w/next-superstruct-bug\n\n### To Reproduce\n\nFrom the repo:\r\n1. `npm instal"
+        },
+        {
+          "rank": 4,
+          "score": 0.766,
+          "is_gold": false,
+          "corpus_id": 569878317,
+          "corpus_repo": "go",
+          "labels": [
+            "compiler"
+          ],
+          "snippet": "TITLE: runtime: \"interface {} is nil, not *main.T\" on linux-amd64-noopt builder\n\nBODY:\n[2020-02-22T04:31:41-059a5ac/linux-amd64-noopt](https://build.golang.org/log/9df8661fd5326a034504b9834d9e49931fdc"
+        },
+        {
+          "rank": 5,
+          "score": 0.7629,
+          "is_gold": false,
+          "corpus_id": 2363881173,
+          "corpus_repo": "next.js",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: Server Actions that are hybrid types are compiled to `{}` causing `TypeError`\n\nBODY:\n### Link to the code that reproduces this issue\r\n\r\n- CodeSandbox  \r\nhttps://codesandbox.io/p/github/purfectl"
+        }
+      ]
+    },
+    {
+      "query_id": 2497437001,
+      "query_repo": "deno",
+      "query_split": "val",
+      "query_labels": [
+        "bug"
+      ],
+      "query_snippet": "TITLE: Inconsistencies of unrelated but nested workspaces\n\nBODY:\nVersion: Deno 1.46.2\r\n\r\nRepro repo: https://github.com/albnnc/deno-repro-20240830\r\n\r\nPossibly related: https://github.com/denoland/deno/issues/25226\r\n\r\nShould the following cases work, or do I have wrong understanding of workspaces in ",
+      "lex_r10": 0.0,
+      "lex_mrr": 0.0833,
+      "dense_r10": 0.0,
+      "dense_mrr": 0.0,
+      "gold_relevant": [
+        {
+          "corpus_id": 2725226414,
+          "corpus_repo": "godot",
+          "shared_labels": [
+            "bug"
+          ],
+          "score": 0.1208,
+          "text_snippet": "TITLE: UV Map corruption on GLB import\n\nBODY:\n### Tested versions\n\nGodot 4.3\n\n\n### System information\n\nForward+, Windows 10, I3 4190\n\n### Issue description\n\nWhen importing GLB models into Godot, textu"
+        },
+        {
+          "corpus_id": 2746879384,
+          "corpus_repo": "godot",
+          "shared_labels": [
+            "bug"
+          ],
+          "score": 0.118,
+          "text_snippet": "TITLE: invalid signal when as return variant, sometimes !\n\nBODY:\n### Tested versions\n\n- godot 4.3 stable\n\n### System information\n\ndevelop env\n\n### Issue description\n\n![Image](https://github.com/user-a"
+        },
+        {
+          "corpus_id": 2659120502,
+          "corpus_repo": "godot",
+          "shared_labels": [
+            "bug"
+          ],
+          "score": 0.1125,
+          "text_snippet": "TITLE: Ellipsis sometimes not being rendered for RTL text\n\nBODY:\n### Tested versions\n\n- Reproducible in 4.4.dev (76fa7b291455a8ba24c50005072ebdb58f8a5984)\n\n### System information\n\nGodot v4.4.dev (342e"
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.221,
+          "is_gold": false,
+          "corpus_id": 1878153821,
+          "corpus_repo": "node",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: import.meta.main\n\nBODY:\nDeno just added this.\r\n\r\nShould we?\r\n\r\nhttps://github.com/denoland/deno/pull/1835"
+        },
+        {
+          "rank": 2,
+          "score": 0.2116,
+          "is_gold": false,
+          "corpus_id": 1309919592,
+          "corpus_repo": "create-react-app",
+          "labels": [
+            "issue: proposal"
+          ],
+          "snippet": "TITLE: Deno support\n\nBODY:\nAre there plans to support Deno?"
+        },
+        {
+          "rank": 3,
+          "score": 0.141,
+          "is_gold": false,
+          "corpus_id": 2632518348,
+          "corpus_repo": "PowerToys",
+          "labels": [],
+          "snippet": "TITLE: Workspaces doesn't recognize firefox developer edtion\n\nBODY:\n### Microsoft PowerToys version\n\n0.85.1\n\n### Installation method\n\nWinGet\n\n### Running as admin\n\nYes\n\n### Area(s) with issue?\n\nWorksp"
+        },
+        {
+          "rank": 4,
+          "score": 0.1404,
+          "is_gold": false,
+          "corpus_id": 2495919047,
+          "corpus_repo": "PowerToys",
+          "labels": [],
+          "snippet": "TITLE: Change File Icon\n\nBODY:\n### Description of the new feature / enhancement\r\n\r\nA tool to change file association icons.\r\n\r\n### Scenario when this would be used?\r\n\r\nI want to make `.code-workspace`"
+        },
+        {
+          "rank": 5,
+          "score": 0.139,
+          "is_gold": false,
+          "corpus_id": 2706614268,
+          "corpus_repo": "PowerToys",
+          "labels": [
+            "product-powertoys run"
+          ],
+          "snippet": "TITLE: Chinese Pinyin(\u62fc\u97f3) search doesn't work when it corresponds to more than two characters (or 3 maybe) in PowerToys Run\n\nBODY:\n### Microsoft PowerToys version\n\n0.86.0\n\n### Installation method\n\nPow"
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.7489,
+          "is_gold": false,
+          "corpus_id": 1067792877,
+          "corpus_repo": "storybook",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: Conflicting exports in `@storybook\\components` and `@storybook\\addon-docs`\n\nBODY:\n**Describe the bug**\r\nA clear and concise description of what the bug is.\r\nWhen building storybook with `storyb"
+        },
+        {
+          "rank": 2,
+          "score": 0.7437,
+          "is_gold": false,
+          "corpus_id": 2514317514,
+          "corpus_repo": "ui",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [bug]: Mixed indentations in the same file\n\nBODY:\n### Describe the bug\n\nWhen you follow the instructions and install the library, `tailwind.config.{js,ts}` file you're getting at the end has bo"
+        },
+        {
+          "rank": 3,
+          "score": 0.7406,
+          "is_gold": false,
+          "corpus_id": 1989625746,
+          "corpus_repo": "godot",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: GDScript Editor Nesting bug\n\nBODY:\n### Godot version\n\n4.1.3-Stable\n\n### System information\n\nWindows 10\n\n### Issue description\n\nGDScript editor nesting isn't working always correctly. When I wan"
+        },
+        {
+          "rank": 4,
+          "score": 0.7351,
+          "is_gold": false,
+          "corpus_id": 2338926285,
+          "corpus_repo": "godot",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: Nested resources are not always saved after being modified externally\n\nBODY:\n### Tested versions\n\n- Reproducible in: v4.2.1.stable.mono.official [b09f793f5], v4.3.beta1.mono.official [a4f2ea91a"
+        },
+        {
+          "rank": 5,
+          "score": 0.7346,
+          "is_gold": false,
+          "corpus_id": 2721505925,
+          "corpus_repo": "ui",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [bug]: inconsistency in distinguishing files and folders in file tree\n\nBODY:\n### Describe the bug\r\n\r\nHello and thanks for this great project!\r\n\r\nRelated to [A sidebar with a collapsible file tr"
+        }
+      ]
+    },
+    {
+      "query_id": 699667084,
+      "query_repo": "flutter",
+      "query_split": "test",
+      "query_labels": [
+        "crash"
+      ],
+      "query_snippet": "TITLE: Throwing in didChangeDependencies after establishing dependencies causes failures during test teardown\n\nBODY:\n```dart\r\n// @dart = 2.8\r\n\r\nimport 'package:flutter/widgets.dart';\r\nimport 'package:flutter_test/flutter_test.dart';\r\n\r\nvoid main() {\r\n  testWidgets('example', (WidgetTester tester) as",
+      "lex_r10": 0.0,
+      "lex_mrr": 0.0,
+      "dense_r10": 0.0,
+      "dense_mrr": 0.0,
+      "gold_relevant": [
+        {
+          "corpus_id": 1197822525,
+          "corpus_repo": "godot",
+          "shared_labels": [
+            "crash"
+          ],
+          "score": 0.0675,
+          "text_snippet": "TITLE: VisualScript crashes when reconnecting _physics and  _process_physics nodes delta to Construct Vector3\n\nBODY:\n### Godot version\r\n\r\nGodot_v3.4.4-stable_x11.64\r\n\r\n### System information\r\n\r\nLinux,"
+        },
+        {
+          "corpus_id": 2711042824,
+          "corpus_repo": "godot",
+          "shared_labels": [
+            "crash"
+          ],
+          "score": 0.0548,
+          "text_snippet": "TITLE: Godot v4.3 & windows 11- crash when edit \u201cRenderer: Forward+\u201d project\n\nBODY:\n### Tested versions\n\n-**Reproducible**: v4.4-dev5, v4.3-stable, v4.2.2-stable, v4.2.1-stable, v4.2-stable\n-**Not rep"
+        },
+        {
+          "corpus_id": 2246179654,
+          "corpus_repo": "godot",
+          "shared_labels": [
+            "crash"
+          ],
+          "score": 0.0537,
+          "text_snippet": "TITLE: Godot crashes in Debug when C# exception is thrown (VS Code and Rider, using dotnet 8.0.204)\n\nBODY:\n### Tested versions\r\n\r\n- Reproducible in all 4.2 and 4.3 version (including 2e5d2333b782a2439"
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.1161,
+          "is_gold": false,
+          "corpus_id": 2251638792,
+          "corpus_repo": "go",
+          "labels": [],
+          "snippet": "TITLE: crypto/tls: TestBogoSuite failures\n\nBODY:\n```\n#!watchflakes\ndefault <- pkg == \"crypto/tls\" && test == \"TestBogoSuite\"\n```\n\nIssue created automatically to collect these failures.\n\nExample ([log]"
+        },
+        {
+          "rank": 2,
+          "score": 0.1146,
+          "is_gold": false,
+          "corpus_id": 539717361,
+          "corpus_repo": "storybook",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: Add Flutter Support\n\nBODY:\nI love storybook and would like a Flutter support for it...\r\nI known that today it only works for js frameworks, but can we change it?\r\nHave you considered changing s"
+        },
+        {
+          "rank": 3,
+          "score": 0.1098,
+          "is_gold": false,
+          "corpus_id": 243440818,
+          "corpus_repo": "opencv",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: DNN now predicts incorrectly in Universal Windows Platform build\n\nBODY:\n- OpenCV => 3.3.0-rc\r\n- Operating System / Platform =>Windows 10 - 64 bit\r\n- Compiler =>Visual Studio 15 2017\r\n- cmake =>"
+        },
+        {
+          "rank": 4,
+          "score": 0.0986,
+          "is_gold": false,
+          "corpus_id": 485930059,
+          "corpus_repo": "electron",
+          "labels": [],
+          "snippet": "TITLE: Crash when closing devtools after focus\n\nBODY:\nHappens on at least macOS and Linux on current master. Also reproducible on v6.0.4, v5.0.10, and v4.2.9.\r\n\r\nFiddle: https://gist.github.com/6872f2"
+        },
+        {
+          "rank": 5,
+          "score": 0.098,
+          "is_gold": false,
+          "corpus_id": 1428907520,
+          "corpus_repo": "godot",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: Theme resource with default font changes on every save\n\nBODY:\n### Godot version\n\n3.5.stable.arch_linux\n\n### System information\n\nLinux 5.19.11-arch1-1\n\n### Issue description\n\nI've saved a GUI th"
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.7784,
+          "is_gold": false,
+          "corpus_id": 984346053,
+          "corpus_repo": "pytorch",
+          "labels": [],
+          "snippet": "TITLE: issues flutter in android studio\n\nBODY:\nFAILURE: Build failed with an exception.\r\n\r\n* What went wrong:\r\nExecution failed for task ':app:compileDebugKotlin'.\r\n> Could not resolve all artifacts f"
+        },
+        {
+          "rank": 2,
+          "score": 0.7554,
+          "is_gold": false,
+          "corpus_id": 2284110001,
+          "corpus_repo": "go",
+          "labels": [],
+          "snippet": "TITLE: internal/trace/v2: TestTraceIterPull failures\n\nBODY:\n```\n#!watchflakes\ndefault <- pkg == \"internal/trace/v2\" && test == \"TestTraceIterPull\"\n```\n\nIssue created automatically to collect these fai"
+        },
+        {
+          "rank": 3,
+          "score": 0.7505,
+          "is_gold": false,
+          "corpus_id": 619295091,
+          "corpus_repo": "godot",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: Cyclic dependencies between References, even without any static typing, cause memory leaks / errors on exit\n\nBODY:\n**Godot version:**\r\n\r\n3.2.1-stable\r\n\r\n**Steps to reproduce:**\r\n\r\nSimply have t"
+        },
+        {
+          "rank": 4,
+          "score": 0.7486,
+          "is_gold": false,
+          "corpus_id": 2257360914,
+          "corpus_repo": "go",
+          "labels": [],
+          "snippet": "TITLE: internal/trace/v2: TestTraceWaitOnPipe failures\n\nBODY:\n```\n#!watchflakes\ndefault <- pkg == \"internal/trace/v2\" && test == \"TestTraceWaitOnPipe\"\n```\n\nIssue created automatically to collect these"
+        },
+        {
+          "rank": 5,
+          "score": 0.7468,
+          "is_gold": false,
+          "corpus_id": 1063516113,
+          "corpus_repo": "angular",
+          "labels": [],
+          "snippet": "TITLE: Unexpected supression (or undetected) ExpressionChangedAfterItHasBeenCheckedError\n\nBODY:\n### Which @angular/* package(s) are the source of the bug?\r\n\r\ncore\r\n\r\n### Is this a regression?\r\n\r\nNo\r\n\r"
+        }
+      ]
+    }
+  ]
+}
