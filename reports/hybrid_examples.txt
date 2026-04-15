@@ -1,0 +1,448 @@
+HYBRID (RRF) vs LEXICAL vs DENSE — COMPARISON EXAMPLES
+RRF k=60 | pool=20 from each method | BAAI/bge-small-en-v1.5 + TF-IDF
+Eval set: 21 queries (human-annotated)
+============================================================================
+
+============================================================================
+           HYBRID WINS  (hybrid MRR beats both lexical and dense)           
+============================================================================
+────────────────────────────────────────────────────────────────────────────
+[HYBRID_WIN #1]  repo=neovim  split=test
+labels=['enhancement', 'performance']
+  Lex   MRR=0.200  R@5=0.500  R@10=0.500
+  Dense MRR=0.200  R@5=0.500  R@10=0.500
+  Hybrid MRR=1.000  R@5=0.500  R@10=1.000
+
+QUERY:
+TITLE: Option to disable writing extended attributes  BODY: ### Problem
+Hi,    I am working for a large software company. Our codebase is
+remote, and mounted locally on the workstations. We also have various
+automation tools which pick up changes to the files and perform build,
+test, deployment,
+
+GOLD RELEVANT:
+  [next.js]  shared_labels=[]
+  TITLE: Build error when using mapped drive (Windows)
+  [go]  shared_labels=[]
+  TITLE: x/sys/unix: add Solaris/Illumos ACL and extended attribute suppor
+  LEXICAL TOP-5:
+    #1  score=0.1390  repo=node  labels=[]
+       TITLE: fs async functions (both callback and promises APIs) return E
+    #2  score=0.1326  repo=node  labels=[]
+       TITLE: fs.realpathSync('') returns CWD
+    #3  score=0.1249  repo=bitcoin  labels=[]
+       TITLE: depends: llvm-ranlib (etc): "No such file or directory" on In
+    #4  score=0.1192  repo=next.js  labels=[]
+       TITLE: [Turbopack] Error: ENOENT: no such file or directory, open '[
+    #5  score=0.1182  repo=next.js  labels=['bug'] ← GOLD
+       TITLE: Build error when using mapped drive (Windows)
+  DENSE TOP-5:
+    #1  score=0.7467  repo=PowerToys  labels=[]
+       TITLE: NewPlus starting digits, spaces, and dots should ALSO be igno
+    #2  score=0.7396  repo=terminal  labels=[]
+       TITLE: WriteConsoleOutputCharacterA doesn't merge UTF-8 partials in 
+    #3  score=0.7393  repo=godot  labels=['bug']
+       TITLE: Saving embedded resource to overwrite previously used resourc
+    #4  score=0.7369  repo=yt-dlp  labels=['enhancement', 'triage']
+       TITLE: mark truncated filenames with ellipsis "…" in `-o` template i
+    #5  score=0.7363  repo=go  labels=['help wanted', 'compiler'] ← GOLD
+       TITLE: x/sys/unix: add Solaris/Illumos ACL and extended attribute su
+  HYBRID TOP-5:
+    #1  score=0.02789  [lex:20|den:5]  repo=go  labels=['help wanted', 'compiler'] ← GOLD
+       TITLE: x/sys/unix: add Solaris/Illumos ACL and extended attribute su
+    #2  score=0.01639  [lex:1|den:-]  repo=node  labels=[]
+       TITLE: fs async functions (both callback and promises APIs) return E
+    #3  score=0.01639  [lex:-|den:1]  repo=PowerToys  labels=[]
+       TITLE: NewPlus starting digits, spaces, and dots should ALSO be igno
+    #4  score=0.01613  [lex:2|den:-]  repo=node  labels=[]
+       TITLE: fs.realpathSync('') returns CWD
+    #5  score=0.01613  [lex:-|den:2]  repo=terminal  labels=[]
+       TITLE: WriteConsoleOutputCharacterA doesn't merge UTF-8 partials in 
+────────────────────────────────────────────────────────────────────────────
+[HYBRID_WIN #2]  repo=deno  split=val
+labels=['good first issue']
+  Lex   MRR=0.053  R@5=0.000  R@10=0.000
+  Dense MRR=0.500  R@5=0.667  R@10=1.000
+  Hybrid MRR=1.000  R@5=0.667  R@10=0.667
+
+QUERY:
+TITLE: Support passing paths to `--watch` flag of `deno test`  BODY:
+Currently, the following works as expected:    ```sh  deno run
+--watch=watched-file.ts other-file.ts  ```    However, the following
+fails:    ```sh  deno test --watch=watched-file.ts other-file.ts  #
+error: unexpected value 'watche
+
+GOLD RELEVANT:
+  [node]  shared_labels=[]
+  TITLE: Support file globs with `--watch-path`
+  [node]  shared_labels=[]
+  TITLE: --watch should monitor replaced files
+  [node]  shared_labels=[]
+  TITLE: `--watch` mode does not work on volumes mounted via `/etc/synthet
+  LEXICAL TOP-5:
+    #1  score=0.1368  repo=create-react-app  labels=['issue: proposal']
+       TITLE: Deno support
+    #2  score=0.1228  repo=node  labels=['feature-request']
+       TITLE: import.meta.main
+    #3  score=0.1096  repo=PowerToys  labels=[]
+       TITLE: When in preview mode of a Markdown file, enable navigation to
+    #4  score=0.1053  repo=PowerToys  labels=['enhancement']
+       TITLE: Add capability to browser links in Markdown (.md) files in pr
+    #5  score=0.1003  repo=PowerToys  labels=[]
+       TITLE: Checkbox ticks in Markdown files have bad contrast
+  DENSE TOP-5:
+    #1  score=0.7989  repo=node  labels=[]
+       TITLE: Investigate flaky test-watch-mode (no. 3)
+    #2  score=0.7926  repo=node  labels=['feature-request'] ← GOLD
+       TITLE: Support file globs with `--watch-path`
+    #3  score=0.7830  repo=node  labels=['feature-request'] ← GOLD
+       TITLE: --watch should monitor replaced files
+    #4  score=0.7822  repo=create-react-app  labels=['issue: bug report']
+       TITLE: 'Failed to initialize watch plugin' when running tests for ne
+    #5  score=0.7773  repo=next.js  labels=[]
+       TITLE: `npm run test` fails with-jest-app using --watch flag.
+  HYBRID TOP-5:
+    #1  score=0.02853  [lex:19|den:3]  repo=node  labels=['feature-request'] ← GOLD
+       TITLE: --watch should monitor replaced files
+    #2  score=0.01639  [lex:1|den:-]  repo=create-react-app  labels=['issue: proposal']
+       TITLE: Deno support
+    #3  score=0.01639  [lex:-|den:1]  repo=node  labels=[]
+       TITLE: Investigate flaky test-watch-mode (no. 3)
+    #4  score=0.01613  [lex:2|den:-]  repo=node  labels=['feature-request']
+       TITLE: import.meta.main
+    #5  score=0.01613  [lex:-|den:2]  repo=node  labels=['feature-request'] ← GOLD
+       TITLE: Support file globs with `--watch-path`
+────────────────────────────────────────────────────────────────────────────
+[HYBRID_WIN #3]  repo=deno  split=val
+labels=['help wanted']
+  Lex   MRR=0.111  R@5=0.000  R@10=1.000
+  Dense MRR=0.100  R@5=0.000  R@10=1.000
+  Hybrid MRR=0.333  R@5=1.000  R@10=1.000
+
+QUERY:
+TITLE: Support a pty interface  BODY: Deno should support forking of pty
+interfaces (psuedo terminals) which would allow Deno workloads to be
+able to "pretend" to be a terminal, which can allow Deno workloads to be
+a terminal emulator or allow certain programs to think a Deno workload
+is an terminal
+
+GOLD RELEVANT:
+  [terminal]  shared_labels=[]
+  TITLE: Make sure that pty window ownership changes when root process exi
+  LEXICAL TOP-5:
+    #1  score=0.1952  repo=create-react-app  labels=['issue: proposal']
+       TITLE: Deno support
+    #2  score=0.1857  repo=node  labels=['feature-request']
+       TITLE: import.meta.main
+    #3  score=0.1423  repo=node  labels=['feature-request']
+       TITLE: Please make Node.js embeddable (e.g. libnode)
+    #4  score=0.1271  repo=ui  labels=[]
+       TITLE: [feat]: add native support for deno 2 as a package manager.
+    #5  score=0.1263  repo=node  labels=[]
+       TITLE: Add console.log() %c support for parity with browsers, Deno, 
+  DENSE TOP-5:
+    #1  score=0.7711  repo=ui  labels=[]
+       TITLE: [feat]: add native support for deno 2 as a package manager.
+    #2  score=0.7476  repo=node  labels=['feature-request']
+       TITLE: Should node support subcommands?
+    #3  score=0.7328  repo=node  labels=['feature-request']
+       TITLE: Please make Node.js embeddable (e.g. libnode)
+    #4  score=0.7317  repo=node  labels=['feature-request']
+       TITLE: Reconsider adding FFI to the core
+    #5  score=0.7306  repo=go  labels=['help wanted', 'featurerequest']
+       TITLE: syscall: add support for Windows job objects
+  HYBRID TOP-5:
+    #1  score=0.03202  [lex:4|den:1]  repo=ui  labels=[]
+       TITLE: [feat]: add native support for deno 2 as a package manager.
+    #2  score=0.03175  [lex:3|den:3]  repo=node  labels=['feature-request']
+       TITLE: Please make Node.js embeddable (e.g. libnode)
+    #3  score=0.02878  [lex:9|den:10]  repo=terminal  labels=[] ← GOLD
+       TITLE: Make sure that pty window ownership changes when root process
+    #4  score=0.02837  [lex:5|den:17]  repo=node  labels=[]
+       TITLE: Add console.log() %c support for parity with browsers, Deno, 
+    #5  score=0.01639  [lex:1|den:-]  repo=create-react-app  labels=['issue: proposal']
+       TITLE: Deno support
+
+============================================================================
+          DENSE BEATS HYBRID  (RRF dilutes a strong dense signal)           
+============================================================================
+────────────────────────────────────────────────────────────────────────────
+[DENSE_BEATS_HYBRID #1]  repo=svelte  split=val
+labels=['documentation']
+  Lex   MRR=0.100  R@5=0.000  R@10=0.500
+  Dense MRR=1.000  R@5=0.500  R@10=0.500
+  Hybrid MRR=0.333  R@5=0.500  R@10=0.500
+
+QUERY:
+TITLE: Runes + async: add (or document) idiomatic way to work with async
+functions and runes  BODY: ### Describe the problem  In my Svelte 4 app,
+I keep all the logic inside stores and away from components. I found
+this approach to be more predictable and bug-free.     [Here is an
+example of a deriv
+
+GOLD RELEVANT:
+  [vue]  shared_labels=[]
+  TITLE: Create an ".async" modifier for event handlers
+  [react]  shared_labels=[]
+  TITLE: Dancing between state and effects - a real-world use case
+  LEXICAL TOP-5:
+    #1  score=0.1097  repo=react  labels=[]
+       TITLE: Bug: Impossible to use on async hooks
+    #2  score=0.1012  repo=storybook  labels=['bug']
+       TITLE: [Bug]: SvelteKit mocks doesn't support the `$app/state` modul
+    #3  score=0.0964  repo=angular  labels=[]
+       TITLE: Signals for Reactive and Template-based Forms
+    #4  score=0.0898  repo=angular  labels=['feature-request']
+       TITLE: Reactive `ComponentRef.setInput`
+    #5  score=0.0888  repo=angular  labels=['feature-request']
+       TITLE: Allow lazy initialization logic with Standalone Components
+  DENSE TOP-5:
+    #1  score=0.7880  repo=vue  labels=['feature-request', 'discussion'] ← GOLD
+       TITLE: Create an ".async" modifier for event handlers
+    #2  score=0.7720  repo=storybook  labels=['feature-request']
+       TITLE: async configurations
+    #3  score=0.7686  repo=node  labels=[]
+       TITLE: How to wrap event emitters with async_hooks
+    #4  score=0.7613  repo=storybook  labels=['bug']
+       TITLE: [Bug]: Svelte source viewer shows events as `event_NAME` in p
+    #5  score=0.7585  repo=create-react-app  labels=['issue: proposal']
+       TITLE: Don't compile async/await in node_modules in development
+  HYBRID TOP-5:
+    #1  score=0.03105  [lex:2|den:7]  repo=storybook  labels=['bug']
+       TITLE: [Bug]: SvelteKit mocks doesn't support the `$app/state` modul
+    #2  score=0.01639  [lex:1|den:-]  repo=react  labels=[]
+       TITLE: Bug: Impossible to use on async hooks
+    #3  score=0.01639  [lex:-|den:1]  repo=vue  labels=['feature-request', 'discussion'] ← GOLD
+       TITLE: Create an ".async" modifier for event handlers
+    #4  score=0.01613  [lex:-|den:2]  repo=storybook  labels=['feature-request']
+       TITLE: async configurations
+    #5  score=0.01587  [lex:3|den:-]  repo=angular  labels=[]
+       TITLE: Signals for Reactive and Template-based Forms
+────────────────────────────────────────────────────────────────────────────
+[DENSE_BEATS_HYBRID #2]  repo=vscode  split=val
+labels=['feature-request', 'terminal']
+  Lex   MRR=0.000  R@5=0.000  R@10=0.000
+  Dense MRR=1.000  R@5=0.667  R@10=1.000
+  Hybrid MRR=0.333  R@5=0.333  R@10=0.667
+
+QUERY:
+TITLE: Persistent terminals in repositories with Workspace settings
+configurations  BODY: <!-- ⚠️⚠️ Do Not Delete This!
+feature_request_template ⚠️⚠️ -->  <!-- Please read our Rules of
+Conduct: https://opensource.microsoft.com/codeofconduct/ -->  <!--
+Please search existing issues to avoid creating
+
+GOLD RELEVANT:
+  [terminal]  shared_labels=['terminal']
+  TITLE: Workspace-specific settings and profiles
+  [PowerToys]  shared_labels=[]
+  TITLE: Workspaces should save the current state effortlessly
+  [terminal]  shared_labels=['terminal']
+  TITLE: Need a way to have per-machine profiles in settings
+  LEXICAL TOP-5:
+    #1  score=0.1294  repo=terminal  labels=['terminal']
+       TITLE: Terminal Key-Map Sets for/from iTerm & other Terminals
+    #2  score=0.1201  repo=PowerToys  labels=[]
+       TITLE: unexpected / Added characters
+    #3  score=0.1153  repo=PowerToys  labels=[]
+       TITLE: Change File Icon
+    #4  score=0.1121  repo=terminal  labels=['help wanted', 'terminal']
+       TITLE: Suggestion: ability for terminals to set their tab icon
+    #5  score=0.1119  repo=PowerToys  labels=['enhancement', 'help wanted']
+       TITLE: When turning off auto-complete history, delete history file
+  DENSE TOP-5:
+    #1  score=0.8161  repo=terminal  labels=['terminal'] ← GOLD
+       TITLE: Workspace-specific settings and profiles
+    #2  score=0.7796  repo=terminal  labels=['help wanted', 'terminal']
+       TITLE: Add support for roaming settings.json or storing it elsewhere
+    #3  score=0.7794  repo=terminal  labels=['help wanted', 'terminal']
+       TITLE: Include a profile that will connect to Visual Studio Codespac
+    #4  score=0.7715  repo=terminal  labels=['terminal']
+       TITLE: Feature Request: Clients of terminal need a way to inquire ab
+    #5  score=0.7659  repo=PowerToys  labels=[] ← GOLD
+       TITLE: Workspaces should save the current state effortlessly
+  HYBRID TOP-5:
+    #1  score=0.03062  [lex:9|den:2]  repo=terminal  labels=['help wanted', 'terminal']
+       TITLE: Add support for roaming settings.json or storing it elsewhere
+    #2  score=0.01639  [lex:1|den:-]  repo=terminal  labels=['terminal']
+       TITLE: Terminal Key-Map Sets for/from iTerm & other Terminals
+    #3  score=0.01639  [lex:-|den:1]  repo=terminal  labels=['terminal'] ← GOLD
+       TITLE: Workspace-specific settings and profiles
+    #4  score=0.01613  [lex:2|den:-]  repo=PowerToys  labels=[]
+       TITLE: unexpected / Added characters
+    #5  score=0.01587  [lex:3|den:-]  repo=PowerToys  labels=[]
+       TITLE: Change File Icon
+────────────────────────────────────────────────────────────────────────────
+[DENSE_BEATS_HYBRID #3]  repo=transformers  split=val
+labels=['documentation']
+  Lex   MRR=0.000  R@5=0.000  R@10=0.000
+  Dense MRR=1.000  R@5=0.556  R@10=1.000
+  Hybrid MRR=0.500  R@5=0.222  R@10=0.556
+
+QUERY:
+TITLE: Tranformers documentation translation to Italian  BODY: Hi!
+Let's bring the documentation to all the Italian-speaking community :)
+Who would want to translate? Please follow the 🤗 [TRANSLATING guide](htt
+ps://github.com/huggingface/transformers/blob/main/docs/TRANSLATING.md).
+Here is a l
+
+GOLD RELEVANT:
+  [three.js]  shared_labels=['documentation']
+  TITLE: Docs: Italian version
+  [stable-diffusion-webui]  shared_labels=['documentation']
+  TITLE: Documentation translation
+  [java-design-patterns]  shared_labels=[]
+  TITLE: Translation to Italian
+  [material-ui]  shared_labels=[]
+  TITLE: [docs] Translate the documentation to Chinese / 将文档翻译成中文
+  [javascript-algorithms]  shared_labels=[]
+  TITLE: Italian Language
+  [three.js]  shared_labels=['documentation']
+  TITLE: Docs: portuguese version
+  [java-design-patterns]  shared_labels=[]
+  TITLE: Translation to Portuguese
+  [material-ui]  shared_labels=[]
+  TITLE: [docs] Translate the documentation
+  [three.js]  shared_labels=['documentation']
+  TITLE: Docs: Spanish version
+  LEXICAL TOP-5:
+    #1  score=0.2558  repo=pytorch  labels=[]
+       TITLE: [fx] symbolic trace "is None" and "is not None" checks
+    #2  score=0.2087  repo=pytorch  labels=['module: nn']
+       TITLE: Add head_mask for transformers
+    #3  score=0.2004  repo=pytorch  labels=['enhancement']
+       TITLE: xpu: implement aten::_linalg_eigvals for XPU backend (affecti
+    #4  score=0.1851  repo=pytorch  labels=['module: docs']
+       TITLE: Torch dynamo deep dive and overview discrepancy
+    #5  score=0.1764  repo=pytorch  labels=[]
+       TITLE: [Dynamo] HuggingFace transformers configuration_utils graph b
+  DENSE TOP-5:
+    #1  score=0.7813  repo=three.js  labels=['documentation'] ← GOLD
+       TITLE: Docs: Italian version
+    #2  score=0.7721  repo=stable-diffusion-webui  labels=['documentation'] ← GOLD
+       TITLE: Documentation translation
+    #3  score=0.7714  repo=java-design-patterns  labels=[] ← GOLD
+       TITLE: Translation to Italian
+    #4  score=0.7572  repo=material-ui  labels=[] ← GOLD
+       TITLE: [docs] Translate the documentation to Chinese / 将文档翻译成中文
+    #5  score=0.7530  repo=javascript-algorithms  labels=['enhancement'] ← GOLD
+       TITLE: Italian Language
+  HYBRID TOP-5:
+    #1  score=0.01639  [lex:1|den:-]  repo=pytorch  labels=[]
+       TITLE: [fx] symbolic trace "is None" and "is not None" checks
+    #2  score=0.01639  [lex:-|den:1]  repo=three.js  labels=['documentation'] ← GOLD
+       TITLE: Docs: Italian version
+    #3  score=0.01613  [lex:2|den:-]  repo=pytorch  labels=['module: nn']
+       TITLE: Add head_mask for transformers
+    #4  score=0.01613  [lex:-|den:2]  repo=stable-diffusion-webui  labels=['documentation'] ← GOLD
+       TITLE: Documentation translation
+    #5  score=0.01587  [lex:3|den:-]  repo=pytorch  labels=['enhancement']
+       TITLE: xpu: implement aten::_linalg_eigvals for XPU backend (affecti
+
+============================================================================
+        LEXICAL BEATS HYBRID  (keyword match, RRF introduces noise)         
+============================================================================
+────────────────────────────────────────────────────────────────────────────
+[LEX_BEATS_HYBRID #1]  repo=tauri  split=val
+labels=['good first issue']
+  Lex   MRR=0.333  R@5=1.000  R@10=1.000
+  Dense MRR=0.000  R@5=0.000  R@10=0.000
+  Hybrid MRR=0.200  R@5=0.500  R@10=1.000
+
+QUERY:
+TITLE: [bug] `@tauri-apps/cli` NPM package contains unnecessary files
+BODY: ### Describe the bug  The following path in
+`packages/cli/Cargo.toml` is incorrect in [NPM
+package](https://www.npmjs.com/package/@tauri-apps/cli?activeTab=code):
+```toml  [dependencies]  # Default enable napi4 feature,
+
+GOLD RELEVANT:
+  [storybook]  shared_labels=[]
+  TITLE: [Bug]: Manifest Confusion: @storybook/core NPM Registry data repo
+  [react]  shared_labels=[]
+  TITLE: Bug: `react-server-dom-esm` package is empty
+  LEXICAL TOP-5:
+    #1  score=0.1949  repo=animate.css  labels=[]
+       TITLE: The license on NPM is still listed as MIT
+    #2  score=0.1485  repo=storybook  labels=['bug']
+       TITLE: [Bug]: StoryBook + NextJS based NPM is not working
+    #3  score=0.1438  repo=storybook  labels=['bug'] ← GOLD
+       TITLE: [Bug]: Manifest Confusion: @storybook/core NPM Registry data 
+    #4  score=0.1326  repo=three.js  labels=['enhancement']
+       TITLE: Add volume calculator for 3d mesh
+    #5  score=0.1265  repo=react  labels=[] ← GOLD
+       TITLE: Bug: `react-server-dom-esm` package is empty
+  DENSE TOP-5:
+    #1  score=0.7809  repo=ui  labels=['bug']
+       TITLE: [bug]: CLI errors when using relative path as util alias
+    #2  score=0.7751  repo=ui  labels=['bug']
+       TITLE: [bug]: CLI not respecting settings in components.json
+    #3  score=0.7749  repo=create-react-app  labels=['issue: proposal']
+       TITLE: On deleting `compileroptions.paths`
+    #4  score=0.7708  repo=ui  labels=['bug']
+       TITLE: [bug]: Why does my project report dependency errors when it c
+    #5  score=0.7696  repo=create-react-app  labels=['issue: bug report']
+       TITLE: A folder "tmpnodejsnpm-cache" is created whenever i am doing 
+  HYBRID TOP-5:
+    #1  score=0.01639  [lex:1|den:-]  repo=animate.css  labels=[]
+       TITLE: The license on NPM is still listed as MIT
+    #2  score=0.01639  [lex:-|den:1]  repo=ui  labels=['bug']
+       TITLE: [bug]: CLI errors when using relative path as util alias
+    #3  score=0.01613  [lex:2|den:-]  repo=storybook  labels=['bug']
+       TITLE: [Bug]: StoryBook + NextJS based NPM is not working
+    #4  score=0.01613  [lex:-|den:2]  repo=ui  labels=['bug']
+       TITLE: [bug]: CLI not respecting settings in components.json
+    #5  score=0.01587  [lex:3|den:-]  repo=storybook  labels=['bug'] ← GOLD
+       TITLE: [Bug]: Manifest Confusion: @storybook/core NPM Registry data 
+────────────────────────────────────────────────────────────────────────────
+[LEX_BEATS_HYBRID #2]  repo=ollama  split=test
+labels=['documentation']
+  Lex   MRR=0.200  R@5=0.500  R@10=1.000
+  Dense MRR=0.000  R@5=0.000  R@10=0.000
+  Hybrid MRR=0.083  R@5=0.000  R@10=0.000
+
+QUERY:
+TITLE: Ollama API Documentation: Error responses are not defined.  BODY:
+I received a 500 Internal Server error as a response when using Ollama
+MacOS and Ollama-UI.  This made me realise that errors are not mentioned
+in [Ollama's
+documentation](https://github.com/jmorganca/ollama/blob/main/docs/api.
+
+GOLD RELEVANT:
+  [go]  shared_labels=[]
+  TITLE: x/net/websocket: ErrBadStatus should include the bad status code
+  [stable-diffusion-webui]  shared_labels=['documentation']
+  TITLE: update API documentation
+  LEXICAL TOP-5:
+    #1  score=0.1619  repo=langchain  labels=[]
+       TITLE: DOC: sql-ollama leads to removed page
+    #2  score=0.1431  repo=stable-diffusion-webui  labels=[]
+       TITLE: [Feature Request]: prepare host for specific gpu (needed for 
+    #3  score=0.1294  repo=langchain  labels=[]
+       TITLE: Ollama (Partner package) and cache integration not working co
+    #4  score=0.1190  repo=next.js  labels=['bug']
+       TITLE: [NEXT-662] HTTP 500 - Internal Server Error when errors are t
+    #5  score=0.1183  repo=go  labels=[] ← GOLD
+       TITLE: x/net/websocket: ErrBadStatus should include the bad status c
+  DENSE TOP-5:
+    #1  score=0.7465  repo=langchain  labels=[]
+       TITLE: Issue with Ollama Function – Only Agent Response, No Tool Cal
+    #2  score=0.7385  repo=kubernetes  labels=['kind/bug', 'sig/api-machinery', 'triage/accepted']
+       TITLE: Inappropriate HTTP 500 Internal Server Error: `failed to crea
+    #3  score=0.7345  repo=kubernetes  labels=['kind/bug', 'sig/api-machinery']
+       TITLE: Some API parameter parsing error
+    #4  score=0.7337  repo=stable-diffusion-webui  labels=['bug']
+       TITLE: [Bug]: API error: change() and other events can only be calle
+    #5  score=0.7321  repo=langchain  labels=[]
+       TITLE: langchain.agents.openai_assistant.base method parameters don'
+  HYBRID TOP-5:
+    #1  score=0.03016  [lex:3|den:10]  repo=langchain  labels=[]
+       TITLE: Ollama (Partner package) and cache integration not working co
+    #2  score=0.02946  [lex:15|den:2]  repo=kubernetes  labels=['kind/bug', 'sig/api-machinery', 'triage/accepted']
+       TITLE: Inappropriate HTTP 500 Internal Server Error: `failed to crea
+    #3  score=0.02932  [lex:4|den:13]  repo=next.js  labels=['bug']
+       TITLE: [NEXT-662] HTTP 500 - Internal Server Error when errors are t
+    #4  score=0.02769  [lex:17|den:8]  repo=langchain  labels=[]
+       TITLE: Not using Tools in Langchain_Ollama causes: 'NoneType' object
+    #5  score=0.02753  [lex:8|den:18]  repo=go  labels=[]
+       TITLE: x/pkgsite: 500 errorcode on https://pkg.go.dev/github.com/leb

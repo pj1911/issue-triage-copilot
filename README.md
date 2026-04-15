@@ -11,6 +11,7 @@ An end-to-end ML project for automated GitHub issue triage — predicting labels
 - [x] Encoder fine-tuning (DistilBERT, multi-label)
 - [x] Retrieval baseline (lexical, TF-IDF + cosine)
 - [x] Dense retrieval (encoder embeddings)
+- [x] Hybrid retrieval (RRF) + fairer human-annotated eval set
 - [ ] Retrieval-augmented labeling
 - [ ] Fine-tuned LLM
 - [ ] Demo app
@@ -124,6 +125,60 @@ Example exports (37 queries classified):
 
 ---
 
+## Day 7 — Hybrid retrieval + fairer eval set
+
+**Goal:** combine lexical and dense via Reciprocal Rank Fusion and measure on a human-annotated eval set that isn't biased toward either retrieval method.
+
+### Why the Day 5/6 eval was biased
+
+The original 37-query eval selected gold docs by TF-IDF cosine similarity. Dense retrieval scored 0.072 R@10 on that set — not because it retrieves poorly, but because its gold docs were literally chosen by the lexical method. A fair eval needs gold docs selected independently of both retrievers.
+
+### Human-annotated eval set
+
+- **27 queries** generated (3 per repo × 9 repos), candidates pooled from top-10 lexical + top-10 dense + 5 random label-matched docs per query
+- **21 queries** retained after annotation (6 skipped: no cross-repo semantic matches found)
+- **78 gold docs** annotated by relevance judgment (mean 3.7/query)
+- Gold source: **71% dense-only**, 19% lex-only, 10% both — confirms the original eval was structurally suppressing dense retrieval
+
+### Hybrid retrieval (RRF)
+
+Reciprocal Rank Fusion over top-20 lexical + top-20 dense results:
+
+```
+score(d) = Σ  1 / (60 + rank_m(d))    for each method m that retrieved d
+```
+
+RRF constant k=60 (standard). Documents retrieved by both methods get boosted; documents missed by one method still appear if the other ranked them highly.
+
+### Results (21 queries, human-annotated eval set)
+
+| Method | R@5 | R@10 | R@20 | MRR |
+|---|---|---|---|---|
+| Lexical (TF-IDF) | 0.193 | 0.412 | 0.460 | 0.253 |
+| Dense (BGE-small) | **0.383** | **0.721** | 0.721 | **0.619** |
+| Hybrid (RRF) | 0.356 | 0.549 | **1.000** | 0.578 |
+
+**Hard repos (lexical was weakest on old eval):**
+
+| Repo | Method | R@5 | R@10 | MRR |
+|---|---|---|---|---|
+| flutter | Lexical | 0.111 | 0.278 | 0.214 |
+| flutter | Dense | 0.222 | **0.833** | **0.417** |
+| flutter | Hybrid | 0.333 | 0.333 | 0.374 |
+| transformers | Lexical | 0.133 | 0.308 | 0.370 |
+| transformers | Dense | **0.418** | **0.825** | **0.833** |
+| transformers | Hybrid | 0.357 | 0.552 | 0.667 |
+
+### Analysis
+
+- **Dense dominates on a fair eval** — R@10 0.721 vs 0.412 lexical. The Day 6 result (dense 0.072 R@10) was an artifact of biased gold selection.
+- **Hybrid R@20 = 1.000** — the union of top-20 from each method captures every gold doc. The combined pool has full recall; the problem is ranking.
+- **Equal-weight RRF underperforms dense** at R@5/R@10 — because 71% of gold docs are dense-only, lexical noise dilutes dense's strong signal at the top ranks. This is clearest on the Italian/French translation queries where dense ranks 5 gold docs in its top-5 but RRF interleaves irrelevant PyTorch results.
+- **Hybrid wins when both methods agree weakly** — e.g. deno PTY query where the gold doc sat at lex:9 + dense:10 individually (outside top-5 for either), but RRF fusion promoted it to rank 3.
+- **Next step**: weighted RRF (e.g. `w_dense=0.7, w_lex=0.3`) would likely recover the dense-beats-hybrid cases without losing the hybrid wins.
+
+---
+
 ## Project structure
 
 ```
@@ -131,11 +186,30 @@ src/
   data/          # ingestion, cleaning, split, preprocessing
   models/        # encoder training, evaluation, ablations
   retrieval/     # corpus building, lexical retriever, eval, examples
+    build_corpus.py            # build 71k-doc retrieval corpus
+    lexical_retriever.py       # TF-IDF + cosine retriever
+    dense_retriever.py         # BGE-small encoder + cosine retriever
+    hybrid_retriever.py        # RRF fusion of lexical + dense        [Day 7]
+    build_eval.py              # original biased eval set (37 queries)
+    build_human_eval.py        # candidate pool for human annotation  [Day 7]
+    finalize_human_eval.py     # convert annotations → eval set       [Day 7]
+    evaluate_retrieval.py      # lexical eval (Recall@k, MRR)
+    evaluate_dense.py          # dense eval
+    evaluate_hybrid.py         # 3-way lexical/dense/hybrid eval      [Day 7]
+    export_examples.py         # lexical win/fail examples
+    export_dense_examples.py   # dense win/fail examples
+    export_hybrid_examples.py  # hybrid win/fail examples             [Day 7]
   utils/         # shared paths
 models/          # saved checkpoints and retrieval index
 reports/         # metrics, error analysis, retrieval eval
+  hybrid_metrics.json          # 3-way eval results                  [Day 7]
+  hybrid_examples.json/txt     # hybrid win/fail case studies         [Day 7]
+  human_eval_stats.json        # annotation statistics                [Day 7]
 configs/         # label cleaning rules
-data/            # raw / interim / processed (gitignored)
+data/
+  processed/
+    retrieval_eval_human.json  # 21-query human-annotated eval set    [Day 7]
+    human_eval_candidates.json # annotated candidate pool             [Day 7]
 ```
 
 ---
@@ -176,6 +250,14 @@ python -m src.retrieval.save_outputs       # write report + CSV
 python -m src.retrieval.dense_retriever          # encode 71k docs, save index
 python -m src.retrieval.evaluate_dense           # Recall@k + MRR vs lexical
 python -m src.retrieval.export_dense_examples   # dense wins / failures / both-fail
+
+# hybrid retrieval + fairer eval (Day 7)
+python -m src.retrieval.build_human_eval         # generate candidate pool (lex+dense+random)
+# annotate data/processed/human_eval_candidates.json, then:
+python -m src.retrieval.finalize_human_eval      # produce retrieval_eval_human.json
+python -m src.retrieval.hybrid_retriever         # smoke test RRF fusion
+python -m src.retrieval.evaluate_hybrid          # 3-way comparison on human eval set
+python -m src.retrieval.export_hybrid_examples   # hybrid wins / failures
 ```
 
 ---

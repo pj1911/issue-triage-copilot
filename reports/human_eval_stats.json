@@ -1,0 +1,38 @@
+{
+  "n_queries": 21,
+  "n_skipped": 6,
+  "n_unannotated": 0,
+  "n_gold_total": 78,
+  "gold_per_query": {
+    "mean": 3.71,
+    "min": 1,
+    "max": 9
+  },
+  "relevant_set_size": {
+    "min": 434,
+    "median": 1455,
+    "max": 16405
+  },
+  "queries_per_repo": {
+    "TypeScript": 1,
+    "deno": 2,
+    "flutter": 3,
+    "neovim": 3,
+    "ollama": 3,
+    "svelte": 2,
+    "tauri": 3,
+    "transformers": 3,
+    "vscode": 1
+  },
+  "queries_per_split": {
+    "test": 10,
+    "val": 11
+  },
+  "gold_source": {
+    "both": 8,
+    "lex_only": 15,
+    "dense_only": 55,
+    "random": 0
+  },
+  "note": "gold_source counts how each gold doc entered the candidate pool. 'both' = ranked by lexical and dense; 'lex_only'/'dense_only' = only one method found it; 'random' = neither method, added randomly. A healthy eval set has gold spread across all sources."
+}

@@ -1,0 +1,1808 @@
+{
+  "hybrid_win": [
+    {
+      "query_id": 2554539116,
+      "query_repo": "neovim",
+      "split": "test",
+      "labels": [
+        "enhancement",
+        "performance"
+      ],
+      "query_snippet": "TITLE: Option to disable writing extended attributes\n\nBODY:\n### Problem\r\n\r\nHi,\r\n\r\nI am working for a large software company. Our codebase is remote, and mounted locally on the workstations. We also have various automation tools which pick up changes to the files and perform build, test, deployment, ",
+      "metrics": {
+        "lex": {
+          "mrr": 0.2,
+          "r@5": 0.5,
+          "r@10": 0.5
+        },
+        "dense": {
+          "mrr": 0.2,
+          "r@5": 0.5,
+          "r@10": 0.5
+        },
+        "hybrid": {
+          "mrr": 1.0,
+          "r@5": 0.5,
+          "r@10": 1.0
+        }
+      },
+      "gold_relevant": [
+        {
+          "corpus_id": 2393350428,
+          "corpus_repo": "next.js",
+          "shared_labels": [],
+          "lex_score": 0.1182,
+          "dense_score": null,
+          "text_snippet": "TITLE: Build error when using mapped drive (Windows)\nBODY: ### Link to the code that reproduces this issue https://github.com/DiskCrasher/next-js-issue2 ### To Reproduce 1. Save the project on a Linux server that's configured with Sa"
+        },
+        {
+          "corpus_id": 304948372,
+          "corpus_repo": "go",
+          "shared_labels": [],
+          "lex_score": null,
+          "dense_score": 0.7363,
+          "text_snippet": "TITLE: x/sys/unix: add Solaris/Illumos ACL and extended attribute support\nBODY: Would it be possible to get these calls added as part of Solaris/Illumos.  Must use cgo to interface with file attributes otherwise.  Some of these might exist, most don't.  "
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.139,
+          "corpus_id": 537715677,
+          "repo": "node",
+          "labels": [],
+          "snippet": "TITLE: fs async functions (both callback and promises APIs) return Errors without stack trace\n\nBODY:\n* **Version**: 13.3.0\r\n* **Platform**: Windows 10 x64\r\n```js\r\nconst fs = require('fs')\r\nfs.readFile",
+          "is_gold": false
+        },
+        {
+          "rank": 2,
+          "score": 0.1326,
+          "corpus_id": 710624080,
+          "repo": "node",
+          "labels": [],
+          "snippet": "TITLE: fs.realpathSync('') returns CWD\n\nBODY:\n```\r\n$ node -v\r\nv12.18.4\r\n```\r\n### What steps will reproduce the bug?\r\n```\r\n$ cd /tmp\r\n$ node -e \"console.log(fs.realpathSync(''))\"\r\n/tmp\r\n```\r\n### What i",
+          "is_gold": false
+        },
+        {
+          "rank": 3,
+          "score": 0.1249,
+          "corpus_id": 2550496065,
+          "repo": "bitcoin",
+          "labels": [],
+          "snippet": "TITLE: depends: llvm-ranlib (etc): \"No such file or directory\" on Intel macOS 15.0\n\nBODY:\nTried on Intel macOS 15.0 (Xcode 16.0) and 13.7 (Xcode 15.2):\r\n\r\n```\r\n$ cd depends\r\n$ make\r\n/bin/sh: command -",
+          "is_gold": false
+        },
+        {
+          "rank": 4,
+          "score": 0.1192,
+          "corpus_id": 2808684287,
+          "repo": "next.js",
+          "labels": [],
+          "snippet": "TITLE: [Turbopack] Error: ENOENT: no such file or directory, open '[project]/......'\n\nBODY:\n### Link to the code that reproduces this issue\n\nhttps://github.com/HMubaireek/nextjs-turbopack-zeebe-node\n\n",
+          "is_gold": false
+        },
+        {
+          "rank": 5,
+          "score": 0.1182,
+          "corpus_id": 2393350428,
+          "repo": "next.js",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: Build error when using mapped drive (Windows)\n\nBODY:\n### Link to the code that reproduces this issue\r\n\r\nhttps://github.com/DiskCrasher/next-js-issue2\r\n\r\n### To Reproduce\r\n\r\n1. Save the project ",
+          "is_gold": true
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.7467,
+          "corpus_id": 2761816769,
+          "repo": "PowerToys",
+          "labels": [],
+          "snippet": "TITLE: NewPlus starting digits, spaces, and dots should ALSO be ignored in creating the file from the template file\n\nBODY:\n### Description of the new feature / enhancement\n\nIf a template file is calle",
+          "is_gold": false
+        },
+        {
+          "rank": 2,
+          "score": 0.7396,
+          "corpus_id": 464893554,
+          "repo": "terminal",
+          "labels": [],
+          "snippet": "TITLE: WriteConsoleOutputCharacterA doesn't merge UTF-8 partials in successive calls\n\nBODY:\n<!-- \r\n\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\r\n\r\nI ACKNOWLEDGE THE FOLLOWING BEFORE PROCEEDING:\r\n1. If I delete this entire template and",
+          "is_gold": false
+        },
+        {
+          "rank": 3,
+          "score": 0.7393,
+          "corpus_id": 1623897654,
+          "repo": "godot",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: Saving embedded resource to overwrite previously used resource file causes error \"possible cyclic resource inclusion\" and fails to update resource reference, keeping embedded data\n\nBODY:\n### Go",
+          "is_gold": false
+        },
+        {
+          "rank": 4,
+          "score": 0.7369,
+          "corpus_id": 1694998244,
+          "repo": "yt-dlp",
+          "labels": [
+            "enhancement",
+            "triage"
+          ],
+          "snippet": "TITLE: mark truncated filenames with ellipsis \"\u2026\" in `-o` template if length exceeds x bytes\n\nBODY:\n### DO NOT REMOVE OR SKIP THE ISSUE TEMPLATE\r\n\r\n- [X] I understand that I will be **blocked** if I *",
+          "is_gold": false
+        },
+        {
+          "rank": 5,
+          "score": 0.7363,
+          "corpus_id": 304948372,
+          "repo": "go",
+          "labels": [
+            "help wanted",
+            "compiler"
+          ],
+          "snippet": "TITLE: x/sys/unix: add Solaris/Illumos ACL and extended attribute support\n\nBODY:\nWould it be possible to get these calls added as part of Solaris/Illumos.  Must use cgo to interface with file attribut",
+          "is_gold": true
+        }
+      ],
+      "hybrid_top5": [
+        {
+          "rank": 1,
+          "score": 0.027885,
+          "lex_rank": 20,
+          "dense_rank": 5,
+          "corpus_id": 304948372,
+          "repo": "go",
+          "labels": [
+            "help wanted",
+            "compiler"
+          ],
+          "snippet": "TITLE: x/sys/unix: add Solaris/Illumos ACL and extended attribute support\n\nBODY:\nWould it be possible to get these calls added as part of Solaris/Illumos.  Must use cgo to interface with file attribut",
+          "is_gold": true
+        },
+        {
+          "rank": 2,
+          "score": 0.016393,
+          "lex_rank": 1,
+          "dense_rank": null,
+          "corpus_id": 537715677,
+          "repo": "node",
+          "labels": [],
+          "snippet": "TITLE: fs async functions (both callback and promises APIs) return Errors without stack trace\n\nBODY:\n* **Version**: 13.3.0\r\n* **Platform**: Windows 10 x64\r\n```js\r\nconst fs = require('fs')\r\nfs.readFile",
+          "is_gold": false
+        },
+        {
+          "rank": 3,
+          "score": 0.016393,
+          "lex_rank": null,
+          "dense_rank": 1,
+          "corpus_id": 2761816769,
+          "repo": "PowerToys",
+          "labels": [],
+          "snippet": "TITLE: NewPlus starting digits, spaces, and dots should ALSO be ignored in creating the file from the template file\n\nBODY:\n### Description of the new feature / enhancement\n\nIf a template file is calle",
+          "is_gold": false
+        },
+        {
+          "rank": 4,
+          "score": 0.016129,
+          "lex_rank": 2,
+          "dense_rank": null,
+          "corpus_id": 710624080,
+          "repo": "node",
+          "labels": [],
+          "snippet": "TITLE: fs.realpathSync('') returns CWD\n\nBODY:\n```\r\n$ node -v\r\nv12.18.4\r\n```\r\n### What steps will reproduce the bug?\r\n```\r\n$ cd /tmp\r\n$ node -e \"console.log(fs.realpathSync(''))\"\r\n/tmp\r\n```\r\n### What i",
+          "is_gold": false
+        },
+        {
+          "rank": 5,
+          "score": 0.016129,
+          "lex_rank": null,
+          "dense_rank": 2,
+          "corpus_id": 464893554,
+          "repo": "terminal",
+          "labels": [],
+          "snippet": "TITLE: WriteConsoleOutputCharacterA doesn't merge UTF-8 partials in successive calls\n\nBODY:\n<!-- \r\n\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\ud83d\udea8\r\n\r\nI ACKNOWLEDGE THE FOLLOWING BEFORE PROCEEDING:\r\n1. If I delete this entire template and",
+          "is_gold": false
+        }
+      ]
+    },
+    {
+      "query_id": 2056165855,
+      "query_repo": "deno",
+      "split": "val",
+      "labels": [
+        "good first issue"
+      ],
+      "query_snippet": "TITLE: Support passing paths to `--watch` flag of `deno test`\n\nBODY:\nCurrently, the following works as expected:\r\n\r\n```sh\r\ndeno run --watch=watched-file.ts other-file.ts\r\n```\r\n\r\nHowever, the following fails:\r\n\r\n```sh\r\ndeno test --watch=watched-file.ts other-file.ts\r\n# error: unexpected value 'watche",
+      "metrics": {
+        "lex": {
+          "mrr": 0.05263157894736842,
+          "r@5": 0.0,
+          "r@10": 0.0
+        },
+        "dense": {
+          "mrr": 0.5,
+          "r@5": 0.6666666666666666,
+          "r@10": 1.0
+        },
+        "hybrid": {
+          "mrr": 1.0,
+          "r@5": 0.6666666666666666,
+          "r@10": 0.6666666666666666
+        }
+      },
+      "gold_relevant": [
+        {
+          "corpus_id": 1423183290,
+          "corpus_repo": "node",
+          "shared_labels": [],
+          "lex_score": null,
+          "dense_score": 0.7926,
+          "text_snippet": "TITLE: Support file globs with `--watch-path`\nBODY: ### What is the problem this feature will solve? The new experimental watch feature is awesome, but sometimes apps depend on non-imported files or data. For example, if your "
+        },
+        {
+          "corpus_id": 2110574191,
+          "corpus_repo": "node",
+          "shared_labels": [],
+          "lex_score": null,
+          "dense_score": 0.783,
+          "text_snippet": "TITLE: --watch should monitor replaced files\nBODY: ### What is the problem this feature will solve? Currently, `--watch` watches an [inode](https://nodejs.org/docs/latest/api/fs.html#inodes) and not necessarily what the user "
+        },
+        {
+          "corpus_id": 1622539628,
+          "corpus_repo": "node",
+          "shared_labels": [],
+          "lex_score": null,
+          "dense_score": 0.7722,
+          "text_snippet": "TITLE: `--watch` mode does not work on volumes mounted via `/etc/synthetic.conf`\nBODY: ### Version v18.15.0 ### Platform Darwin BL-mmillerick-NNH946444W 22.3.0 Darwin Kernel Version 22.3.0: Thu Jan  5 20:48:54 PST 2023; root:xnu-8792.81.2~2/RELEASE_ARM64_T6000 "
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.1368,
+          "corpus_id": 1309919592,
+          "repo": "create-react-app",
+          "labels": [
+            "issue: proposal"
+          ],
+          "snippet": "TITLE: Deno support\n\nBODY:\nAre there plans to support Deno?",
+          "is_gold": false
+        },
+        {
+          "rank": 2,
+          "score": 0.1228,
+          "corpus_id": 1878153821,
+          "repo": "node",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: import.meta.main\n\nBODY:\nDeno just added this.\r\n\r\nShould we?\r\n\r\nhttps://github.com/denoland/deno/pull/1835",
+          "is_gold": false
+        },
+        {
+          "rank": 3,
+          "score": 0.1096,
+          "corpus_id": 2377999499,
+          "repo": "PowerToys",
+          "labels": [],
+          "snippet": "TITLE: When in preview mode of a Markdown file, enable navigation to another markdown file in a new Window.\n\nBODY:\n### Description of the new feature / enhancement\n\nIn Markdown file you can define som",
+          "is_gold": false
+        },
+        {
+          "rank": 4,
+          "score": 0.1053,
+          "corpus_id": 1702246744,
+          "repo": "PowerToys",
+          "labels": [
+            "enhancement"
+          ],
+          "snippet": "TITLE: Add capability to browser links in Markdown (.md) files in preview\n\nBODY:\n### Description of the new feature / enhancement\n\nThrough the File Explorer add-ons power tools, we can preview markdow",
+          "is_gold": false
+        },
+        {
+          "rank": 5,
+          "score": 0.1003,
+          "corpus_id": 2731554618,
+          "repo": "PowerToys",
+          "labels": [],
+          "snippet": "TITLE: Checkbox ticks in Markdown files have bad contrast\n\nBODY:\n### Microsoft PowerToys version\n\n0.86.0\n\n### Installation method\n\nMicrosoft Store\n\n### Running as admin\n\nNo\n\n### Area(s) with issue?\n\nP",
+          "is_gold": false
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.7989,
+          "corpus_id": 1397751640,
+          "repo": "node",
+          "labels": [],
+          "snippet": "TITLE: Investigate flaky test-watch-mode (no. 3)\n\nBODY:\n### Test\r\n\r\ntest-watch-mode\r\n\r\n### Platform\r\n\r\nLinux x64, FreeBSD\r\n\r\n### Console output\r\n\r\n```console\r\n13:17:49 not ok 3811 sequential/test-watc",
+          "is_gold": false
+        },
+        {
+          "rank": 2,
+          "score": 0.7926,
+          "corpus_id": 1423183290,
+          "repo": "node",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: Support file globs with `--watch-path`\n\nBODY:\n### What is the problem this feature will solve?\n\nThe new experimental watch feature is awesome, but sometimes apps depend on non-imported files or",
+          "is_gold": true
+        },
+        {
+          "rank": 3,
+          "score": 0.783,
+          "corpus_id": 2110574191,
+          "repo": "node",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: --watch should monitor replaced files\n\nBODY:\n### What is the problem this feature will solve?\r\n\r\nCurrently, `--watch` watches an [inode](https://nodejs.org/docs/latest/api/fs.html#inodes) and n",
+          "is_gold": true
+        },
+        {
+          "rank": 4,
+          "score": 0.7822,
+          "corpus_id": 1083291936,
+          "repo": "create-react-app",
+          "labels": [
+            "issue: bug report"
+          ],
+          "snippet": "TITLE: 'Failed to initialize watch plugin' when running tests for newly created app\n\nBODY:\n<!--\r\n    Please note that your issue will be fixed much faster if you spend about\r\n    half an hour preparin",
+          "is_gold": false
+        },
+        {
+          "rank": 5,
+          "score": 0.7773,
+          "corpus_id": 2483637503,
+          "repo": "next.js",
+          "labels": [],
+          "snippet": "TITLE: `npm run test` fails with-jest-app using --watch flag.\n\nBODY:\n### Verify canary release\r\n\r\n- [X] I verified that the issue exists in the latest Next.js canary release\r\n\r\n### Provide environment",
+          "is_gold": false
+        }
+      ],
+      "hybrid_top5": [
+        {
+          "rank": 1,
+          "score": 0.028531,
+          "lex_rank": 19,
+          "dense_rank": 3,
+          "corpus_id": 2110574191,
+          "repo": "node",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: --watch should monitor replaced files\n\nBODY:\n### What is the problem this feature will solve?\r\n\r\nCurrently, `--watch` watches an [inode](https://nodejs.org/docs/latest/api/fs.html#inodes) and n",
+          "is_gold": true
+        },
+        {
+          "rank": 2,
+          "score": 0.016393,
+          "lex_rank": 1,
+          "dense_rank": null,
+          "corpus_id": 1309919592,
+          "repo": "create-react-app",
+          "labels": [
+            "issue: proposal"
+          ],
+          "snippet": "TITLE: Deno support\n\nBODY:\nAre there plans to support Deno?",
+          "is_gold": false
+        },
+        {
+          "rank": 3,
+          "score": 0.016393,
+          "lex_rank": null,
+          "dense_rank": 1,
+          "corpus_id": 1397751640,
+          "repo": "node",
+          "labels": [],
+          "snippet": "TITLE: Investigate flaky test-watch-mode (no. 3)\n\nBODY:\n### Test\r\n\r\ntest-watch-mode\r\n\r\n### Platform\r\n\r\nLinux x64, FreeBSD\r\n\r\n### Console output\r\n\r\n```console\r\n13:17:49 not ok 3811 sequential/test-watc",
+          "is_gold": false
+        },
+        {
+          "rank": 4,
+          "score": 0.016129,
+          "lex_rank": 2,
+          "dense_rank": null,
+          "corpus_id": 1878153821,
+          "repo": "node",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: import.meta.main\n\nBODY:\nDeno just added this.\r\n\r\nShould we?\r\n\r\nhttps://github.com/denoland/deno/pull/1835",
+          "is_gold": false
+        },
+        {
+          "rank": 5,
+          "score": 0.016129,
+          "lex_rank": null,
+          "dense_rank": 2,
+          "corpus_id": 1423183290,
+          "repo": "node",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: Support file globs with `--watch-path`\n\nBODY:\n### What is the problem this feature will solve?\n\nThe new experimental watch feature is awesome, but sometimes apps depend on non-imported files or",
+          "is_gold": true
+        }
+      ]
+    },
+    {
+      "query_id": 565117331,
+      "query_repo": "deno",
+      "split": "val",
+      "labels": [
+        "help wanted"
+      ],
+      "query_snippet": "TITLE: Support a pty interface\n\nBODY:\nDeno should support forking of pty interfaces (psuedo terminals) which would allow Deno workloads to be able to \"pretend\" to be a terminal, which can allow Deno workloads to be a terminal emulator or allow certain programs to think a Deno workload is an terminal",
+      "metrics": {
+        "lex": {
+          "mrr": 0.1111111111111111,
+          "r@5": 0.0,
+          "r@10": 1.0
+        },
+        "dense": {
+          "mrr": 0.1,
+          "r@5": 0.0,
+          "r@10": 1.0
+        },
+        "hybrid": {
+          "mrr": 0.3333333333333333,
+          "r@5": 1.0,
+          "r@10": 1.0
+        }
+      },
+      "gold_relevant": [
+        {
+          "corpus_id": 1472086024,
+          "corpus_repo": "terminal",
+          "shared_labels": [],
+          "lex_score": 0.1108,
+          "dense_score": 0.7154,
+          "text_snippet": "TITLE: Make sure that pty window ownership changes when root process exits\nBODY: There's a TODO yet to be done: make sure that ownership changes when the root process exits. Terminal doesn't care about that right now, but other ConPTY clients don't have t"
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.1952,
+          "corpus_id": 1309919592,
+          "repo": "create-react-app",
+          "labels": [
+            "issue: proposal"
+          ],
+          "snippet": "TITLE: Deno support\n\nBODY:\nAre there plans to support Deno?",
+          "is_gold": false
+        },
+        {
+          "rank": 2,
+          "score": 0.1857,
+          "corpus_id": 1878153821,
+          "repo": "node",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: import.meta.main\n\nBODY:\nDeno just added this.\r\n\r\nShould we?\r\n\r\nhttps://github.com/denoland/deno/pull/1835",
+          "is_gold": false
+        },
+        {
+          "rank": 3,
+          "score": 0.1423,
+          "corpus_id": 2216816388,
+          "repo": "node",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: Please make Node.js embeddable (e.g. libnode)\n\nBODY:\n### What is the problem this feature will solve?\r\n\r\nNode.js is prolific throughout the server-side world with many projects wanting to repac",
+          "is_gold": false
+        },
+        {
+          "rank": 4,
+          "score": 0.1271,
+          "corpus_id": 2608242421,
+          "repo": "ui",
+          "labels": [],
+          "snippet": "TITLE: [feat]: add native support for deno 2 as a package manager.\n\nBODY:\n### Feature description\r\n\r\nDeno 2 can be used as a drop in replacement for node and all package managers so please add support",
+          "is_gold": false
+        },
+        {
+          "rank": 5,
+          "score": 0.1263,
+          "corpus_id": 2223147143,
+          "repo": "node",
+          "labels": [],
+          "snippet": "TITLE: Add console.log() %c support for parity with browsers, Deno, and Bun\n\nBODY:\nwould be fixed by https://github.com/nodejs/node/pull/49205\r\n\r\nMy attempt at a compat table of ANSI and %c:\r\n\r\n||%c|A",
+          "is_gold": false
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.7711,
+          "corpus_id": 2608242421,
+          "repo": "ui",
+          "labels": [],
+          "snippet": "TITLE: [feat]: add native support for deno 2 as a package manager.\n\nBODY:\n### Feature description\r\n\r\nDeno 2 can be used as a drop in replacement for node and all package managers so please add support",
+          "is_gold": false
+        },
+        {
+          "rank": 2,
+          "score": 0.7476,
+          "corpus_id": 2356560683,
+          "repo": "node",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: Should node support subcommands?\n\nBODY:\n### What is the problem this feature will solve?\n\ncurrently, node's cli interface is pretty simple and lean,\r\nit mainly accepts flags that start with two",
+          "is_gold": false
+        },
+        {
+          "rank": 3,
+          "score": 0.7328,
+          "corpus_id": 2216816388,
+          "repo": "node",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: Please make Node.js embeddable (e.g. libnode)\n\nBODY:\n### What is the problem this feature will solve?\r\n\r\nNode.js is prolific throughout the server-side world with many projects wanting to repac",
+          "is_gold": false
+        },
+        {
+          "rank": 4,
+          "score": 0.7317,
+          "corpus_id": 1536540829,
+          "repo": "node",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: Reconsider adding FFI to the core\n\nBODY:\n### What is the problem this feature will solve?\r\n\r\nCall foreign functions\r\n\r\n### What is the feature you are proposing to solve the problem?\r\n\r\nthe API",
+          "is_gold": false
+        },
+        {
+          "rank": 5,
+          "score": 0.7306,
+          "corpus_id": 185437822,
+          "repo": "go",
+          "labels": [
+            "help wanted",
+            "featurerequest"
+          ],
+          "snippet": "TITLE: syscall: add support for Windows job objects\n\nBODY:\nI would like to reopen #6720.\nI excitedly read all the thread, ending with the greatest facepalm I had in the past years.\n\nLook, this is not ",
+          "is_gold": false
+        }
+      ],
+      "hybrid_top5": [
+        {
+          "rank": 1,
+          "score": 0.032018,
+          "lex_rank": 4,
+          "dense_rank": 1,
+          "corpus_id": 2608242421,
+          "repo": "ui",
+          "labels": [],
+          "snippet": "TITLE: [feat]: add native support for deno 2 as a package manager.\n\nBODY:\n### Feature description\r\n\r\nDeno 2 can be used as a drop in replacement for node and all package managers so please add support",
+          "is_gold": false
+        },
+        {
+          "rank": 2,
+          "score": 0.031746,
+          "lex_rank": 3,
+          "dense_rank": 3,
+          "corpus_id": 2216816388,
+          "repo": "node",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: Please make Node.js embeddable (e.g. libnode)\n\nBODY:\n### What is the problem this feature will solve?\r\n\r\nNode.js is prolific throughout the server-side world with many projects wanting to repac",
+          "is_gold": false
+        },
+        {
+          "rank": 3,
+          "score": 0.028778,
+          "lex_rank": 9,
+          "dense_rank": 10,
+          "corpus_id": 1472086024,
+          "repo": "terminal",
+          "labels": [],
+          "snippet": "TITLE: Make sure that pty window ownership changes when root process exits\n\nBODY:\nThere's a TODO yet to be done: make sure that ownership changes when the root process exits. Terminal doesn't care abo",
+          "is_gold": true
+        },
+        {
+          "rank": 4,
+          "score": 0.028372,
+          "lex_rank": 5,
+          "dense_rank": 17,
+          "corpus_id": 2223147143,
+          "repo": "node",
+          "labels": [],
+          "snippet": "TITLE: Add console.log() %c support for parity with browsers, Deno, and Bun\n\nBODY:\nwould be fixed by https://github.com/nodejs/node/pull/49205\r\n\r\nMy attempt at a compat table of ANSI and %c:\r\n\r\n||%c|A",
+          "is_gold": false
+        },
+        {
+          "rank": 5,
+          "score": 0.016393,
+          "lex_rank": 1,
+          "dense_rank": null,
+          "corpus_id": 1309919592,
+          "repo": "create-react-app",
+          "labels": [
+            "issue: proposal"
+          ],
+          "snippet": "TITLE: Deno support\n\nBODY:\nAre there plans to support Deno?",
+          "is_gold": false
+        }
+      ]
+    }
+  ],
+  "dense_beats_hybrid": [
+    {
+      "query_id": 2215327857,
+      "query_repo": "svelte",
+      "split": "val",
+      "labels": [
+        "documentation"
+      ],
+      "query_snippet": "TITLE: Runes + async: add (or document) idiomatic way to work with async functions and runes\n\nBODY:\n### Describe the problem\n\nIn my Svelte 4 app, I keep all the logic inside stores and away from components. I found this approach to be more predictable and bug-free. \r\n\r\n[Here is an example of a deriv",
+      "metrics": {
+        "lex": {
+          "mrr": 0.1,
+          "r@5": 0.0,
+          "r@10": 0.5
+        },
+        "dense": {
+          "mrr": 1.0,
+          "r@5": 0.5,
+          "r@10": 0.5
+        },
+        "hybrid": {
+          "mrr": 0.3333333333333333,
+          "r@5": 0.5,
+          "r@10": 0.5
+        }
+      },
+      "gold_relevant": [
+        {
+          "corpus_id": 476400469,
+          "corpus_repo": "vue",
+          "shared_labels": [],
+          "lex_score": null,
+          "dense_score": 0.788,
+          "text_snippet": "TITLE: Create an \".async\" modifier for event handlers\nBODY: ### What problem does this feature solve? In an event handler, one can easily mix property modifications and method calls (which is great), as in: <span @click=\" accumulator "
+        },
+        {
+          "corpus_id": 426597099,
+          "corpus_repo": "react",
+          "shared_labels": [],
+          "lex_score": 0.0851,
+          "dense_score": null,
+          "text_snippet": "TITLE: Dancing between state and effects - a real-world use case\nBODY: I started this as a gist but Dan mentioned that this would be a good discussion issue so here goes. I've been writing with and refactoring code into hooks for a while now. Fo"
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.1097,
+          "corpus_id": 870240055,
+          "repo": "react",
+          "labels": [],
+          "snippet": "TITLE: Bug: Impossible to use on async hooks\n\nBODY:\nThe rule that prevents using async functions in the hook makes sense in most cases, but there are some valid hooks that have async functions.  See u",
+          "is_gold": false
+        },
+        {
+          "rank": 2,
+          "score": 0.1012,
+          "corpus_id": 2773677531,
+          "repo": "storybook",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [Bug]: SvelteKit mocks doesn't support the `$app/state` module\n\nBODY:\n### Describe the bug\n\n[SvelteKit 2.12.0](https://github.com/sveltejs/kit/releases/tag/%40sveltejs%2Fkit%402.12.0) introduce",
+          "is_gold": false
+        },
+        {
+          "rank": 3,
+          "score": 0.0964,
+          "corpus_id": 2034579954,
+          "repo": "angular",
+          "labels": [],
+          "snippet": "TITLE: Signals for Reactive and Template-based Forms\n\nBODY:\n### Which @angular/* package(s) are relevant/related to the feature request?\r\n\r\nforms\r\n\r\n### Description\r\n\r\nWhile the current forms module a",
+          "is_gold": false
+        },
+        {
+          "rank": 4,
+          "score": 0.0898,
+          "corpus_id": 2531003052,
+          "repo": "angular",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: Reactive `ComponentRef.setInput`\n\nBODY:\n### Which @angular/* package(s) are relevant/related to the feature request?\n\ncore\n\n### Description\n\nIf I want to pass signal based data to a `ComponentR",
+          "is_gold": false
+        },
+        {
+          "rank": 5,
+          "score": 0.0888,
+          "corpus_id": 1234243019,
+          "repo": "angular",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: Allow lazy initialization logic with Standalone Components\n\nBODY:\n### Which @angular/* package(s) are relevant/related to the feature request?\n\ncore\n\n### Description\n\nIn general, some component",
+          "is_gold": false
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.788,
+          "corpus_id": 476400469,
+          "repo": "vue",
+          "labels": [
+            "feature-request",
+            "discussion"
+          ],
+          "snippet": "TITLE: Create an \".async\" modifier for event handlers\n\nBODY:\n### What problem does this feature solve?\r\nIn an event handler, one can easily mix property modifications and method calls (which is great)",
+          "is_gold": true
+        },
+        {
+          "rank": 2,
+          "score": 0.772,
+          "corpus_id": 716266759,
+          "repo": "storybook",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: async configurations\n\nBODY:\n**Is your feature request related to a problem? Please describe**\r\nWe have to dynamically generate some configurations based on the result of a JSON file on a server",
+          "is_gold": false
+        },
+        {
+          "rank": 3,
+          "score": 0.7686,
+          "corpus_id": 1589409320,
+          "repo": "node",
+          "labels": [],
+          "snippet": "TITLE: How to wrap event emitters with async_hooks\n\nBODY:\n### Affected URL(s)\n\n_No response_\n\n### Description of the problem\n\nHello,\r\n\r\nI have been following https://nodejs.org/api/async_context.html#",
+          "is_gold": false
+        },
+        {
+          "rank": 4,
+          "score": 0.7613,
+          "corpus_id": 1467646486,
+          "repo": "storybook",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [Bug]: Svelte source viewer shows events as `event_NAME` in prerelease\n\nBODY:\n### Describe the bug\n\nNative Svelte events are shown in the source viewer, even though they are not supposed to be ",
+          "is_gold": false
+        },
+        {
+          "rank": 5,
+          "score": 0.7585,
+          "corpus_id": 469295215,
+          "repo": "create-react-app",
+          "labels": [
+            "issue: proposal"
+          ],
+          "snippet": "TITLE: Don't compile async/await in node_modules in development\n\nBODY:\n### Is your proposal related to a problem?\r\n\r\nThe problem that I have with the preset transpiling async/await is that debugging g",
+          "is_gold": false
+        }
+      ],
+      "hybrid_top5": [
+        {
+          "rank": 1,
+          "score": 0.031054,
+          "lex_rank": 2,
+          "dense_rank": 7,
+          "corpus_id": 2773677531,
+          "repo": "storybook",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [Bug]: SvelteKit mocks doesn't support the `$app/state` module\n\nBODY:\n### Describe the bug\n\n[SvelteKit 2.12.0](https://github.com/sveltejs/kit/releases/tag/%40sveltejs%2Fkit%402.12.0) introduce",
+          "is_gold": false
+        },
+        {
+          "rank": 2,
+          "score": 0.016393,
+          "lex_rank": 1,
+          "dense_rank": null,
+          "corpus_id": 870240055,
+          "repo": "react",
+          "labels": [],
+          "snippet": "TITLE: Bug: Impossible to use on async hooks\n\nBODY:\nThe rule that prevents using async functions in the hook makes sense in most cases, but there are some valid hooks that have async functions.  See u",
+          "is_gold": false
+        },
+        {
+          "rank": 3,
+          "score": 0.016393,
+          "lex_rank": null,
+          "dense_rank": 1,
+          "corpus_id": 476400469,
+          "repo": "vue",
+          "labels": [
+            "feature-request",
+            "discussion"
+          ],
+          "snippet": "TITLE: Create an \".async\" modifier for event handlers\n\nBODY:\n### What problem does this feature solve?\r\nIn an event handler, one can easily mix property modifications and method calls (which is great)",
+          "is_gold": true
+        },
+        {
+          "rank": 4,
+          "score": 0.016129,
+          "lex_rank": null,
+          "dense_rank": 2,
+          "corpus_id": 716266759,
+          "repo": "storybook",
+          "labels": [
+            "feature-request"
+          ],
+          "snippet": "TITLE: async configurations\n\nBODY:\n**Is your feature request related to a problem? Please describe**\r\nWe have to dynamically generate some configurations based on the result of a JSON file on a server",
+          "is_gold": false
+        },
+        {
+          "rank": 5,
+          "score": 0.015873,
+          "lex_rank": 3,
+          "dense_rank": null,
+          "corpus_id": 2034579954,
+          "repo": "angular",
+          "labels": [],
+          "snippet": "TITLE: Signals for Reactive and Template-based Forms\n\nBODY:\n### Which @angular/* package(s) are relevant/related to the feature request?\r\n\r\nforms\r\n\r\n### Description\r\n\r\nWhile the current forms module a",
+          "is_gold": false
+        }
+      ]
+    },
+    {
+      "query_id": 2444638268,
+      "query_repo": "vscode",
+      "split": "val",
+      "labels": [
+        "feature-request",
+        "terminal"
+      ],
+      "query_snippet": "TITLE: Persistent terminals in repositories with Workspace settings configurations\n\nBODY:\n<!-- \u26a0\ufe0f\u26a0\ufe0f Do Not Delete This! feature_request_template \u26a0\ufe0f\u26a0\ufe0f -->\r\n<!-- Please read our Rules of Conduct: https://opensource.microsoft.com/codeofconduct/ -->\r\n<!-- Please search existing issues to avoid creating ",
+      "metrics": {
+        "lex": {
+          "mrr": 0.0,
+          "r@5": 0.0,
+          "r@10": 0.0
+        },
+        "dense": {
+          "mrr": 1.0,
+          "r@5": 0.6666666666666666,
+          "r@10": 1.0
+        },
+        "hybrid": {
+          "mrr": 0.3333333333333333,
+          "r@5": 0.3333333333333333,
+          "r@10": 0.6666666666666666
+        }
+      },
+      "gold_relevant": [
+        {
+          "corpus_id": 441043866,
+          "corpus_repo": "terminal",
+          "shared_labels": [
+            "terminal"
+          ],
+          "lex_score": null,
+          "dense_score": 0.8161,
+          "text_snippet": "TITLE: Workspace-specific settings and profiles\nBODY: Is workspace-specific settings on the roadmap for the Windows Terminal? I was chatting with @jongalloway about it and it would really help streamline teams to be able to chec"
+        },
+        {
+          "corpus_id": 2755603643,
+          "corpus_repo": "PowerToys",
+          "shared_labels": [],
+          "lex_score": null,
+          "dense_score": 0.7659,
+          "text_snippet": "TITLE: Workspaces should save the current state effortlessly\nBODY: ### Description of the new feature / enhancement Hi. in attempt to make it easier to get right back on track, Workspaces has to also make it easy for us to *configure* our co"
+        },
+        {
+          "corpus_id": 442436406,
+          "corpus_repo": "terminal",
+          "shared_labels": [
+            "terminal"
+          ],
+          "lex_score": null,
+          "dense_score": 0.7616,
+          "text_snippet": "TITLE: Need a way to have per-machine profiles in settings\nBODY: Settings roam, which is really cool! However, my machines don't all have the same configuration. For instance, my main dev machine has tooling installed on the `O:` drive. My"
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.1294,
+          "corpus_id": 476303654,
+          "repo": "terminal",
+          "labels": [
+            "terminal"
+          ],
+          "snippet": "TITLE: Terminal Key-Map Sets for/from iTerm & other Terminals\n\nBODY:\n# Description of the new feature/enhancement\r\n\r\n> This feature request was requested by an early-adopter of Terminal at a review me",
+          "is_gold": false
+        },
+        {
+          "rank": 2,
+          "score": 0.1201,
+          "corpus_id": 2443376851,
+          "repo": "PowerToys",
+          "labels": [],
+          "snippet": "TITLE: unexpected / Added characters\n\nBODY:\n### Microsoft PowerToys version\n\n0.83.0\n\n### Installation method\n\nMicrosoft Store\n\n### Running as admin\n\nNone\n\n### Area(s) with issue?\n\nPowerRename\n\n### Ste",
+          "is_gold": false
+        },
+        {
+          "rank": 3,
+          "score": 0.1153,
+          "corpus_id": 2495919047,
+          "repo": "PowerToys",
+          "labels": [],
+          "snippet": "TITLE: Change File Icon\n\nBODY:\n### Description of the new feature / enhancement\r\n\r\nA tool to change file association icons.\r\n\r\n### Scenario when this would be used?\r\n\r\nI want to make `.code-workspace`",
+          "is_gold": false
+        },
+        {
+          "rank": 4,
+          "score": 0.1121,
+          "corpus_id": 465192739,
+          "repo": "terminal",
+          "labels": [
+            "help wanted",
+            "terminal"
+          ],
+          "snippet": "TITLE: Suggestion: ability for terminals to set their tab icon\n\nBODY:\n#1685 Summary of the new feature/enhancement\r\n\r\nThe terminal currently provides a way for shells to specify the title:\r\n\r\n![image]",
+          "is_gold": false
+        },
+        {
+          "rank": 5,
+          "score": 0.1119,
+          "corpus_id": 1043181312,
+          "repo": "PowerToys",
+          "labels": [
+            "enhancement",
+            "help wanted"
+          ],
+          "snippet": "TITLE: When turning off auto-complete history, delete history file\n\nBODY:\n### Description of the new feature / enhancement\n\nMy suggestion is that if there is a function that can erase the history of P",
+          "is_gold": false
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.8161,
+          "corpus_id": 441043866,
+          "repo": "terminal",
+          "labels": [
+            "terminal"
+          ],
+          "snippet": "TITLE: Workspace-specific settings and profiles\n\nBODY:\nIs workspace-specific settings on the roadmap for the Windows Terminal? I was chatting with @jongalloway about it and it would really help stream",
+          "is_gold": true
+        },
+        {
+          "rank": 2,
+          "score": 0.7796,
+          "corpus_id": 499306174,
+          "repo": "terminal",
+          "labels": [
+            "help wanted",
+            "terminal"
+          ],
+          "snippet": "TITLE: Add support for roaming settings.json or storing it elsewhere\n\nBODY:\n<hr>\r\n\r\n> **Note**: \ud83d\udccc Pinned comment: **https://github.com/microsoft/terminal/issues/2933#issuecomment-536652883**\r\n\r\n<hr>\r\n",
+          "is_gold": false
+        },
+        {
+          "rank": 3,
+          "score": 0.7794,
+          "corpus_id": 617877489,
+          "repo": "terminal",
+          "labels": [
+            "help wanted",
+            "terminal"
+          ],
+          "snippet": "TITLE: Include a profile that will connect to Visual Studio Codespaces\n\nBODY:\n# Description of the new feature/enhancement\r\n\r\nWhen using VSCode with [Visual Studio Codespaces ](https://online.visualst",
+          "is_gold": false
+        },
+        {
+          "rank": 4,
+          "score": 0.7715,
+          "corpus_id": 449476193,
+          "repo": "terminal",
+          "labels": [
+            "terminal"
+          ],
+          "snippet": "TITLE: Feature Request: Clients of terminal need a way to inquire about the capabilities of the terminal\n\nBODY:\n# Summary of the new feature/enhancement\r\n\r\n<!-- \r\nA clear and concise description of wh",
+          "is_gold": false
+        },
+        {
+          "rank": 5,
+          "score": 0.7659,
+          "corpus_id": 2755603643,
+          "repo": "PowerToys",
+          "labels": [],
+          "snippet": "TITLE: Workspaces should save the current state effortlessly\n\nBODY:\n### Description of the new feature / enhancement\n\nHi. in attempt to make it easier to get right back on track, Workspaces has to als",
+          "is_gold": true
+        }
+      ],
+      "hybrid_top5": [
+        {
+          "rank": 1,
+          "score": 0.030622,
+          "lex_rank": 9,
+          "dense_rank": 2,
+          "corpus_id": 499306174,
+          "repo": "terminal",
+          "labels": [
+            "help wanted",
+            "terminal"
+          ],
+          "snippet": "TITLE: Add support for roaming settings.json or storing it elsewhere\n\nBODY:\n<hr>\r\n\r\n> **Note**: \ud83d\udccc Pinned comment: **https://github.com/microsoft/terminal/issues/2933#issuecomment-536652883**\r\n\r\n<hr>\r\n",
+          "is_gold": false
+        },
+        {
+          "rank": 2,
+          "score": 0.016393,
+          "lex_rank": 1,
+          "dense_rank": null,
+          "corpus_id": 476303654,
+          "repo": "terminal",
+          "labels": [
+            "terminal"
+          ],
+          "snippet": "TITLE: Terminal Key-Map Sets for/from iTerm & other Terminals\n\nBODY:\n# Description of the new feature/enhancement\r\n\r\n> This feature request was requested by an early-adopter of Terminal at a review me",
+          "is_gold": false
+        },
+        {
+          "rank": 3,
+          "score": 0.016393,
+          "lex_rank": null,
+          "dense_rank": 1,
+          "corpus_id": 441043866,
+          "repo": "terminal",
+          "labels": [
+            "terminal"
+          ],
+          "snippet": "TITLE: Workspace-specific settings and profiles\n\nBODY:\nIs workspace-specific settings on the roadmap for the Windows Terminal? I was chatting with @jongalloway about it and it would really help stream",
+          "is_gold": true
+        },
+        {
+          "rank": 4,
+          "score": 0.016129,
+          "lex_rank": 2,
+          "dense_rank": null,
+          "corpus_id": 2443376851,
+          "repo": "PowerToys",
+          "labels": [],
+          "snippet": "TITLE: unexpected / Added characters\n\nBODY:\n### Microsoft PowerToys version\n\n0.83.0\n\n### Installation method\n\nMicrosoft Store\n\n### Running as admin\n\nNone\n\n### Area(s) with issue?\n\nPowerRename\n\n### Ste",
+          "is_gold": false
+        },
+        {
+          "rank": 5,
+          "score": 0.015873,
+          "lex_rank": 3,
+          "dense_rank": null,
+          "corpus_id": 2495919047,
+          "repo": "PowerToys",
+          "labels": [],
+          "snippet": "TITLE: Change File Icon\n\nBODY:\n### Description of the new feature / enhancement\r\n\r\nA tool to change file association icons.\r\n\r\n### Scenario when this would be used?\r\n\r\nI want to make `.code-workspace`",
+          "is_gold": false
+        }
+      ]
+    },
+    {
+      "query_id": 1251151485,
+      "query_repo": "transformers",
+      "split": "val",
+      "labels": [
+        "documentation"
+      ],
+      "query_snippet": "TITLE: Tranformers documentation translation to Italian\n\nBODY:\nHi!\r\n\r\nLet's bring the documentation to all the Italian-speaking community :)\r\n\r\nWho would want to translate? Please follow the \ud83e\udd17 [TRANSLATING guide](https://github.com/huggingface/transformers/blob/main/docs/TRANSLATING.md). Here is a l",
+      "metrics": {
+        "lex": {
+          "mrr": 0.0,
+          "r@5": 0.0,
+          "r@10": 0.0
+        },
+        "dense": {
+          "mrr": 1.0,
+          "r@5": 0.5555555555555556,
+          "r@10": 1.0
+        },
+        "hybrid": {
+          "mrr": 0.5,
+          "r@5": 0.2222222222222222,
+          "r@10": 0.5555555555555556
+        }
+      },
+      "gold_relevant": [
+        {
+          "corpus_id": 1320047332,
+          "corpus_repo": "three.js",
+          "shared_labels": [
+            "documentation"
+          ],
+          "lex_score": null,
+          "dense_score": 0.7813,
+          "text_snippet": "TITLE: Docs: Italian version\nBODY: Hello, I'm a software developer and a three.js user. I'd like to contribute to the library and I think that the best way to start is by documentation. I'd like to translate t"
+        },
+        {
+          "corpus_id": 1508088666,
+          "corpus_repo": "stable-diffusion-webui",
+          "shared_labels": [
+            "documentation"
+          ],
+          "lex_score": null,
+          "dense_score": 0.7721,
+          "text_snippet": "TITLE: Documentation translation\nBODY: ### Is there an existing issue for this? - [X] I have searched the existing issues and checked the recent builds/commits ### What would your feature do ? It would greatly dec"
+        },
+        {
+          "corpus_id": 1437319047,
+          "corpus_repo": "java-design-patterns",
+          "shared_labels": [],
+          "lex_score": null,
+          "dense_score": 0.7714,
+          "text_snippet": "TITLE: Translation to Italian\nBODY: This task tracks the translation of the patterns. More information about the translation process is available at https://github.com/iluwatar/java-design-patterns/wiki/15.-Sup"
+        },
+        {
+          "corpus_id": 1952615430,
+          "corpus_repo": "material-ui",
+          "shared_labels": [],
+          "lex_score": null,
+          "dense_score": 0.7572,
+          "text_snippet": "TITLE: [docs] Translate the documentation to Chinese / \u5c06\u6587\u6863\u7ffb\u8bd1\u6210\u4e2d\u6587\nBODY: ### Summary \ud83d\udca1 There is a huge community of Chinese developers https://en.wikipedia.org/wiki/List_of_languages_by_total_number_of_speakers <img width=\"975\" alt=\"Screenshot 202"
+        },
+        {
+          "corpus_id": 362935797,
+          "corpus_repo": "javascript-algorithms",
+          "shared_labels": [],
+          "lex_score": null,
+          "dense_score": 0.753,
+          "text_snippet": "TITLE: Italian Language\nBODY: Can I help you with the Italian translation? You did a great job!"
+        },
+        {
+          "corpus_id": 1311711934,
+          "corpus_repo": "three.js",
+          "shared_labels": [
+            "documentation"
+          ],
+          "lex_score": null,
+          "dense_score": 0.7417,
+          "text_snippet": "TITLE: Docs: portuguese version\nBODY: Hello, I intend to start translating the documentation into Portuguese. starting with the manual section"
+        },
+        {
+          "corpus_id": 1428665930,
+          "corpus_repo": "java-design-patterns",
+          "shared_labels": [],
+          "lex_score": null,
+          "dense_score": 0.74,
+          "text_snippet": "TITLE: Translation to Portuguese\nBODY: This task tracks the translation of the patterns. More information about the translation process is available at https://github.com/iluwatar/java-design-patterns/wiki/15.-Sup"
+        },
+        {
+          "corpus_id": 1596818053,
+          "corpus_repo": "material-ui",
+          "shared_labels": [],
+          "lex_score": null,
+          "dense_score": 0.7394,
+          "text_snippet": "TITLE: [docs] Translate the documentation\nBODY: The translation is not available. It used to be good."
+        },
+        {
+          "corpus_id": 1611919592,
+          "corpus_repo": "three.js",
+          "shared_labels": [
+            "documentation"
+          ],
+          "lex_score": null,
+          "dense_score": 0.7373,
+          "text_snippet": "TITLE: Docs: Spanish version\nBODY: ## Description Hello, everyone. Thank you for this fantastic project and your hard work in maintaining it. I'm in love with Three.js and I'd like to contribute to the project"
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.2558,
+          "corpus_id": 713094501,
+          "repo": "pytorch",
+          "labels": [],
+          "snippet": "TITLE: [fx] symbolic trace \"is None\" and \"is not None\" checks\n\nBODY:\nthere are many is None or is not None in \r\nhttps://github.com/huggingface/transformers/blob/master/src/transformers/modeling_bert.p",
+          "is_gold": false
+        },
+        {
+          "rank": 2,
+          "score": 0.2087,
+          "corpus_id": 2017419313,
+          "repo": "pytorch",
+          "labels": [
+            "module: nn"
+          ],
+          "snippet": "TITLE: Add head_mask for transformers\n\nBODY:\n### \ud83d\ude80 The feature, motivation and pitch\n\nI am wondering if we can also have the head_mask, which can manually alter the attention_weights after the softmax",
+          "is_gold": false
+        },
+        {
+          "rank": 3,
+          "score": 0.2004,
+          "corpus_id": 2669544964,
+          "repo": "pytorch",
+          "labels": [
+            "enhancement"
+          ],
+          "snippet": "TITLE: xpu: implement aten::_linalg_eigvals for XPU backend (affecting HF Transformers v4.46.0 and later)\n\nBODY:\nRecent changes in Huggingface Transformers (https://github.com/huggingface/transformers",
+          "is_gold": false
+        },
+        {
+          "rank": 4,
+          "score": 0.1851,
+          "corpus_id": 2368359096,
+          "repo": "pytorch",
+          "labels": [
+            "module: docs"
+          ],
+          "snippet": "TITLE: Torch dynamo deep dive and overview discrepancy\n\nBODY:\n### \ud83d\udcda The doc issue\n\nPyTorch docs website has a [compiler_deepdive](https://pytorch.org/docs/stable/torch.compiler_deepdive.html), but the",
+          "is_gold": false
+        },
+        {
+          "rank": 5,
+          "score": 0.1764,
+          "corpus_id": 1613932426,
+          "repo": "pytorch",
+          "labels": [],
+          "snippet": "TITLE: [Dynamo] HuggingFace transformers configuration_utils graph break workaround\n\nBODY:\n### \ud83d\udc1b Describe the bug\n\nHF worked around dynamo problem here https://github.com/huggingface/transformers/pull",
+          "is_gold": false
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.7813,
+          "corpus_id": 1320047332,
+          "repo": "three.js",
+          "labels": [
+            "documentation"
+          ],
+          "snippet": "TITLE: Docs: Italian version\n\nBODY:\nHello, I'm a software developer and a three.js user. \r\n\r\nI'd like to contribute to the library and I think that the best way to start is by documentation. I'd like ",
+          "is_gold": true
+        },
+        {
+          "rank": 2,
+          "score": 0.7721,
+          "corpus_id": 1508088666,
+          "repo": "stable-diffusion-webui",
+          "labels": [
+            "documentation"
+          ],
+          "snippet": "TITLE: Documentation translation\n\nBODY:\n### Is there an existing issue for this?\n\n- [X] I have searched the existing issues and checked the recent builds/commits\n\n### What would your feature do ?\n\nIt ",
+          "is_gold": true
+        },
+        {
+          "rank": 3,
+          "score": 0.7714,
+          "corpus_id": 1437319047,
+          "repo": "java-design-patterns",
+          "labels": [],
+          "snippet": "TITLE: Translation to Italian\n\nBODY:\nThis task tracks the translation of the patterns. More information about the translation process is available at https://github.com/iluwatar/java-design-patterns/w",
+          "is_gold": true
+        },
+        {
+          "rank": 4,
+          "score": 0.7572,
+          "corpus_id": 1952615430,
+          "repo": "material-ui",
+          "labels": [],
+          "snippet": "TITLE: [docs] Translate the documentation to Chinese / \u5c06\u6587\u6863\u7ffb\u8bd1\u6210\u4e2d\u6587\n\nBODY:\n### Summary \ud83d\udca1\r\n\r\nThere is a huge community of Chinese developers https://en.wikipedia.org/wiki/List_of_languages_by_total_number_",
+          "is_gold": true
+        },
+        {
+          "rank": 5,
+          "score": 0.753,
+          "corpus_id": 362935797,
+          "repo": "javascript-algorithms",
+          "labels": [
+            "enhancement"
+          ],
+          "snippet": "TITLE: Italian Language\n\nBODY:\nCan I help you with the Italian translation? You did a great job!",
+          "is_gold": true
+        }
+      ],
+      "hybrid_top5": [
+        {
+          "rank": 1,
+          "score": 0.016393,
+          "lex_rank": 1,
+          "dense_rank": null,
+          "corpus_id": 713094501,
+          "repo": "pytorch",
+          "labels": [],
+          "snippet": "TITLE: [fx] symbolic trace \"is None\" and \"is not None\" checks\n\nBODY:\nthere are many is None or is not None in \r\nhttps://github.com/huggingface/transformers/blob/master/src/transformers/modeling_bert.p",
+          "is_gold": false
+        },
+        {
+          "rank": 2,
+          "score": 0.016393,
+          "lex_rank": null,
+          "dense_rank": 1,
+          "corpus_id": 1320047332,
+          "repo": "three.js",
+          "labels": [
+            "documentation"
+          ],
+          "snippet": "TITLE: Docs: Italian version\n\nBODY:\nHello, I'm a software developer and a three.js user. \r\n\r\nI'd like to contribute to the library and I think that the best way to start is by documentation. I'd like ",
+          "is_gold": true
+        },
+        {
+          "rank": 3,
+          "score": 0.016129,
+          "lex_rank": 2,
+          "dense_rank": null,
+          "corpus_id": 2017419313,
+          "repo": "pytorch",
+          "labels": [
+            "module: nn"
+          ],
+          "snippet": "TITLE: Add head_mask for transformers\n\nBODY:\n### \ud83d\ude80 The feature, motivation and pitch\n\nI am wondering if we can also have the head_mask, which can manually alter the attention_weights after the softmax",
+          "is_gold": false
+        },
+        {
+          "rank": 4,
+          "score": 0.016129,
+          "lex_rank": null,
+          "dense_rank": 2,
+          "corpus_id": 1508088666,
+          "repo": "stable-diffusion-webui",
+          "labels": [
+            "documentation"
+          ],
+          "snippet": "TITLE: Documentation translation\n\nBODY:\n### Is there an existing issue for this?\n\n- [X] I have searched the existing issues and checked the recent builds/commits\n\n### What would your feature do ?\n\nIt ",
+          "is_gold": true
+        },
+        {
+          "rank": 5,
+          "score": 0.015873,
+          "lex_rank": 3,
+          "dense_rank": null,
+          "corpus_id": 2669544964,
+          "repo": "pytorch",
+          "labels": [
+            "enhancement"
+          ],
+          "snippet": "TITLE: xpu: implement aten::_linalg_eigvals for XPU backend (affecting HF Transformers v4.46.0 and later)\n\nBODY:\nRecent changes in Huggingface Transformers (https://github.com/huggingface/transformers",
+          "is_gold": false
+        }
+      ]
+    }
+  ],
+  "lex_beats_hybrid": [
+    {
+      "query_id": 2766647524,
+      "query_repo": "tauri",
+      "split": "val",
+      "labels": [
+        "good first issue"
+      ],
+      "query_snippet": "TITLE: [bug] `@tauri-apps/cli` NPM package contains unnecessary files\n\nBODY:\n### Describe the bug\n\nThe following path in `packages/cli/Cargo.toml` is incorrect in [NPM package](https://www.npmjs.com/package/@tauri-apps/cli?activeTab=code):\r\n\r\n```toml\r\n[dependencies]\r\n# Default enable napi4 feature, ",
+      "metrics": {
+        "lex": {
+          "mrr": 0.3333333333333333,
+          "r@5": 1.0,
+          "r@10": 1.0
+        },
+        "dense": {
+          "mrr": 0.0,
+          "r@5": 0.0,
+          "r@10": 0.0
+        },
+        "hybrid": {
+          "mrr": 0.2,
+          "r@5": 0.5,
+          "r@10": 1.0
+        }
+      },
+      "gold_relevant": [
+        {
+          "corpus_id": 1797093738,
+          "corpus_repo": "storybook",
+          "shared_labels": [],
+          "lex_score": 0.1438,
+          "dense_score": null,
+          "text_snippet": "TITLE: [Bug]: Manifest Confusion: @storybook/core NPM Registry data reports different scripts than current package.json\nBODY: ### Describe the bug I am checking my dependencies for the latest [NPM Manifest Confusion](https://blog.vlt.sh/blog/the-massive-hole-in-the-npm-ecosystem) vulnerability, and "
+        },
+        {
+          "corpus_id": 1838127504,
+          "corpus_repo": "react",
+          "shared_labels": [],
+          "lex_score": 0.1265,
+          "dense_score": null,
+          "text_snippet": "TITLE: Bug: `react-server-dom-esm` package is empty\nBODY: I thought it would be helpful to use [`react-server-dom-esm`](https://www.npmjs.com/package/react-server-dom-esm) for an RSC test integration, but the package appears to be e"
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.1949,
+          "corpus_id": 1188599097,
+          "repo": "animate.css",
+          "labels": [],
+          "snippet": "TITLE: The license on NPM is still listed as MIT\n\nBODY:\n**Describe the bug** \r\nI was going to use this library but I'm restricted to choosing MIT licensed products. I integrated it based on the licens",
+          "is_gold": false
+        },
+        {
+          "rank": 2,
+          "score": 0.1485,
+          "corpus_id": 2372641186,
+          "repo": "storybook",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [Bug]: StoryBook + NextJS based NPM is not working\n\nBODY:\n### Describe the bug\n\nAfter making an build, NextJS is building an **.next** folder. While importing an NPM package using my organizati",
+          "is_gold": false
+        },
+        {
+          "rank": 3,
+          "score": 0.1438,
+          "corpus_id": 1797093738,
+          "repo": "storybook",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [Bug]: Manifest Confusion: @storybook/core NPM Registry data reports different scripts than current package.json\n\nBODY:\n### Describe the bug\r\n\r\nI am checking my dependencies for the latest [NPM",
+          "is_gold": true
+        },
+        {
+          "rank": 4,
+          "score": 0.1326,
+          "corpus_id": 2180709696,
+          "repo": "three.js",
+          "labels": [
+            "enhancement"
+          ],
+          "snippet": "TITLE: Add volume calculator for 3d mesh\n\nBODY:\n### Description\n\nThree has no native method to calculate mesh's volumes. \r\n\r\n\n\n### Solution\n\nAdd a method (mesh.volume) to retrieve the calculated volum",
+          "is_gold": false
+        },
+        {
+          "rank": 5,
+          "score": 0.1265,
+          "corpus_id": 1838127504,
+          "repo": "react",
+          "labels": [],
+          "snippet": "TITLE: Bug: `react-server-dom-esm` package is empty\n\nBODY:\nI thought it would be helpful to use [`react-server-dom-esm`](https://www.npmjs.com/package/react-server-dom-esm) for an RSC test integration",
+          "is_gold": true
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.7809,
+          "corpus_id": 2322693107,
+          "repo": "ui",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [bug]: CLI errors when using relative path as util alias\n\nBODY:\n### Describe the bug\r\n\r\nWhen using relative path as the alias for util import (I'm using a monorepo, the cn function is under /sr",
+          "is_gold": false
+        },
+        {
+          "rank": 2,
+          "score": 0.7751,
+          "corpus_id": 2796316504,
+          "repo": "ui",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [bug]: CLI not respecting settings in components.json\n\nBODY:\n### Describe the bug\n\n```json\n{\n  \"$schema\": \"https://ui.shadcn.com/schema.json\",\n  \"style\": \"new-york\",\n  \"rsc\": false,\n  \"tsx\": tr",
+          "is_gold": false
+        },
+        {
+          "rank": 3,
+          "score": 0.7749,
+          "corpus_id": 971336517,
+          "repo": "create-react-app",
+          "labels": [
+            "issue: proposal"
+          ],
+          "snippet": "TITLE: On deleting `compileroptions.paths`\n\nBODY:\n### Is your proposal related to a problem?\r\n\r\n<!--\r\n  Provide a clear and concise description of what the problem is.\r\n  For example, \"I'm always frus",
+          "is_gold": false
+        },
+        {
+          "rank": 4,
+          "score": 0.7708,
+          "corpus_id": 2386592388,
+          "repo": "ui",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [bug]: Why does my project report dependency errors when it comes to manual or scaffold installation\n\nBODY:\n### Describe the bug\n\nI used cli format or manually installed dependencies in the old",
+          "is_gold": false
+        },
+        {
+          "rank": 5,
+          "score": 0.7696,
+          "corpus_id": 713710271,
+          "repo": "create-react-app",
+          "labels": [
+            "issue: bug report"
+          ],
+          "snippet": "TITLE: A folder \"tmpnodejsnpm-cache\" is created whenever i am doing npx create-react-app or npm install\n\nBODY:\n<!--\r\n    Please note that your issue will be fixed much faster if you spend about\r\n    h",
+          "is_gold": false
+        }
+      ],
+      "hybrid_top5": [
+        {
+          "rank": 1,
+          "score": 0.016393,
+          "lex_rank": 1,
+          "dense_rank": null,
+          "corpus_id": 1188599097,
+          "repo": "animate.css",
+          "labels": [],
+          "snippet": "TITLE: The license on NPM is still listed as MIT\n\nBODY:\n**Describe the bug** \r\nI was going to use this library but I'm restricted to choosing MIT licensed products. I integrated it based on the licens",
+          "is_gold": false
+        },
+        {
+          "rank": 2,
+          "score": 0.016393,
+          "lex_rank": null,
+          "dense_rank": 1,
+          "corpus_id": 2322693107,
+          "repo": "ui",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [bug]: CLI errors when using relative path as util alias\n\nBODY:\n### Describe the bug\r\n\r\nWhen using relative path as the alias for util import (I'm using a monorepo, the cn function is under /sr",
+          "is_gold": false
+        },
+        {
+          "rank": 3,
+          "score": 0.016129,
+          "lex_rank": 2,
+          "dense_rank": null,
+          "corpus_id": 2372641186,
+          "repo": "storybook",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [Bug]: StoryBook + NextJS based NPM is not working\n\nBODY:\n### Describe the bug\n\nAfter making an build, NextJS is building an **.next** folder. While importing an NPM package using my organizati",
+          "is_gold": false
+        },
+        {
+          "rank": 4,
+          "score": 0.016129,
+          "lex_rank": null,
+          "dense_rank": 2,
+          "corpus_id": 2796316504,
+          "repo": "ui",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [bug]: CLI not respecting settings in components.json\n\nBODY:\n### Describe the bug\n\n```json\n{\n  \"$schema\": \"https://ui.shadcn.com/schema.json\",\n  \"style\": \"new-york\",\n  \"rsc\": false,\n  \"tsx\": tr",
+          "is_gold": false
+        },
+        {
+          "rank": 5,
+          "score": 0.015873,
+          "lex_rank": 3,
+          "dense_rank": null,
+          "corpus_id": 1797093738,
+          "repo": "storybook",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [Bug]: Manifest Confusion: @storybook/core NPM Registry data reports different scripts than current package.json\n\nBODY:\n### Describe the bug\r\n\r\nI am checking my dependencies for the latest [NPM",
+          "is_gold": true
+        }
+      ]
+    },
+    {
+      "query_id": 2035222853,
+      "query_repo": "ollama",
+      "split": "test",
+      "labels": [
+        "documentation"
+      ],
+      "query_snippet": "TITLE: Ollama API Documentation: Error responses are not defined.\n\nBODY:\nI received a 500 Internal Server error as a response when using Ollama MacOS and Ollama-UI.\r\nThis made me realise that errors are not mentioned in [Ollama's documentation](https://github.com/jmorganca/ollama/blob/main/docs/api.",
+      "metrics": {
+        "lex": {
+          "mrr": 0.2,
+          "r@5": 0.5,
+          "r@10": 1.0
+        },
+        "dense": {
+          "mrr": 0.0,
+          "r@5": 0.0,
+          "r@10": 0.0
+        },
+        "hybrid": {
+          "mrr": 0.08333333333333333,
+          "r@5": 0.0,
+          "r@10": 0.0
+        }
+      },
+      "gold_relevant": [
+        {
+          "corpus_id": 120906923,
+          "corpus_repo": "go",
+          "shared_labels": [],
+          "lex_score": 0.1183,
+          "dense_score": null,
+          "text_snippet": "TITLE: x/net/websocket: ErrBadStatus should include the bad status code\nBODY: Right now, if a `x/net/websocket` client connects to an HTTP endpoint and receives a response with any status other than 101, it returns an `ErrBadStatus` ([source](https://g"
+        },
+        {
+          "corpus_id": 1878419663,
+          "corpus_repo": "stable-diffusion-webui",
+          "shared_labels": [
+            "documentation"
+          ],
+          "lex_score": 0.1125,
+          "dense_score": null,
+          "text_snippet": "TITLE: update API documentation\nBODY: ### Is there an existing issue for this? - [X] I have searched the existing issues and checked the recent builds/commits ### What would your feature do ? I found that the int"
+        }
+      ],
+      "lexical_top5": [
+        {
+          "rank": 1,
+          "score": 0.1619,
+          "corpus_id": 2648383854,
+          "repo": "langchain",
+          "labels": [],
+          "snippet": "TITLE: DOC: sql-ollama leads to removed page\n\nBODY:\n### URL\n\nhttps://python.langchain.com/docs/templates/sql-ollama/\n\n### Checklist\n\n- [X] I added a very descriptive title to this issue.\n- [X] I inclu",
+          "is_gold": false
+        },
+        {
+          "rank": 2,
+          "score": 0.1431,
+          "corpus_id": 2762527733,
+          "repo": "stable-diffusion-webui",
+          "labels": [],
+          "snippet": "TITLE: [Feature Request]: prepare host for specific gpu (needed for containers) without starting api/ui\n\nBODY:\n### Is there an existing issue for this?\r\n\r\n- [X] I have searched the existing issues and",
+          "is_gold": false
+        },
+        {
+          "rank": 3,
+          "score": 0.1294,
+          "corpus_id": 2483669919,
+          "repo": "langchain",
+          "labels": [],
+          "snippet": "TITLE: Ollama (Partner package) and cache integration not working correctly - missing filters / Community Package works\n\nBODY:\n### Checked other resources\n\n- [X] I added a very descriptive title to th",
+          "is_gold": false
+        },
+        {
+          "rank": 4,
+          "score": 0.119,
+          "corpus_id": 1599798734,
+          "repo": "next.js",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [NEXT-662] HTTP 500 - Internal Server Error when errors are thrown during initial render in a page that exports `generateStaticParams`\n\nBODY:\n### Verify canary release\n\n- [X] I verified that th",
+          "is_gold": false
+        },
+        {
+          "rank": 5,
+          "score": 0.1183,
+          "corpus_id": 120906923,
+          "repo": "go",
+          "labels": [],
+          "snippet": "TITLE: x/net/websocket: ErrBadStatus should include the bad status code\n\nBODY:\nRight now, if a `x/net/websocket` client connects to an HTTP endpoint and receives a response with any status other than ",
+          "is_gold": true
+        }
+      ],
+      "dense_top5": [
+        {
+          "rank": 1,
+          "score": 0.7465,
+          "corpus_id": 2658964940,
+          "repo": "langchain",
+          "labels": [],
+          "snippet": "TITLE: Issue with Ollama Function \u2013 Only Agent Response, No Tool Calls\n\nBODY:\n### Checked other resources\n\n- [X] I added a very descriptive title to this issue.\n- [X] I searched the [LangGraph](https:",
+          "is_gold": false
+        },
+        {
+          "rank": 2,
+          "score": 0.7385,
+          "corpus_id": 2055798212,
+          "repo": "kubernetes",
+          "labels": [
+            "kind/bug",
+            "sig/api-machinery",
+            "triage/accepted"
+          ],
+          "snippet": "TITLE: Inappropriate HTTP 500 Internal Server Error: `failed to create typed patch object (general/admin-api; /v1, Kind=Service): .spec.topologyKeys: field not declared in schema`\n\nBODY:\n### What happ",
+          "is_gold": false
+        },
+        {
+          "rank": 3,
+          "score": 0.7345,
+          "corpus_id": 1450769557,
+          "repo": "kubernetes",
+          "labels": [
+            "kind/bug",
+            "sig/api-machinery"
+          ],
+          "snippet": "TITLE: Some API parameter parsing error\n\nBODY:\n### What happened?\n\n### /api/v1/componentstatuses/{name}\r\nWhen I accessed a non-existent component,I recevied 500 status\r\n\r\n### resourceVerison parameter",
+          "is_gold": false
+        },
+        {
+          "rank": 4,
+          "score": 0.7337,
+          "corpus_id": 1733707528,
+          "repo": "stable-diffusion-webui",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [Bug]: API error: change() and other events can only be called within a Blocks context.\n\nBODY:\n### Is there an existing issue for this?\n\n- [X] I have searched the existing issues and checked th",
+          "is_gold": false
+        },
+        {
+          "rank": 5,
+          "score": 0.7321,
+          "corpus_id": 2695516415,
+          "repo": "langchain",
+          "labels": [],
+          "snippet": "TITLE: langchain.agents.openai_assistant.base method parameters don't allow response_format\n\nBODY:\n### Checked other resources\n\n- [X] I added a very descriptive title to this issue.\n- [X] I searched t",
+          "is_gold": false
+        }
+      ],
+      "hybrid_top5": [
+        {
+          "rank": 1,
+          "score": 0.030159,
+          "lex_rank": 3,
+          "dense_rank": 10,
+          "corpus_id": 2483669919,
+          "repo": "langchain",
+          "labels": [],
+          "snippet": "TITLE: Ollama (Partner package) and cache integration not working correctly - missing filters / Community Package works\n\nBODY:\n### Checked other resources\n\n- [X] I added a very descriptive title to th",
+          "is_gold": false
+        },
+        {
+          "rank": 2,
+          "score": 0.029462,
+          "lex_rank": 15,
+          "dense_rank": 2,
+          "corpus_id": 2055798212,
+          "repo": "kubernetes",
+          "labels": [
+            "kind/bug",
+            "sig/api-machinery",
+            "triage/accepted"
+          ],
+          "snippet": "TITLE: Inappropriate HTTP 500 Internal Server Error: `failed to create typed patch object (general/admin-api; /v1, Kind=Service): .spec.topologyKeys: field not declared in schema`\n\nBODY:\n### What happ",
+          "is_gold": false
+        },
+        {
+          "rank": 3,
+          "score": 0.029324,
+          "lex_rank": 4,
+          "dense_rank": 13,
+          "corpus_id": 1599798734,
+          "repo": "next.js",
+          "labels": [
+            "bug"
+          ],
+          "snippet": "TITLE: [NEXT-662] HTTP 500 - Internal Server Error when errors are thrown during initial render in a page that exports `generateStaticParams`\n\nBODY:\n### Verify canary release\n\n- [X] I verified that th",
+          "is_gold": false
+        },
+        {
+          "rank": 4,
+          "score": 0.027693,
+          "lex_rank": 17,
+          "dense_rank": 8,
+          "corpus_id": 2685783061,
+          "repo": "langchain",
+          "labels": [],
+          "snippet": "TITLE: Not using Tools in Langchain_Ollama causes: 'NoneType' object is not iterable\n\nBODY:\n### Checked other resources\n\n- [X] I added a very descriptive title to this issue.\n- [X] I searched the Lang",
+          "is_gold": false
+        },
+        {
+          "rank": 5,
+          "score": 0.027526,
+          "lex_rank": 8,
+          "dense_rank": 18,
+          "corpus_id": 2369173567,
+          "repo": "go",
+          "labels": [],
+          "snippet": "TITLE: x/pkgsite: 500 errorcode on https://pkg.go.dev/github.com/leberkleber/simple-jwt-provider\n\nBODY:\n### What is the URL of the page with the issue?\r\n \r\n https://pkg.go.dev/github.com/leberkleber/s",
+          "is_gold": false
+        }
+      ]
+    }
+  ]
+}
